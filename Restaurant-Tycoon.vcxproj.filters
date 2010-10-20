@@ -16,9 +16,27 @@
     <Filter Include="Header Files\actors">
       <UniqueIdentifier>{09fdb7f4-eaa1-4462-b772-6c5514b34612}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\objects">
+      <UniqueIdentifier>{5018c60b-bc89-4e78-991b-a62bcbe9b4f0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Client.h">
+    <ClInclude Include="src\Car.h">
+      <Filter>Header Files\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Client.h">
+      <Filter>Header Files\actors</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Waiter.h">
+      <Filter>Header Files\actors</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TableGroup.h">
+      <Filter>Header Files\actors</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Chef.h">
+      <Filter>Header Files\actors</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Admin.h">
       <Filter>Header Files\actors</Filter>
     </ClInclude>
   </ItemGroup>
