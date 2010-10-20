@@ -19,7 +19,7 @@
     <Filter Include="Header Files\objects">
       <UniqueIdentifier>{5018c60b-bc89-4e78-991b-a62bcbe9b4f0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\htl">
+    <Filter Include="Header Files\htlib">
       <UniqueIdentifier>{9e3c9228-68a5-4a1e-b883-b84cd712d202}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -49,13 +49,13 @@
       <Filter>Header Files\objects</Filter>
     </ClInclude>
     <ClInclude Include="src\htl\hvector.h">
-      <Filter>Header Files\htl</Filter>
+      <Filter>Header Files\htlib</Filter>
     </ClInclude>
     <ClInclude Include="src\htl\hallocator.h">
-      <Filter>Header Files\htl</Filter>
+      <Filter>Header Files\htlib</Filter>
     </ClInclude>
     <ClInclude Include="src\htl\hiterators.h">
-      <Filter>Header Files\htl</Filter>
+      <Filter>Header Files\htlib</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
