@@ -1,0 +1,888 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="5ca9fe72-78fd-4f38-9122-727581d3df37" name="ações" linkedPackageId="b46cba06-f61e-4f6e-8921-d2ce7c6d5da9" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="4b29fdd9-ee55-414f-a8f6-e263f4599c89">
+      <profileInstance Id="4833e026-eb6c-4add-b531-b9bde98ac7ae" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="71555f5e-7c6e-4a07-a4f2-98b37b0e5278">
+      <profileInstance Id="73349e3c-b631-4a70-9ef5-89c36a7e953a" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="0cf1e50b-daf9-432e-9c80-81eed9c4e3b8" name="Cliente" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b562864c-66bf-4cb8-bd12-0152875d5143" />
+        <targetEnds>
+          <association Id="4864c43f-a527-48a6-b4af-d1337a72fe86" isDerived="false" sourceEndRoleName="Cliente" targetEndRoleName="Abandonar Fila" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="61663a6b-5889-4963-a8dc-b47ed0734af2" LastKnownName="Abandonar Fila" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b022c67e-db9d-472a-8f45-fe20cdbce775" name="Cliente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c1399292-3894-49e6-9512-3258567446bf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9c166e3c-63ec-472d-8efb-4c0d1e618ad1" name="Abandonar Fila" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="264108fc-51d6-4888-9509-0b6e37bfe266" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="332c5d96-080f-4165-ad10-b3272f6e10d0" />
+          </association>
+          <association Id="395d88d0-2777-49cf-857f-1364104058c6" isDerived="false" sourceEndRoleName="Cliente" targetEndRoleName="Pagar conta" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="382530b0-2d05-428f-8e52-8fdc9ca31194" LastKnownName="Pagar conta" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9d67588e-e9a4-4f17-a9f4-2fb687958b7f" name="Cliente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="eb68d509-998a-4922-a04e-6a7b01fb0814" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8b24469f-f52c-4b0f-bc0a-86590f5d82e7" name="Pagar conta" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="104f216c-3078-4fa7-96b8-e78f72b365f5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d2250454-9846-42fb-84c6-235399a6ea33" />
+          </association>
+          <association Id="dc80fa64-a23d-4700-9ce7-5ba5660b4d63" isDerived="false" sourceEndRoleName="Cliente" targetEndRoleName="Solicitar Mesa" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="894ef6f4-574e-4a68-8bca-e99f767c76c0" LastKnownName="Solicitar Mesa" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="16c07000-94d8-472a-af69-d7336bbcec10" name="Cliente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="69cb3235-83f5-4964-9750-d91cf833b44e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8f2fd881-a71a-450c-bf2c-de155fddf72a" name="Solicitar Mesa" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3c61f96b-2ccb-46ca-bdfa-54f89d45c884" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4912981d-e13c-4f0e-934b-1ca936b556d9" />
+          </association>
+          <association Id="27930a78-5625-4051-b302-822efcb545d8" isDerived="false" sourceEndRoleName="Cliente" targetEndRoleName="Fazer Pedido" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a9cf0ce2-4c23-4519-9e6f-545c8b2b3c87" LastKnownName="Fazer Pedido" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e5bc7493-cb72-420a-b9d9-f170f46cb313" name="Cliente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="51d8a429-cb5e-4171-a15d-c06657732332" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1a1edcfa-21af-47ad-bfae-a3ba7068cce3" name="Fazer Pedido" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="72fa8f93-c1fa-4234-8215-8f4ef2513c9a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="89fc1c92-df96-457e-aaa8-48aee7aaa8ef" />
+          </association>
+          <association Id="cb9f563d-40e3-4102-8eb6-54018496687e" isDerived="false" sourceEndRoleName="Cliente" targetEndRoleName="Gerenciar seu Carro" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="c51f2f37-f123-4d23-90f7-cf8f201c4485" LastKnownName="Gerenciar seu Carro" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4e2ab628-9382-46f7-a27c-7558454910a5" name="Cliente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="96e63f55-3282-48c4-8e8e-4bffcc6586b3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9b40f753-cd81-490d-a3cd-3f7d17435242" name="Gerenciar seu Carro" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="635e8c9d-260b-41bb-aba9-f90e535f01b3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="74bc6e65-b50f-4d17-9324-68fd19a485eb" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="894ef6f4-574e-4a68-8bca-e99f767c76c0" name="Solicitar Mesa" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d65c9f34-2746-4413-9c54-2ba668b41bbd" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="61663a6b-5889-4963-a8dc-b47ed0734af2" name="Abandonar Fila" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8b125602-907f-4467-b326-553e8be0444c" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4654a8ab-5e6c-4763-9d1c-ea44e59b5e31" name="Ir Embora" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ee6471aa-adbf-4746-9502-43175d0bce0d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="382530b0-2d05-428f-8e52-8fdc9ca31194" name="Pagar conta" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fe5c0b0d-df8d-4f0d-be06-75bc9b08f779" />
+        <targetEnds>
+          <association Id="83ec7a0b-4dca-4bfc-b372-d4ae584e867d" isDerived="false" sourceEndRoleName="Pagar conta" targetEndRoleName="Ir Embora" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4654a8ab-5e6c-4763-9d1c-ea44e59b5e31" LastKnownName="Ir Embora" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7da552fa-89f4-4738-b714-454df84824af" name="Pagar conta" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8d5aca5f-21a8-49b5-9711-e525f65a0955" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e53db36d-35ff-4b0c-aae3-837cc0d36e1d" name="Ir Embora" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a9527468-cb39-48f1-943c-e63a10be2c67" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="483a16a5-8732-497d-a0d9-75f8e6787f85" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a9cf0ce2-4c23-4519-9e6f-545c8b2b3c87" name="Fazer Pedido" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="24254380-fc15-4880-9093-208606c388f5" />
+        <targetEnds>
+          <association Id="827f15a6-7e67-4573-93b8-e55cd18ae14e" isDerived="false" sourceEndRoleName="Fazer Pedido" targetEndRoleName="Consultar cardápio" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f4149de3-7693-4542-99b1-c32f29aae42d" LastKnownName="Consultar cardápio" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4374549e-ac06-49a9-82a3-8023d79cfbc9" name="Fazer Pedido" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5eb9b03d-e14a-4c64-98d4-26593b2b9c08" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="33863fcf-4670-4d27-b46d-6e10231c27f7" name="Consultar cardápio" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ad46d0f9-60a3-46b1-8aa6-b58ab06549b0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b4ccaace-aff5-492b-a759-59baaffc712f" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c51f2f37-f123-4d23-90f7-cf8f201c4485" name="Gerenciar seu Carro" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="69d747c4-e3a9-497d-8860-536895d48813" />
+        <targetEnds>
+          <association Id="ae25b948-2821-4cf8-8b56-48ccd68c2b76" isDerived="false" sourceEndRoleName="Gerenciar seu Carro" targetEndRoleName="UseCase1" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ab4b6d2d-cbac-4714-a7e9-b0ac7e11b431" LastKnownName="Pedir pra remover" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e9e81de5-14dc-4233-b1f7-dfa6e8d3801d" name="Gerenciar seu Carro" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0cd32235-c022-44b9-b93e-77a9594f7f94" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d90c78bf-f14e-4800-8591-ebce9f6d2278" name="UseCase1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="187a8f2a-61f6-4e2b-b3e1-d1b1c95abc80" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bc4afbd1-c7bb-40c3-9d9f-144d8a02f1ab" />
+          </association>
+          <association Id="8d07a125-9d70-4175-b5dd-8ac2d6b124ea" isDerived="false" sourceEndRoleName="Gerenciar seu Carro" targetEndRoleName="UseCase3" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="106e15f0-389a-4472-b56c-fb662112e764" LastKnownName="Pedir para estacionar" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6646a1a3-65a6-405a-ae4f-fe215ba98747" name="Gerenciar seu Carro" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a247d2d6-64e4-4297-935f-e1538592e7d6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d7009f35-8351-4d79-9f89-6d39c4b72e27" name="UseCase3" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="57e8bfc0-3206-4ee2-9c5e-37d4dada5373" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="96d984ac-eaca-4c29-bfc0-febe6237a691" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ab4b6d2d-cbac-4714-a7e9-b0ac7e11b431" name="Pedir pra remover" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0014edcd-da76-4b4a-93e1-46337e46e1a3" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="106e15f0-389a-4472-b56c-fb662112e764" name="Pedir para estacionar" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="01e29029-67a1-40ad-9f2c-d97cb268be8d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f4149de3-7693-4542-99b1-c32f29aae42d" name="Consultar cardápio" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1e197570-a9ef-40d3-b570-9566f2e88bdd" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="c8a2b874-1a22-451f-81cb-be5f74fd9c48" name="Cozinheiro" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="962f27de-c13e-42ac-b4a3-b27123fb9d44" />
+        <targetEnds>
+          <association Id="bc794db7-bab8-4168-a0f1-06e41f5536a5" isDerived="false" sourceEndRoleName="Cozinheiro" targetEndRoleName="Preparar pedido" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ec055cc2-aa22-4c38-a5d3-5896cf7bc4fc" LastKnownName="Preparar pedido" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="edfd20c0-e129-4f48-975c-4bc63fd89252" name="Cozinheiro" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f208bae4-c7f7-43d8-9bc6-ea2baea61d6b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="db8254cc-715f-49f7-b072-f337820da804" name="Preparar pedido" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="88e0163b-3a34-4627-831e-6043eb6a8de6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c412a65b-3e68-45be-8c59-a2c71a8817fa" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ec055cc2-aa22-4c38-a5d3-5896cf7bc4fc" name="Preparar pedido" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9d4ac4f6-1935-4094-99e3-051e614117c7" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="8f32c201-bf11-4082-a6ba-df4c7bb30ead" name="Garçom" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="493bd787-b7ce-4a10-a609-070cd9e6cc8b" />
+        <targetEnds>
+          <association Id="55ffafa1-9c25-490a-be50-5a5f1db4b843" isDerived="false" sourceEndRoleName="Garçom" targetEndRoleName="Pegar pedido" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e6f72d47-2639-46db-9637-ddab903da33c" LastKnownName="Pegar pedido" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="15bb25f3-12d8-4eec-b72c-08e77fd2336a" name="Garçom" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1b93bf86-acb4-438d-afb0-b2de287910bd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0c75d710-242a-4b5d-94eb-811a9494b620" name="Pegar pedido" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="847fba8b-356f-4fda-9fbd-43b97defdc8a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ea27a7b5-0400-437a-9ced-7a70b0fd151d" />
+          </association>
+          <association Id="f9fccfd5-5651-4a4d-9c28-8fe9e4a7d1bf" isDerived="false" sourceEndRoleName="Garçom" targetEndRoleName="Solicitar preparo" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ac7e489b-1b75-4a8a-875c-d4d923f7e90f" LastKnownName="Solicitar preparo" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5607814a-20f1-444e-8d60-26519f621c6a" name="Garçom" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="abb035c0-690b-4ed4-989e-bcede10bda1e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2016505c-7405-476f-9550-b35f7463a82f" name="Solicitar preparo" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="83ea1b6f-bfe2-43d8-98ef-1756aef5ed54" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b130019b-8d89-4678-9220-9ddd720dd05e" />
+          </association>
+          <association Id="e459dd20-a4b5-420a-8f4e-3d172e143c35" isDerived="false" sourceEndRoleName="Garçom" targetEndRoleName="Entregar pedido" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="88146c5e-bbde-4c44-9b3d-ad10bc57f76a" LastKnownName="Entregar pedido" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dc650526-b0a7-4815-8fdb-7a31fe519d93" name="Garçom" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="62ab8679-796e-485b-aece-a8f26aced7a7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e2a8345e-aafa-41d5-9d2a-ea2bacb3d6dd" name="Entregar pedido" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="25617961-efe6-4b25-90d9-4a208c4535d4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6acfbd97-9e65-4750-bf48-89bfde96a660" />
+          </association>
+          <association Id="e54a453a-7e50-4b44-ab37-7487668dbf50" isDerived="false" sourceEndRoleName="Garçom" targetEndRoleName="Informar total" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b9f1132d-2612-4fe0-a2db-b885f835d648" LastKnownName="Informar total" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ecc49348-cc91-4650-a2ad-d17a2aa2e6c0" name="Garçom" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="90a700b4-c624-4b55-86a6-b292a2376231" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="49f87549-39d4-4b14-b508-c706c90d28e4" name="Informar total" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="53476e1d-a43e-4318-b2a2-5708bfecd3ed" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="af2b5ff7-0403-4562-a80a-507a3ed55d4b" />
+          </association>
+          <association Id="d3ec5169-126f-49f7-9c4e-eb04a3d17c50" isDerived="false" sourceEndRoleName="Garçom" targetEndRoleName="Alocar mesa" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2708a362-f5e3-48f1-b0c0-395a80d981de" LastKnownName="Alocar mesa" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="18a42e65-3719-498e-893c-fc33570cffdb" name="Garçom" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7ee5880b-4cbb-4a19-a9f6-930bb6524e2a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="abefb6ee-f2d1-44a4-b369-22e80a639760" name="Alocar mesa" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="cc689b55-9237-45c0-9240-19fdef3ce953" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9414ac03-87bf-4d13-a9f0-f0b09c1e8f21" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e6f72d47-2639-46db-9637-ddab903da33c" name="Pegar pedido" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8e48d8b1-4dbd-416e-95b3-524bdc00ceb1" />
+        <targetEnds>
+          <association Id="8e4c3a9f-f641-442d-bf34-a729bf3d070f" isDerived="false" sourceEndRoleName="Pegar pedido" targetEndRoleName="Cliente" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="0cf1e50b-daf9-432e-9c80-81eed9c4e3b8" LastKnownName="Cliente" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3d597f11-1134-4dfa-bd80-6f197d9f60fe" name="Pegar pedido" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="23b36c58-f32f-4147-bc96-08d52f22dddf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="40414ba0-f846-4b7c-aedb-8d729f6d7920" name="Cliente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="337d3346-e034-48bd-9f73-9b59902cec36" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2a3293a3-1960-458f-970a-15e80558b48a" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ac7e489b-1b75-4a8a-875c-d4d923f7e90f" name="Solicitar preparo" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5a523c99-c363-48ed-ad1b-4215c1434106" />
+        <targetEnds>
+          <association Id="63c5556d-79de-43af-aa6b-e71cd8c7d807" isDerived="false" sourceEndRoleName="Solicitar preparo" targetEndRoleName="Cozinheiro" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="c8a2b874-1a22-451f-81cb-be5f74fd9c48" LastKnownName="Cozinheiro" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7f4069c2-bad9-4ca7-80e7-963b54402c52" name="Solicitar preparo" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3beb74f8-f4aa-483e-bfd2-ef58af7afebf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f5323cf3-d7ff-40eb-9b06-0baccdd80466" name="Cozinheiro" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c12f7eaf-2a68-4769-80a8-6a1064e159f8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a404a981-0e91-41fd-9bf9-886c4d80a45e" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="88146c5e-bbde-4c44-9b3d-ad10bc57f76a" name="Entregar pedido" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="401e0a95-ffb8-4bc3-a17f-12ae92a1dbdd" />
+        <targetEnds>
+          <association Id="bcd78fb8-d7b2-41a2-b1fd-abea80186c1d" isDerived="false" sourceEndRoleName="Entregar pedido" targetEndRoleName="Cozinheiro" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="c8a2b874-1a22-451f-81cb-be5f74fd9c48" LastKnownName="Cozinheiro" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c61361fa-5b67-4eb9-9a87-66efc44f4aa5" name="Entregar pedido" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="85e2f317-838e-4552-a303-bbd0a5bc30be" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6d0ae29f-68d3-4d6b-87ba-6b67bc66ac51" name="Cozinheiro" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="026caf18-9fd8-4d69-866b-8070a9c2dacd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d01fadc8-faf2-4380-af15-7be35c94ea1e" />
+          </association>
+          <association Id="656ff98b-b4ea-4fd0-8041-6a41f0634808" isDerived="false" sourceEndRoleName="Entregar pedido" targetEndRoleName="Cliente" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="0cf1e50b-daf9-432e-9c80-81eed9c4e3b8" LastKnownName="Cliente" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b0382324-51e2-4e8c-a644-11f53f51935e" name="Entregar pedido" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4145c3b6-b915-463a-a5fe-33d564b8aa7a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2636c88b-d6fd-49b1-9aae-3a6200f12831" name="Cliente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2b78dbe5-f942-4d83-8239-e4b4db0800d3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="69993252-1ac1-464c-8c88-507198cbe90f" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b9f1132d-2612-4fe0-a2db-b885f835d648" name="Informar total" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="995fc060-67bb-47c7-8988-ba8e80712d8c" />
+        <targetEnds>
+          <association Id="a6dc05e5-0d06-44a2-b374-2d20abf266cd" isDerived="false" sourceEndRoleName="Informar total" targetEndRoleName="Pagar conta" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="382530b0-2d05-428f-8e52-8fdc9ca31194" LastKnownName="Pagar conta" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f6901d6d-863c-4e2c-8ab1-aec2d91c5d99" name="Informar total" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="40033401-3d8c-4928-8dcd-b0a32adf29c6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="39e86c1c-013e-46bb-a6a7-d8b67022ade6" name="Pagar conta" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="94319276-4eb6-4427-9697-f3b754dd41ae" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="890643f1-6d6e-48b0-a286-5b4bd5f801ef" />
+          </association>
+          <association Id="20a92250-910f-4004-9e75-9edb840871cd" isDerived="false" sourceEndRoleName="Informar total" targetEndRoleName="Cliente" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="0cf1e50b-daf9-432e-9c80-81eed9c4e3b8" LastKnownName="Cliente" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bfa7279c-d332-4cd3-8c49-2367f51160fe" name="Informar total" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5ca76154-fb6f-4890-84f4-72ac07a8332d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="caab7a2d-6ee8-4eaa-89e3-9632b97dc1e5" name="Cliente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="90a2360e-a0cc-4731-942f-ff0c60c51f6a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="73176122-2147-487b-821d-8ef3f3862e3f" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2708a362-f5e3-48f1-b0c0-395a80d981de" name="Alocar mesa" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="54884478-459c-4530-adc6-7ed9a7ea7a8b" />
+        <targetEnds>
+          <association Id="4a460963-2d4c-4e37-a88d-2c2f41e6f8ca" isDerived="false" sourceEndRoleName="Alocar mesa" targetEndRoleName="Solicitar Mesa" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="894ef6f4-574e-4a68-8bca-e99f767c76c0" LastKnownName="Solicitar Mesa" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c946645b-8189-412e-88ed-650752b1192b" name="Alocar mesa" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5cd707fa-3f7b-40d5-854e-17d2e8355179" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="57ed6a49-7a01-4e95-8011-59d572146432" name="Solicitar Mesa" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2225bbef-5a0c-4968-b54f-0633f605ba24" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5cd6e398-e6ba-4915-8683-7a3da359c1e6" />
+          </association>
+          <association Id="d157cbf4-e202-42f4-a394-27b41435c48a" isDerived="false" sourceEndRoleName="Alocar mesa" targetEndRoleName="Juntar mesas" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="71b228ab-9464-40cb-8a04-1333e0ca9fec" LastKnownName="Juntar mesas" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f2b88981-d500-466a-b4eb-4de9bd3f4b36" name="Alocar mesa" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="67d25a7b-ec2e-4c74-820c-5e41625f657d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f579a170-031b-4327-8700-868cdb7fc0ae" name="Juntar mesas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7f189ff6-d573-4b16-8153-839d463b6dcd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="313d71ac-de75-4994-9527-823ed503d0ab" />
+          </association>
+          <association Id="1237c81a-1d6d-4976-b408-9b6ba5aa9b9e" isDerived="false" sourceEndRoleName="Alocar mesa" targetEndRoleName="Enviar para fila" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="fa41ff94-ce0a-4789-9f7a-d172d7b8e3b2" LastKnownName="Enviar para fila" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="168a7889-d655-415d-bf24-5f8aa5eeab39" name="Alocar mesa" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9da47781-8dfc-46d6-8629-2112098a6d3c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b3c0c2be-fce0-4ce3-b747-def381c39a7a" name="Enviar para fila" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="98a9a3b7-02b3-41d7-90b6-4fe495531859" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e230b09d-73dc-44ec-8589-4aa12217e73f" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="71b228ab-9464-40cb-8a04-1333e0ca9fec" name="Juntar mesas" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c78143e3-a520-4353-8e6c-5f20f949251b" />
+        <targetEnds>
+          <association Id="0f427665-b25c-48ff-bb36-d9d84bd890db" isDerived="false" sourceEndRoleName="Juntar mesas" targetEndRoleName="Solicitar Mesa" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="894ef6f4-574e-4a68-8bca-e99f767c76c0" LastKnownName="Solicitar Mesa" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="09d3538a-5d68-48f4-ba55-31757c372c23" name="Juntar mesas" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c1592bca-a763-448d-98a5-45e885bd89e6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5d9841eb-2fbf-4fea-8c41-e80c798d1cff" name="Solicitar Mesa" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="77b67021-b329-43d8-a22d-9ab60bebe905" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="904d5212-6f5d-4d18-9dd7-169a4ff29eb1" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="fa41ff94-ce0a-4789-9f7a-d172d7b8e3b2" name="Enviar para fila" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2c56d9df-dc76-4567-997c-5aee0e94156f" />
+        <targetEnds>
+          <association Id="7ff29f19-c49d-4104-a447-2a30e9149443" isDerived="false" sourceEndRoleName="Enviar para fila" targetEndRoleName="Enviar para fila" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="fa41ff94-ce0a-4789-9f7a-d172d7b8e3b2" LastKnownName="Enviar para fila" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c5f86e06-98f2-4b47-b027-4dce252a09b3" name="Enviar para fila" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6e0cc49a-0197-4381-9094-bc541bde33a9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d695eb4a-6dd1-4c9a-934d-bd0210a25d92" name="Enviar para fila" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c4f43b42-f388-4a18-b376-33b3727ae63f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="dd478d8f-7968-4e9c-8de6-28895f734296" />
+          </association>
+          <association Id="64df17dc-630e-44c3-a092-f2259e3c704b" isDerived="false" sourceEndRoleName="Enviar para fila" targetEndRoleName="Cliente" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="0cf1e50b-daf9-432e-9c80-81eed9c4e3b8" LastKnownName="Cliente" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="36623a23-8e3c-4a6d-a501-fbb7a92dbc95" name="Enviar para fila" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="449879be-812e-4b30-af03-aa934c6d7ab3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fc8a5e6f-45f5-44c2-9f19-9f857b572cc0" name="Cliente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ff31070b-b9a8-4083-8675-de686938413d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3429b524-05a3-4b24-9ded-7437ac328e66" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="751a9343-ba07-4c74-ad65-f7e88b508d51" name="Manobrista" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4eab67b9-3631-435e-8261-f97eee6d159e" />
+        <targetEnds>
+          <association Id="974095f7-eb77-4fe0-8860-672da96f9b39" isDerived="false" sourceEndRoleName="Actor1" targetEndRoleName="Estacionar carro" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="04e52998-861c-4a0a-a958-3c97a1a605f6" LastKnownName="Estacionar carro" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a04ac81c-10d8-453c-b0a5-857b82d9584a" name="Actor1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b2d71a6f-9178-4edc-9449-fd03615a165d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cbdd2d94-6ecb-49c7-bf55-3dcde4279f88" name="Estacionar carro" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1e120606-dfb1-4166-b061-0dc2cb2919ae" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7284e32e-041b-4d69-a5f1-9660e35fbe04" />
+          </association>
+          <association Id="e4ab61f1-2ea7-49a1-bab4-713c0be6fa06" isDerived="false" sourceEndRoleName="Actor1" targetEndRoleName="Retirar carro" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1e1f37f7-3f0f-45f9-ab1a-fd1ae062dbf4" LastKnownName="Retirar carro" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="50ee853d-5c19-463e-b4db-75978637e798" name="Actor1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c779bc21-1189-44c1-ad0e-4643e032d6a3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4f78bd8f-4b7e-4fd1-aad6-60328a69c4ca" name="Retirar carro" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e3354182-7cf0-4ab0-8235-8fca8be25a85" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5fbe347e-90e6-477a-93ff-40494d894779" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="04e52998-861c-4a0a-a958-3c97a1a605f6" name="Estacionar carro" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b4cf7c66-8d5c-4202-871e-b06c2f1b0c50" />
+        <targetEnds>
+          <association Id="dc1a0292-049a-4c97-8030-ace777477fb2" isDerived="false" sourceEndRoleName="Estacionar carro" targetEndRoleName="Pedir para estacionar" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="106e15f0-389a-4472-b56c-fb662112e764" LastKnownName="Pedir para estacionar" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f180c6fe-4d82-4c9e-b45e-b46ad5b453a0" name="Estacionar carro" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c64daf7a-3198-4ce2-b45a-2a727e8165ba" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="acdc9051-469b-45b4-a5c6-5818793de085" name="Pedir para estacionar" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d094c345-ac8d-4764-a195-26f12fd76013" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3283923e-3253-4e55-8c0c-c37678b2c2c2" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1e1f37f7-3f0f-45f9-ab1a-fd1ae062dbf4" name="Retirar carro" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="61797e8b-0cc5-4be5-9588-366fbddc3eab" />
+        <targetEnds>
+          <association Id="5ce66e5d-a4c5-49cf-8393-89280edbce2a" isDerived="false" sourceEndRoleName="Retirar carro" targetEndRoleName="Pedir pra remover" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ab4b6d2d-cbac-4714-a7e9-b0ac7e11b431" LastKnownName="Pedir pra remover" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8cf81954-e249-4b5b-aa9d-7279320e1962" name="Retirar carro" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7931f258-5968-45d0-abd9-4866142be0c9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f07ee09f-192b-4dc8-a25b-d8a10bf64004" name="Pedir pra remover" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="99db1abf-1e90-4f47-92e9-70884d0fae43" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="edbf9bc5-6c91-440a-ae57-b51bb69aee43" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="c893afbd-f480-4105-b0eb-d614c9f56fd6" name="Administrador" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c23c382d-9feb-4ddc-b157-4146c0241045" />
+        <targetEnds>
+          <association Id="527da6e7-7845-4321-8716-2ee332b8e9e4" isDerived="false" sourceEndRoleName="Administrador" targetEndRoleName="Listar Items ordenadamente" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="dabf3d74-e15d-41c6-ba0d-bf09ef64b718" LastKnownName="Listar Items ordenadamente" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f09c5f96-3914-437a-969a-3d039355a44e" name="Administrador" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9f582635-c84f-4262-b3bf-29d8482c68b6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ae5113b6-0cca-4e55-9382-4968bcab0bba" name="Listar Items ordenadamente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="229e44ac-335f-45bd-a901-e0a365363abb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c3d6914c-bda8-45a8-b67c-eee2b69b3e83" />
+          </association>
+          <association Id="21af40ea-2b7f-4c45-9430-99df3d9abfe0" isDerived="false" sourceEndRoleName="Administrador" targetEndRoleName="Buscar Items" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8dccae6f-a5f3-44c4-8b78-e5a2466be8ca" LastKnownName="Buscar Items" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a61bec34-921a-49e2-b51b-59cc7d9d983a" name="Administrador" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="23fab5d7-b662-4bd5-b76c-c623a587cdb7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0c12f45c-a38a-4de3-8e36-b80a265cbfc2" name="Buscar Items" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0317b30c-350f-44de-83e4-2e7c4e388359" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="90b34910-1837-4fbb-9fa4-661c9355a5fd" />
+          </association>
+          <association Id="33a7fc38-c329-4d09-96d0-5e9b2b139263" isDerived="false" sourceEndRoleName="Administrador" targetEndRoleName="Manter items" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4ba35249-985b-42ce-8b23-4bfcf68a44bc" LastKnownName="Manter items" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="69b7311f-7ab0-4476-a90a-fb87f0f90972" name="Administrador" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a34605fe-55c1-4b15-a13d-1b33c66da48d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dcf83687-0d48-4020-abd2-6253dd2007d1" name="Manter items" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1b718157-c05a-4c2c-baa4-53e45f73aad5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="83995bd2-2903-4364-abba-9d6ee1682cd6" />
+          </association>
+          <association Id="f7682e8c-1a48-4543-91b5-1332e5b82daa" isDerived="false" sourceEndRoleName="Administrador" targetEndRoleName="Consultar movimentação" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e811e6db-f55b-400a-a065-709bfeef29d6" LastKnownName="Consultar movimentação" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d168a4c7-a765-41df-8583-4c5eba9eb643" name="Administrador" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="596f4758-ee73-4c9d-b9d6-ca8228dd524d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9e8e0adc-80d2-427a-9d41-2de3e3f896cc" name="Consultar movimentação" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ca658c23-1909-480c-99b4-85193f9c4d9a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9dd72d8e-17ba-40c0-b053-97b1e3fa2407" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="dabf3d74-e15d-41c6-ba0d-bf09ef64b718" name="Listar Items ordenadamente" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b9955c10-82d6-43f8-863a-3896e58fe613" />
+        <targetEnds>
+          <association Id="8be012a0-ba4e-420a-910b-56eb39a15759" isDerived="false" sourceEndRoleName="Listar Items ordenadamente" targetEndRoleName="Pelo codigo" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="5519b7b1-e98f-4a8d-8463-dc891a1efba4" LastKnownName="Pelo codigo" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="57942d4a-839a-4984-bdf1-531726e72fbf" name="Listar Items ordenadamente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9b70b03c-64b5-4666-ad7a-9fd11bc59f6c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bc454350-f262-4b7c-b711-c4dc12a5fed2" name="Pelo codigo" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="398da7a0-2e36-4fcb-93fb-1f3618129e0a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="05382fcb-0d5c-4e8c-b4a7-33759aee10aa" />
+          </association>
+          <association Id="06c00e3b-c566-4fb4-a039-0439a2d0d057" isDerived="false" sourceEndRoleName="Listar Items ordenadamente" targetEndRoleName="pela descrição" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="20c16d59-59e6-46d3-b64b-7128720773d2" LastKnownName="pela descrição" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c428a94f-0be6-40ca-aafe-f5da7ab89675" name="Listar Items ordenadamente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9ffc6695-df25-44e4-b3d6-3a73c00d4d58" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c5c87b5e-f33b-47c2-bb87-093dae59d2c4" name="pela descrição" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="86e0c6eb-2fba-40a9-9051-38a6b947a1b5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4d535834-6269-46a0-a451-23f0d38ceb0f" />
+          </association>
+          <association Id="0790321b-70c8-41da-85d9-64aff9f1ea20" isDerived="false" sourceEndRoleName="Listar Items ordenadamente" targetEndRoleName="pelo preço" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="98ca2d45-b5c5-40d3-bd30-2d43badd337b" LastKnownName="pelo preço" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="88aa2155-9913-4dec-9dab-6911cb1f156b" name="Listar Items ordenadamente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="00749088-95c4-4016-b905-5b1ce4ab25b6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a34a5e29-4dd2-4525-baeb-1c84918aef0a" name="pelo preço" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4c34feb7-467d-4055-97d1-c7595f7f25f7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ee8b9217-f8a7-447f-9add-10e8246219f4" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5519b7b1-e98f-4a8d-8463-dc891a1efba4" name="Pelo codigo" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e596a530-db77-491c-89d4-16fc12ea2a00" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="20c16d59-59e6-46d3-b64b-7128720773d2" name="pela descrição" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="19e50311-279d-4366-bd43-0710e481f807" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="98ca2d45-b5c5-40d3-bd30-2d43badd337b" name="pelo preço" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="84bbab04-6e5f-4418-8e3d-108412a34b53" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8dccae6f-a5f3-44c4-8b78-e5a2466be8ca" name="Buscar Items" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="276307b7-1383-47dc-a25c-e9538767d67d" />
+        <targetEnds>
+          <association Id="69166f01-a47e-4ea2-92b7-27c854f41f0d" isDerived="false" sourceEndRoleName="Buscar Items" targetEndRoleName="Pelo código" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9eec346c-7a1e-41eb-9722-0039e9b9b539" LastKnownName="Pelo código" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="13596d0a-0c65-497a-831d-473fdb1bf9b6" name="Buscar Items" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="68d31ce6-9c56-41f5-83d2-523dbeabf30e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="82558f82-5568-4eaf-9699-644b668e9f5d" name="Pelo código" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="822c2f9c-0c67-4fa2-b28c-0a1aa7553950" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="406542bd-2516-4d30-9f3b-97eb86a29d4a" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9eec346c-7a1e-41eb-9722-0039e9b9b539" name="Pelo código" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e845635d-f8e9-48ae-92c8-1b2d7e1281a2" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4ba35249-985b-42ce-8b23-4bfcf68a44bc" name="Manter items" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3ff95057-3864-4e72-9ecf-2c635d3abc5d" />
+        <targetEnds>
+          <association Id="2b95254d-ba24-464e-b19a-be76b8772cb7" isDerived="false" sourceEndRoleName="Manter items" targetEndRoleName="Remover" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="69e6836c-d4ce-489c-88ca-bddb58307568" LastKnownName="Remover" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6665c91b-a188-44a8-9190-3c5984a85cc8" name="Manter items" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b72f3d94-a81c-44c5-99a5-e41e4a937ec3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fc6898aa-adb1-48ff-8dad-7d45dcbe6949" name="Remover" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2a6ce126-167e-4f1b-8bc0-4cfd52805553" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="994505f4-5215-4bc5-9ae9-f5feda4f8cfa" />
+          </association>
+          <association Id="7b929abc-9ab0-4de9-b3cb-3f047811585b" isDerived="false" sourceEndRoleName="Manter items" targetEndRoleName="Incluir" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9a0ee12f-2a61-41ec-afa8-9342910a9c2b" LastKnownName="Incluir" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="564e375f-24b2-47b0-a617-e6bcd6c1c17b" name="Manter items" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9b51e72d-c2bd-461b-b38b-9c79a17a0626" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7e27e043-c462-45e4-bae1-ce01175b9006" name="Incluir" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c1b9aaf3-21a5-434c-9a2d-19419751f672" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9c9516dc-869d-4c1a-9c6a-302bff48162b" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9a0ee12f-2a61-41ec-afa8-9342910a9c2b" name="Incluir" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4e8c5790-0199-41ac-82e8-9fe857abfc12" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="69e6836c-d4ce-489c-88ca-bddb58307568" name="Remover" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="424fd478-ad02-4c06-8597-34a60b3608dc" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e811e6db-f55b-400a-a065-709bfeef29d6" name="Consultar movimentação" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6fa37236-8d7c-4374-a4e6-2d86dbc04cb9" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="b46cba06-f61e-4f6e-8921-d2ce7c6d5da9" name="modelo_lab-t3">
+    <elementDefinition Id="55cb4af9-def1-4a3f-9d56-3218029ab5aa" />
+  </package>
+</useCaseModelRoot>

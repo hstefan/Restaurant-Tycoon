@@ -1,0 +1,3216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="55cb4af9-def1-4a3f-9d56-3218029ab5aa"
+  name="modelo_lab-t3" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <actor
+        Id="b562864c-66bf-4cb8-bd12-0152875d5143"
+        name="Cliente"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="332c5d96-080f-4165-ad10-b3272f6e10d0"
+            isDerived="false"
+            sourceEndRoleName="Cliente"
+            targetEndRoleName="Abandonar Fila"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="8b125602-907f-4467-b326-553e8be0444c"
+              LastKnownName="Abandonar Fila"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c1399292-3894-49e6-9512-3258567446bf"
+                  name="Cliente"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="264108fc-51d6-4888-9509-0b6e37bfe266"
+                  name="Abandonar Fila"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d2250454-9846-42fb-84c6-235399a6ea33"
+            isDerived="false"
+            sourceEndRoleName="Cliente"
+            targetEndRoleName="Pagar conta"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="fe5c0b0d-df8d-4f0d-be06-75bc9b08f779"
+              LastKnownName="Pagar conta"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="eb68d509-998a-4922-a04e-6a7b01fb0814"
+                  name="Cliente"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="104f216c-3078-4fa7-96b8-e78f72b365f5"
+                  name="Pagar conta"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="4912981d-e13c-4f0e-934b-1ca936b556d9"
+            isDerived="false"
+            sourceEndRoleName="Cliente"
+            targetEndRoleName="Solicitar Mesa"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d65c9f34-2746-4413-9c54-2ba668b41bbd"
+              LastKnownName="Solicitar Mesa"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="69cb3235-83f5-4964-9750-d91cf833b44e"
+                  name="Cliente"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3c61f96b-2ccb-46ca-bdfa-54f89d45c884"
+                  name="Solicitar Mesa"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="89fc1c92-df96-457e-aaa8-48aee7aaa8ef"
+            isDerived="false"
+            sourceEndRoleName="Cliente"
+            targetEndRoleName="Fazer Pedido"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="24254380-fc15-4880-9093-208606c388f5"
+              LastKnownName="Fazer Pedido"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="51d8a429-cb5e-4171-a15d-c06657732332"
+                  name="Cliente"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="72fa8f93-c1fa-4234-8215-8f4ef2513c9a"
+                  name="Fazer Pedido"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="74bc6e65-b50f-4d17-9324-68fd19a485eb"
+            isDerived="false"
+            sourceEndRoleName="Cliente"
+            targetEndRoleName="Gerenciar seu Carro"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="69d747c4-e3a9-497d-8860-536895d48813"
+              LastKnownName="Gerenciar seu Carro"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="96e63f55-3282-48c4-8e8e-4bffcc6586b3"
+                  name="Cliente"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="635e8c9d-260b-41bb-aba9-f90e535f01b3"
+                  name="Gerenciar seu Carro"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d65c9f34-2746-4413-9c54-2ba668b41bbd"
+        name="Solicitar Mesa"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e0be28d2-105f-4eaf-bd7f-ab9f52c2c173"
+        name="UseCase2"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8b125602-907f-4467-b326-553e8be0444c"
+        name="Abandonar Fila"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ee6471aa-adbf-4746-9502-43175d0bce0d"
+        name="Ir Embora"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fe5c0b0d-df8d-4f0d-be06-75bc9b08f779"
+        name="Pagar conta"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="483a16a5-8732-497d-a0d9-75f8e6787f85"
+            isDerived="false"
+            sourceEndRoleName="Pagar conta"
+            targetEndRoleName="Ir Embora"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="ee6471aa-adbf-4746-9502-43175d0bce0d"
+              LastKnownName="Ir Embora"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8d5aca5f-21a8-49b5-9711-e525f65a0955"
+                  name="Pagar conta"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a9527468-cb39-48f1-943c-e63a10be2c67"
+                  name="Ir Embora"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="24254380-fc15-4880-9093-208606c388f5"
+        name="Fazer Pedido"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="b4ccaace-aff5-492b-a759-59baaffc712f"
+            isDerived="false"
+            sourceEndRoleName="Fazer Pedido"
+            targetEndRoleName="Consultar cardápio"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="1e197570-a9ef-40d3-b570-9566f2e88bdd"
+              LastKnownName="Consultar cardápio"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5eb9b03d-e14a-4c64-98d4-26593b2b9c08"
+                  name="Fazer Pedido"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ad46d0f9-60a3-46b1-8aa6-b58ab06549b0"
+                  name="Consultar cardápio"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="69d747c4-e3a9-497d-8860-536895d48813"
+        name="Gerenciar seu Carro"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="bc4afbd1-c7bb-40c3-9d9f-144d8a02f1ab"
+            isDerived="false"
+            sourceEndRoleName="Gerenciar seu Carro"
+            targetEndRoleName="UseCase1"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="0014edcd-da76-4b4a-93e1-46337e46e1a3"
+              LastKnownName="Pedir pra remover"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0cd32235-c022-44b9-b93e-77a9594f7f94"
+                  name="Gerenciar seu Carro"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="187a8f2a-61f6-4e2b-b3e1-d1b1c95abc80"
+                  name="UseCase1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="96d984ac-eaca-4c29-bfc0-febe6237a691"
+            isDerived="false"
+            sourceEndRoleName="Gerenciar seu Carro"
+            targetEndRoleName="UseCase3"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="01e29029-67a1-40ad-9f2c-d97cb268be8d"
+              LastKnownName="Pedir para estacionar"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a247d2d6-64e4-4297-935f-e1538592e7d6"
+                  name="Gerenciar seu Carro"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="57e8bfc0-3206-4ee2-9c5e-37d4dada5373"
+                  name="UseCase3"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <artifact
+        Id="d32cd8fa-917d-4f20-ac37-75e71648c780"
+        name="Artifact1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="0014edcd-da76-4b4a-93e1-46337e46e1a3"
+        name="Pedir pra remover"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="01e29029-67a1-40ad-9f2c-d97cb268be8d"
+        name="Pedir para estacionar"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1e197570-a9ef-40d3-b570-9566f2e88bdd"
+        name="Consultar cardápio"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d6d7a978-801d-46b1-a261-0b97c8c82753"
+        name="UseCase1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="962f27de-c13e-42ac-b4a3-b27123fb9d44"
+        name="Cozinheiro"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="c412a65b-3e68-45be-8c59-a2c71a8817fa"
+            isDerived="false"
+            sourceEndRoleName="Cozinheiro"
+            targetEndRoleName="Preparar pedido"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="9d4ac4f6-1935-4094-99e3-051e614117c7"
+              LastKnownName="Preparar pedido"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f208bae4-c7f7-43d8-9bc6-ea2baea61d6b"
+                  name="Cozinheiro"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="88e0163b-3a34-4627-831e-6043eb6a8de6"
+                  name="Preparar pedido"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9d4ac4f6-1935-4094-99e3-051e614117c7"
+        name="Preparar pedido"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6867951d-5342-43b1-be49-8c6b6c5bd7a2"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="493bd787-b7ce-4a10-a609-070cd9e6cc8b"
+        name="Garçom"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="ea27a7b5-0400-437a-9ced-7a70b0fd151d"
+            isDerived="false"
+            sourceEndRoleName="Garçom"
+            targetEndRoleName="Pegar pedido"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="8e48d8b1-4dbd-416e-95b3-524bdc00ceb1"
+              LastKnownName="Pegar pedido"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1b93bf86-acb4-438d-afb0-b2de287910bd"
+                  name="Garçom"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="847fba8b-356f-4fda-9fbd-43b97defdc8a"
+                  name="Pegar pedido"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b130019b-8d89-4678-9220-9ddd720dd05e"
+            isDerived="false"
+            sourceEndRoleName="Garçom"
+            targetEndRoleName="Solicitar preparo"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="5a523c99-c363-48ed-ad1b-4215c1434106"
+              LastKnownName="Solicitar preparo"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="abb035c0-690b-4ed4-989e-bcede10bda1e"
+                  name="Garçom"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="83ea1b6f-bfe2-43d8-98ef-1756aef5ed54"
+                  name="Solicitar preparo"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6acfbd97-9e65-4750-bf48-89bfde96a660"
+            isDerived="false"
+            sourceEndRoleName="Garçom"
+            targetEndRoleName="Entregar pedido"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="401e0a95-ffb8-4bc3-a17f-12ae92a1dbdd"
+              LastKnownName="Entregar pedido"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="62ab8679-796e-485b-aece-a8f26aced7a7"
+                  name="Garçom"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="25617961-efe6-4b25-90d9-4a208c4535d4"
+                  name="Entregar pedido"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="af2b5ff7-0403-4562-a80a-507a3ed55d4b"
+            isDerived="false"
+            sourceEndRoleName="Garçom"
+            targetEndRoleName="Informar total"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="995fc060-67bb-47c7-8988-ba8e80712d8c"
+              LastKnownName="Informar total"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="90a700b4-c624-4b55-86a6-b292a2376231"
+                  name="Garçom"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="53476e1d-a43e-4318-b2a2-5708bfecd3ed"
+                  name="Informar total"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9414ac03-87bf-4d13-a9f0-f0b09c1e8f21"
+            isDerived="false"
+            sourceEndRoleName="Garçom"
+            targetEndRoleName="Alocar mesa"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="54884478-459c-4530-adc6-7ed9a7ea7a8b"
+              LastKnownName="Alocar mesa"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7ee5880b-4cbb-4a19-a9f6-930bb6524e2a"
+                  name="Garçom"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cc689b55-9237-45c0-9240-19fdef3ce953"
+                  name="Alocar mesa"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8e48d8b1-4dbd-416e-95b3-524bdc00ceb1"
+        name="Pegar pedido"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="2a3293a3-1960-458f-970a-15e80558b48a"
+            isDerived="false"
+            sourceEndRoleName="Pegar pedido"
+            targetEndRoleName="Cliente"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="b562864c-66bf-4cb8-bd12-0152875d5143"
+              LastKnownName="Cliente"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="23b36c58-f32f-4147-bc96-08d52f22dddf"
+                  name="Pegar pedido"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="337d3346-e034-48bd-9f73-9b59902cec36"
+                  name="Cliente"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5a523c99-c363-48ed-ad1b-4215c1434106"
+        name="Solicitar preparo"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="a404a981-0e91-41fd-9bf9-886c4d80a45e"
+            isDerived="false"
+            sourceEndRoleName="Solicitar preparo"
+            targetEndRoleName="Cozinheiro"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="962f27de-c13e-42ac-b4a3-b27123fb9d44"
+              LastKnownName="Cozinheiro"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3beb74f8-f4aa-483e-bfd2-ef58af7afebf"
+                  name="Solicitar preparo"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c12f7eaf-2a68-4769-80a8-6a1064e159f8"
+                  name="Cozinheiro"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="401e0a95-ffb8-4bc3-a17f-12ae92a1dbdd"
+        name="Entregar pedido"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="d01fadc8-faf2-4380-af15-7be35c94ea1e"
+            isDerived="false"
+            sourceEndRoleName="Entregar pedido"
+            targetEndRoleName="Cozinheiro"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="962f27de-c13e-42ac-b4a3-b27123fb9d44"
+              LastKnownName="Cozinheiro"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="85e2f317-838e-4552-a303-bbd0a5bc30be"
+                  name="Entregar pedido"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="026caf18-9fd8-4d69-866b-8070a9c2dacd"
+                  name="Cozinheiro"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="69993252-1ac1-464c-8c88-507198cbe90f"
+            isDerived="false"
+            sourceEndRoleName="Entregar pedido"
+            targetEndRoleName="Cliente"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="b562864c-66bf-4cb8-bd12-0152875d5143"
+              LastKnownName="Cliente"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4145c3b6-b915-463a-a5fe-33d564b8aa7a"
+                  name="Entregar pedido"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2b78dbe5-f942-4d83-8239-e4b4db0800d3"
+                  name="Cliente"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="995fc060-67bb-47c7-8988-ba8e80712d8c"
+        name="Informar total"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="890643f1-6d6e-48b0-a286-5b4bd5f801ef"
+            isDerived="false"
+            sourceEndRoleName="Informar total"
+            targetEndRoleName="Pagar conta"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="fe5c0b0d-df8d-4f0d-be06-75bc9b08f779"
+              LastKnownName="Pagar conta"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="40033401-3d8c-4928-8dcd-b0a32adf29c6"
+                  name="Informar total"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="94319276-4eb6-4427-9697-f3b754dd41ae"
+                  name="Pagar conta"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="73176122-2147-487b-821d-8ef3f3862e3f"
+            isDerived="false"
+            sourceEndRoleName="Informar total"
+            targetEndRoleName="Cliente"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="b562864c-66bf-4cb8-bd12-0152875d5143"
+              LastKnownName="Cliente"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5ca76154-fb6f-4890-84f4-72ac07a8332d"
+                  name="Informar total"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="90a2360e-a0cc-4731-942f-ff0c60c51f6a"
+                  name="Cliente"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="54884478-459c-4530-adc6-7ed9a7ea7a8b"
+        name="Alocar mesa"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="5cd6e398-e6ba-4915-8683-7a3da359c1e6"
+            isDerived="false"
+            sourceEndRoleName="Alocar mesa"
+            targetEndRoleName="Solicitar Mesa"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d65c9f34-2746-4413-9c54-2ba668b41bbd"
+              LastKnownName="Solicitar Mesa"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5cd707fa-3f7b-40d5-854e-17d2e8355179"
+                  name="Alocar mesa"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2225bbef-5a0c-4968-b54f-0633f605ba24"
+                  name="Solicitar Mesa"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="313d71ac-de75-4994-9527-823ed503d0ab"
+            isDerived="false"
+            sourceEndRoleName="Alocar mesa"
+            targetEndRoleName="Juntar mesas"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c78143e3-a520-4353-8e6c-5f20f949251b"
+              LastKnownName="Juntar mesas"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="67d25a7b-ec2e-4c74-820c-5e41625f657d"
+                  name="Alocar mesa"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7f189ff6-d573-4b16-8153-839d463b6dcd"
+                  name="Juntar mesas"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e230b09d-73dc-44ec-8589-4aa12217e73f"
+            isDerived="false"
+            sourceEndRoleName="Alocar mesa"
+            targetEndRoleName="Enviar para fila"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="2c56d9df-dc76-4567-997c-5aee0e94156f"
+              LastKnownName="Enviar para fila"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9da47781-8dfc-46d6-8629-2112098a6d3c"
+                  name="Alocar mesa"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="98a9a3b7-02b3-41d7-90b6-4fe495531859"
+                  name="Enviar para fila"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c78143e3-a520-4353-8e6c-5f20f949251b"
+        name="Juntar mesas"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="904d5212-6f5d-4d18-9dd7-169a4ff29eb1"
+            isDerived="false"
+            sourceEndRoleName="Juntar mesas"
+            targetEndRoleName="Solicitar Mesa"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d65c9f34-2746-4413-9c54-2ba668b41bbd"
+              LastKnownName="Solicitar Mesa"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c1592bca-a763-448d-98a5-45e885bd89e6"
+                  name="Juntar mesas"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="77b67021-b329-43d8-a22d-9ab60bebe905"
+                  name="Solicitar Mesa"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2c56d9df-dc76-4567-997c-5aee0e94156f"
+        name="Enviar para fila"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="dd478d8f-7968-4e9c-8de6-28895f734296"
+            isDerived="false"
+            sourceEndRoleName="Enviar para fila"
+            targetEndRoleName="Enviar para fila"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="2c56d9df-dc76-4567-997c-5aee0e94156f"
+              LastKnownName="Enviar para fila"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6e0cc49a-0197-4381-9094-bc541bde33a9"
+                  name="Enviar para fila"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c4f43b42-f388-4a18-b376-33b3727ae63f"
+                  name="Enviar para fila"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="3429b524-05a3-4b24-9ded-7437ac328e66"
+            isDerived="false"
+            sourceEndRoleName="Enviar para fila"
+            targetEndRoleName="Cliente"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="b562864c-66bf-4cb8-bd12-0152875d5143"
+              LastKnownName="Cliente"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="449879be-812e-4b30-af03-aa934c6d7ab3"
+                  name="Enviar para fila"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ff31070b-b9a8-4083-8675-de686938413d"
+                  name="Cliente"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="50dae39c-31bd-4a7b-a3c5-7c74af290ddf"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="4eab67b9-3631-435e-8261-f97eee6d159e"
+        name="Manobrista"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="7284e32e-041b-4d69-a5f1-9660e35fbe04"
+            isDerived="false"
+            sourceEndRoleName="Actor1"
+            targetEndRoleName="Estacionar carro"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b4cf7c66-8d5c-4202-871e-b06c2f1b0c50"
+              LastKnownName="Estacionar carro"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b2d71a6f-9178-4edc-9449-fd03615a165d"
+                  name="Actor1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1e120606-dfb1-4166-b061-0dc2cb2919ae"
+                  name="Estacionar carro"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="5fbe347e-90e6-477a-93ff-40494d894779"
+            isDerived="false"
+            sourceEndRoleName="Actor1"
+            targetEndRoleName="Retirar carro"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="61797e8b-0cc5-4be5-9588-366fbddc3eab"
+              LastKnownName="Retirar carro"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c779bc21-1189-44c1-ad0e-4643e032d6a3"
+                  name="Actor1"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e3354182-7cf0-4ab0-8235-8fca8be25a85"
+                  name="Retirar carro"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b4cf7c66-8d5c-4202-871e-b06c2f1b0c50"
+        name="Estacionar carro"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="3283923e-3253-4e55-8c0c-c37678b2c2c2"
+            isDerived="false"
+            sourceEndRoleName="Estacionar carro"
+            targetEndRoleName="Pedir para estacionar"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="01e29029-67a1-40ad-9f2c-d97cb268be8d"
+              LastKnownName="Pedir para estacionar"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c64daf7a-3198-4ce2-b45a-2a727e8165ba"
+                  name="Estacionar carro"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d094c345-ac8d-4764-a195-26f12fd76013"
+                  name="Pedir para estacionar"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="61797e8b-0cc5-4be5-9588-366fbddc3eab"
+        name="Retirar carro"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="edbf9bc5-6c91-440a-ae57-b51bb69aee43"
+            isDerived="false"
+            sourceEndRoleName="Retirar carro"
+            targetEndRoleName="Pedir pra remover"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="0014edcd-da76-4b4a-93e1-46337e46e1a3"
+              LastKnownName="Pedir pra remover"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7931f258-5968-45d0-abd9-4866142be0c9"
+                  name="Retirar carro"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="99db1abf-1e90-4f47-92e9-70884d0fae43"
+                  name="Pedir pra remover"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="c23c382d-9feb-4ddc-b157-4146c0241045"
+        name="Administrador"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="c3d6914c-bda8-45a8-b67c-eee2b69b3e83"
+            isDerived="false"
+            sourceEndRoleName="Administrador"
+            targetEndRoleName="Listar Items ordenadamente"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b9955c10-82d6-43f8-863a-3896e58fe613"
+              LastKnownName="Listar Items ordenadamente"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9f582635-c84f-4262-b3bf-29d8482c68b6"
+                  name="Administrador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="229e44ac-335f-45bd-a901-e0a365363abb"
+                  name="Listar Items ordenadamente"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="90b34910-1837-4fbb-9fa4-661c9355a5fd"
+            isDerived="false"
+            sourceEndRoleName="Administrador"
+            targetEndRoleName="Buscar Items"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="276307b7-1383-47dc-a25c-e9538767d67d"
+              LastKnownName="Buscar Items"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="23fab5d7-b662-4bd5-b76c-c623a587cdb7"
+                  name="Administrador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0317b30c-350f-44de-83e4-2e7c4e388359"
+                  name="Buscar Items"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="83995bd2-2903-4364-abba-9d6ee1682cd6"
+            isDerived="false"
+            sourceEndRoleName="Administrador"
+            targetEndRoleName="Manter items"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="3ff95057-3864-4e72-9ecf-2c635d3abc5d"
+              LastKnownName="Manter items"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a34605fe-55c1-4b15-a13d-1b33c66da48d"
+                  name="Administrador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1b718157-c05a-4c2c-baa4-53e45f73aad5"
+                  name="Manter items"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9dd72d8e-17ba-40c0-b053-97b1e3fa2407"
+            isDerived="false"
+            sourceEndRoleName="Administrador"
+            targetEndRoleName="Consultar movimentação"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="6fa37236-8d7c-4374-a4e6-2d86dbc04cb9"
+              LastKnownName="Consultar movimentação"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="596f4758-ee73-4c9d-b9d6-ca8228dd524d"
+                  name="Administrador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ca658c23-1909-480c-99b4-85193f9c4d9a"
+                  name="Consultar movimentação"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b9955c10-82d6-43f8-863a-3896e58fe613"
+        name="Listar Items ordenadamente"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="05382fcb-0d5c-4e8c-b4a7-33759aee10aa"
+            isDerived="false"
+            sourceEndRoleName="Listar Items ordenadamente"
+            targetEndRoleName="Pelo codigo"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e596a530-db77-491c-89d4-16fc12ea2a00"
+              LastKnownName="Pelo codigo"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9b70b03c-64b5-4666-ad7a-9fd11bc59f6c"
+                  name="Listar Items ordenadamente"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="398da7a0-2e36-4fcb-93fb-1f3618129e0a"
+                  name="Pelo codigo"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="4d535834-6269-46a0-a451-23f0d38ceb0f"
+            isDerived="false"
+            sourceEndRoleName="Listar Items ordenadamente"
+            targetEndRoleName="pela descrição"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="19e50311-279d-4366-bd43-0710e481f807"
+              LastKnownName="pela descrição"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9ffc6695-df25-44e4-b3d6-3a73c00d4d58"
+                  name="Listar Items ordenadamente"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="86e0c6eb-2fba-40a9-9051-38a6b947a1b5"
+                  name="pela descrição"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ee8b9217-f8a7-447f-9add-10e8246219f4"
+            isDerived="false"
+            sourceEndRoleName="Listar Items ordenadamente"
+            targetEndRoleName="pelo preço"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="84bbab04-6e5f-4418-8e3d-108412a34b53"
+              LastKnownName="pelo preço"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="00749088-95c4-4016-b905-5b1ce4ab25b6"
+                  name="Listar Items ordenadamente"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4c34feb7-467d-4055-97d1-c7595f7f25f7"
+                  name="pelo preço"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e596a530-db77-491c-89d4-16fc12ea2a00"
+        name="Pelo codigo"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="19e50311-279d-4366-bd43-0710e481f807"
+        name="pela descrição"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="84bbab04-6e5f-4418-8e3d-108412a34b53"
+        name="pelo preço"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="276307b7-1383-47dc-a25c-e9538767d67d"
+        name="Buscar Items"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="406542bd-2516-4d30-9f3b-97eb86a29d4a"
+            isDerived="false"
+            sourceEndRoleName="Buscar Items"
+            targetEndRoleName="Pelo código"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e845635d-f8e9-48ae-92c8-1b2d7e1281a2"
+              LastKnownName="Pelo código"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="68d31ce6-9c56-41f5-83d2-523dbeabf30e"
+                  name="Buscar Items"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="822c2f9c-0c67-4fa2-b28c-0a1aa7553950"
+                  name="Pelo código"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e845635d-f8e9-48ae-92c8-1b2d7e1281a2"
+        name="Pelo código"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3ff95057-3864-4e72-9ecf-2c635d3abc5d"
+        name="Manter items"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="994505f4-5215-4bc5-9ae9-f5feda4f8cfa"
+            isDerived="false"
+            sourceEndRoleName="Manter items"
+            targetEndRoleName="Remover"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="424fd478-ad02-4c06-8597-34a60b3608dc"
+              LastKnownName="Remover"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b72f3d94-a81c-44c5-99a5-e41e4a937ec3"
+                  name="Manter items"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2a6ce126-167e-4f1b-8bc0-4cfd52805553"
+                  name="Remover"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9c9516dc-869d-4c1a-9c6a-302bff48162b"
+            isDerived="false"
+            sourceEndRoleName="Manter items"
+            targetEndRoleName="Incluir"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="4e8c5790-0199-41ac-82e8-9fe857abfc12"
+              LastKnownName="Incluir"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9b51e72d-c2bd-461b-b38b-9c79a17a0626"
+                  name="Manter items"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c1b9aaf3-21a5-434c-9a2d-19419751f672"
+                  name="Incluir"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4e8c5790-0199-41ac-82e8-9fe857abfc12"
+        name="Incluir"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="424fd478-ad02-4c06-8597-34a60b3608dc"
+        name="Remover"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6fa37236-8d7c-4374-a4e6-2d86dbc04cb9"
+        name="Consultar movimentação"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="bb4d9b7d-d568-4b43-af7a-149e76c3454d"
+        name="Client"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="3970a89a-6aa0-4eb1-bd7f-a383896eaae2"
+            isDerived="false"
+            sourceEndRoleName="Client"
+            targetEndRoleName="TableGroup"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="dd0aaf8e-ddc4-44cb-86fa-55c01ad58186"
+              LastKnownName="TableGroup"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="db5acce0-30c8-42a7-be70-25d578da1abc"
+                  name="Client"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="69c21441-ff8f-44a3-a6ee-ed907d653662"
+                      name="Lower"
+                      value="n" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="687e4c8c-2303-478a-82ea-941f50ad8b30"
+                      name="Upper"
+                      value="n" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bda4ecae-5214-47f6-bf5c-edc0d5969125"
+                  name="TableGroup"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8df7c055-6aea-48a6-b57d-eab7b670b213"
+            isDerived="false"
+            sourceEndRoleName="Client"
+            targetEndRoleName="Car"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="40204761-3a1b-4397-8328-427a8dd795f2"
+              LastKnownName="Car"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="81c0f0df-d46a-489d-9e0f-2711cac34519"
+                  name="Client"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="869b3d70-ce05-4e79-ad99-053bc1db6756"
+                  name="Car"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="2df47e53-a7dc-4ec7-81e8-eddb0b9c5ce0"
+            name="orderItems"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="697ee98e-aa78-4037-8142-a81385bd293f"
+            name="leaveQueue"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="7d62f3e7-a895-4831-b8f6-cf12f4351aaa"
+            name="askForPark"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="b8806f1c-c200-433c-8076-3630493e93be"
+            name="askForUnpark"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="50e5c3f1-126c-4e35-9fdf-be3e8444029b"
+            name="payBill"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="da54d63d-87e6-4a2a-8386-7af5bbe3c2a1"
+            name="askForATable"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="315e8f82-c8df-450c-acd6-6f23d2fb6136"
+            name="leaveRestaurant"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="dd0aaf8e-ddc4-44cb-86fa-55c01ad58186"
+        name="TableGroup"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="17a650a8-5f46-4c8f-9d6b-ebd50642c6d2"
+            isDerived="false"
+            sourceEndRoleName="TableGroup"
+            targetEndRoleName="Table"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="529d410c-eccd-4985-b56c-ad01e1dc1b31"
+              LastKnownName="Table"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="dd628bc2-9cc4-4a72-b649-afc951e8d275"
+                  name="TableGroup"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8bfc40af-c4df-476d-8160-13cf55ffab70"
+                  name="Table"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="f66fad7f-c457-435c-ab2a-9ba5197d4ad3"
+                      name="Lower"
+                      value="n" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="8bb96b3c-42df-4a3a-bdb3-fdc34769e162"
+                      name="Upper"
+                      value="n" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="529d410c-eccd-4985-b56c-ad01e1dc1b31"
+        name="Table"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="58caf879-279c-4c74-9927-57b37673eef3"
+        name="Waiter"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="a9ab5fe0-98ed-4161-a0ad-4ce299d895de"
+            isDerived="false"
+            sourceEndRoleName="Waiter"
+            targetEndRoleName="TableGroup"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="dd0aaf8e-ddc4-44cb-86fa-55c01ad58186"
+              LastKnownName="TableGroup"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="461a0139-1eea-45c8-9751-de6399ff6c07"
+                  name="Waiter"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7539291e-7299-492e-92c6-b25b0faccc18"
+                  name="TableGroup"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="bd7c7207-15b2-4f5b-933f-b01c0341442f"
+                      name="Lower"
+                      value="n" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="0eddd7b9-0a6d-4056-bfc4-c45728e0c8d2"
+                      name="Upper"
+                      value="n" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ef09301f-12fe-4719-81a5-b601bd18a7a2"
+            isDerived="false"
+            sourceEndRoleName="Waiter"
+            targetEndRoleName="Balcony"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="cb13c05d-101f-41af-867f-adbf9477b1c4"
+              LastKnownName="Balcony"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6cf5782b-27fd-4f94-84b2-9cd5c18b790a"
+                  name="Waiter"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a96b8c77-2de2-4042-bc50-57bc5004b7ca"
+                      name="Lower"
+                      value="n" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="34820dd0-e604-4028-8d1c-7755c4644e32"
+                      name="Upper"
+                      value="n" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5289d966-13bd-4120-bb79-da48107b0831"
+                  name="Balcony"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="06c08e61-079a-4913-8049-13b70479c362"
+            name="deliverRequest"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="268457c3-5f82-4feb-a196-7cc83d5dfc32"
+            name="getRequest"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="09db16c8-e776-4d28-9978-b9f2b6544fc5"
+            name="deliverBill"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="9c349752-8375-4809-ba52-147a5bfef504"
+            name="allocateTableGroup"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="c069cb3a-37d4-4287-b553-04da6de92f34"
+            name="askForPreparation"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="694d647c-3bc9-4796-89f6-6f8f571f9e33"
+        name="Valet"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="b94fb413-a005-4f57-8282-23f13269aa1d"
+            isDerived="false"
+            sourceEndRoleName="Valet"
+            targetEndRoleName="Car"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="40204761-3a1b-4397-8328-427a8dd795f2"
+              LastKnownName="Car"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f3ce8771-47d9-41d4-bd44-2b23cca8e9c9"
+                  name="Valet"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fe93940d-306b-4d67-bfec-fad07dbd0e32"
+                  name="Car"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="1b91acd8-2d6e-4414-9da8-a273007abb68"
+                      name="Lower"
+                      value="n" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a33061cf-aa15-4da3-900d-c0cc3b1b8043"
+                      name="Upper"
+                      value="n" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="191b6bd8-202b-43a1-8d34-dee8ffac719e"
+            isDerived="false"
+            sourceEndRoleName="Valet"
+            targetEndRoleName="Parking"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="aa853d98-170f-45fb-8ef0-2203ffa5ce59"
+              LastKnownName="Parking"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9702dc8f-520e-4179-8e64-edea096d957c"
+                  name="Valet"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="d9b13d7a-6c4d-4d74-bea7-988865ad5eed"
+                      name="Lower"
+                      value="n" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="67f234ec-279b-4d02-b717-dbe9f7fe46bc"
+                      name="Upper"
+                      value="n" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4ee59bab-a8c2-4ae8-8f04-faeef64d34ad"
+                  name="Parking"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="b8cb4b86-c1c0-4ed4-b71b-dd54316abfc8"
+            name="park"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="4baa29ca-1edf-45f3-953d-c781acad3ff8"
+            name="unpark"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="40204761-3a1b-4397-8328-427a8dd795f2"
+        name="Car"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="7fe3d9d2-8c73-4f49-84ab-66c61e5b47cd"
+        name="Chef"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="c0c24318-f087-490e-b8cc-8932e9c10c9d"
+            isDerived="false"
+            sourceEndRoleName="Chef"
+            targetEndRoleName="Balcony"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="cb13c05d-101f-41af-867f-adbf9477b1c4"
+              LastKnownName="Balcony"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="05bc8b99-bb12-42d9-8906-811b791334ac"
+                  name="Chef"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="71d672a4-4dd4-436d-863f-d277b06e4ec9"
+                      name="Lower"
+                      value="n" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="73add9c8-5d4f-48ac-b977-54620992e253"
+                      name="Upper"
+                      value="n" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6c462274-d023-43ac-9209-85af41669b9b"
+                  name="Balcony"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="0f87f45f-2923-42c3-a41a-b733fbaa7651"
+            name="prepare"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="cb13c05d-101f-41af-867f-adbf9477b1c4"
+        name="Balcony"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="4010b35e-276d-466e-959f-d48c3ce7e20c"
+            isDerived="false"
+            sourceEndRoleName="Balcony"
+            targetEndRoleName="Order"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e4b890c2-41ed-410c-9fee-53fa80f5444f"
+              LastKnownName="Order"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="65dd72f9-c530-4976-8822-4bf24a3296d7"
+                  name="Balcony"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b374dd2d-e524-495b-8567-f460267afee3"
+                  name="Order"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b3aac9b7-145a-4211-a5fa-069416187e63"
+                      name="Lower"
+                      value="n" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="63891949-543f-4857-822a-a5321ef540a8"
+                      name="Upper"
+                      value="n" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="28f9211b-b05c-4a13-bdb2-fbbc9871c3f2"
+        name="Admin"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="eec75b5b-3920-4723-a0cc-e1b3f5447369"
+            name="searchItemByCode"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="bd3673b3-852e-4c57-a720-39fc7519d07a"
+            name="removeItem"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="4b2e9c42-7ffb-4f3f-85d6-c44adeee19a9"
+            name="insertItem"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="7480bcb6-b7d1-4325-92df-588f37d09bde"
+            name="listItems"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="cededa7c-05dd-433e-a47e-d4b025eacea3"
+            name="consultMovimentation"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="aa853d98-170f-45fb-8ef0-2203ffa5ce59"
+        name="Parking"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="39271977-1e82-4123-abb4-34948f616f4b"
+            isDerived="false"
+            sourceEndRoleName="Parking"
+            targetEndRoleName="Car"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="40204761-3a1b-4397-8328-427a8dd795f2"
+              LastKnownName="Car"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5f2bf839-05ee-4c07-9c54-ee9fc67c240f"
+                  name="Parking"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8bce453f-9eee-4afb-b9aa-23d716004527"
+                  name="Car"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="16dc7e1a-b56e-4a96-859a-3f595df7651c"
+                      name="Lower"
+                      value="n" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="ac1131bf-2133-4ef2-bb21-fde810673af5"
+                      name="Upper"
+                      value="n" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a124aa26-ac54-42e5-9aec-1ece3035d9d1"
+        name="Item"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="17465a04-97db-437c-bf6d-83465f934946"
+            name="preparationTime"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="57ac5db0-0d82-443f-be95-ca33c04e957c"
+            name="description"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="48a77241-a509-4750-8933-682a1f3d20d8"
+            name="cost"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="7843f495-f930-4f2a-b777-327d98c42730"
+            name="name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="c72b9323-4ad9-4a20-9c93-0bb7b82c96a3"
+            name="id"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e4b890c2-41ed-410c-9fee-53fa80f5444f"
+        name="Order"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="008803ef-74c1-43ca-9bd6-6f5ccac52ee6"
+            isDerived="false"
+            sourceEndRoleName="Order"
+            targetEndRoleName="Item"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a124aa26-ac54-42e5-9aec-1ece3035d9d1"
+              LastKnownName="Item"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ce9caca5-223c-47d9-b112-5c4500bb164a"
+                  name="Order"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="9bbdc479-2914-4678-93b7-7e94dfce253c"
+                      name="Lower"
+                      value="n" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="32732a72-f421-4442-bbf5-74ac2ade2fa7"
+                      name="Upper"
+                      value="n" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0a482ee6-f679-4d57-b1e9-00e43d89f210"
+                  name="Item"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="5bfd2d73-70b9-4ecc-b9f8-b68788f1fcd0"
+                      name="Lower"
+                      value="n" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="6a157a17-95b0-4c33-b9df-cfb78c2ec1b2"
+                      name="Upper"
+                      value="n" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c7303fe9-48f0-4b21-8c68-a430db84a0e0"
+        name="Restaurant"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="b063c3a2-8030-459a-b7d5-17779fdaed99"
+            isDerived="false"
+            sourceEndRoleName="Restaurant"
+            targetEndRoleName="Admin"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="28f9211b-b05c-4a13-bdb2-fbbc9871c3f2"
+              LastKnownName="Admin"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a5bfb9f1-1273-4ec3-a04d-220d550b650f"
+                  name="Restaurant"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bb2f0198-1527-4654-9246-39359685295b"
+                  name="Admin"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b15ebb9d-5066-44a5-b7fe-c1bf196da28a"
+            isDerived="false"
+            sourceEndRoleName="Restaurant"
+            targetEndRoleName="Chef"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="7fe3d9d2-8c73-4f49-84ab-66c61e5b47cd"
+              LastKnownName="Chef"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a1fa4573-6806-4d3d-acf2-dd90a2f728d0"
+                  name="Restaurant"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3d14909f-c1bf-4eb0-9fcf-8b24db6bce26"
+                  name="Chef"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="749681dc-6b4a-4b00-aeef-cf93f0547279"
+                      name="Lower"
+                      value="n" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="76049350-d282-4fe4-a76b-00e3cabdedcf"
+                      name="Upper"
+                      value="n" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8fa86fe4-2dfb-4efa-8fe7-d27e339ef4ce"
+            isDerived="false"
+            sourceEndRoleName="Restaurant"
+            targetEndRoleName="Balcony"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="cb13c05d-101f-41af-867f-adbf9477b1c4"
+              LastKnownName="Balcony"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8f60d367-e365-4cfb-b023-7851fb1b8872"
+                  name="Restaurant"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4bae16fc-e47d-4057-97dc-f3692f396c8b"
+                  name="Balcony"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6852107a-503f-42bc-a1da-2887f3f5f82b"
+            isDerived="false"
+            sourceEndRoleName="Restaurant"
+            targetEndRoleName="Item"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a124aa26-ac54-42e5-9aec-1ece3035d9d1"
+              LastKnownName="Item"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8b6dded9-9cb7-4eb7-9bb9-409127c911db"
+                  name="Restaurant"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="32d69538-acce-4e62-8a07-2a6a4201fb9c"
+                  name="Item"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="d0c3570e-513c-4e2b-9ae4-dcc8d7a14714"
+                      name="Lower"
+                      value="n" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="9c94ee5c-d04b-4f9e-95a6-fb729bff541d"
+                      name="Upper"
+                      value="n" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="498b132a-d7e0-4ada-8b3a-1fbe3b38bd7e"
+            isDerived="false"
+            sourceEndRoleName="Restaurant"
+            targetEndRoleName="Parking"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="aa853d98-170f-45fb-8ef0-2203ffa5ce59"
+              LastKnownName="Parking"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="85c76782-df19-4955-bd8e-43bdf1bd70ac"
+                  name="Restaurant"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6295b1c3-e628-4b2d-9b1d-a339491deb33"
+                  name="Parking"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="63c350cb-04f3-486d-8975-45663aad4203"
+            isDerived="false"
+            sourceEndRoleName="Restaurant"
+            targetEndRoleName="Waiter"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="58caf879-279c-4c74-9927-57b37673eef3"
+              LastKnownName="Waiter"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2c79309a-769b-4a51-911c-9ff837de5661"
+                  name="Restaurant"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="581995e8-623c-4416-a629-2d7fb7af0d8c"
+                  name="Waiter"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="9a9d5370-c95a-49a6-b29d-c0f4f4198d8c"
+                      name="Lower"
+                      value="n" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="53910b56-21d5-4e86-8591-c59e74bc6063"
+                      name="Upper"
+                      value="n" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6f4a2a18-2b0e-4589-aa83-1bb9795a7292"
+            isDerived="false"
+            sourceEndRoleName="Restaurant"
+            targetEndRoleName="TableGroup"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="dd0aaf8e-ddc4-44cb-86fa-55c01ad58186"
+              LastKnownName="TableGroup"
+              LastKnownLocation="modelo_lab-t3.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fa439ad0-b31c-41bf-9864-2fb7cd78500b"
+                  name="Restaurant"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9267dba4-61e7-44f4-aadc-62f19da3710b"
+                  name="TableGroup"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
