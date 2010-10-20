@@ -79,9 +79,15 @@
     <ClInclude Include="src\Chair.h" />
     <ClInclude Include="src\Chef.h" />
     <ClInclude Include="src\Client.h" />
+    <ClInclude Include="src\htl\hallocator.h" />
+    <ClInclude Include="src\htl\hiterators.h" />
+    <ClInclude Include="src\htl\hvector.h" />
     <ClInclude Include="src\Table.h" />
     <ClInclude Include="src\TableGroup.h" />
     <ClInclude Include="src\Waiter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
