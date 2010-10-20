@@ -9,7 +9,7 @@ int main()
 	a.push_back(3);
 	for(htl::vector<int>::iterator it = a.begin(); it != a.end(); it++)
 	{
-		std::cout << *it;
+		std::cout << *it << std::endl;
 	}
 	getchar();
 	getchar();
