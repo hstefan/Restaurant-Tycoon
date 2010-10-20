@@ -12,10 +12,19 @@
 #ifndef RTY_TABLE_GROUP_H
 #define RTY_TABLE_GROUP_H
 
+#include "htl\hvector.h"
+#include "Table.h"
+
 namespace rty
 {
 	class TableGroup
-	{};
+	{
+	public:
+		void addTable(Table* table);
+		void removeTable(htl::vector<Table*>::iterator it);
+	private:
+		htl::vector<Table*> tables;
+	};
 }
 
 #endif
