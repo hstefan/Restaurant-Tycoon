@@ -39,5 +39,11 @@
     <ClInclude Include="src\Admin.h">
       <Filter>Header Files\actors</Filter>
     </ClInclude>
+    <ClInclude Include="src\Chair.h">
+      <Filter>Header Files\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Table.h">
+      <Filter>Header Files\objects</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
