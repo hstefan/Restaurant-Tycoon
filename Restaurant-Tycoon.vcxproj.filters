@@ -57,6 +57,15 @@
     <ClInclude Include="src\htl\hiterators.h">
       <Filter>Header Files\htlib</Filter>
     </ClInclude>
+    <ClInclude Include="src\htl\hlist.h">
+      <Filter>Header Files\htlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\htl\hlist_node.h">
+      <Filter>Header Files\htlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\htl\hiterator.h">
+      <Filter>Header Files\htlib</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

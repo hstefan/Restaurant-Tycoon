@@ -80,7 +80,10 @@
     <ClInclude Include="src\Chef.h" />
     <ClInclude Include="src\Client.h" />
     <ClInclude Include="src\htl\hallocator.h" />
+    <ClInclude Include="src\htl\hiterator.h" />
     <ClInclude Include="src\htl\hiterators.h" />
+    <ClInclude Include="src\htl\hlist.h" />
+    <ClInclude Include="src\htl\hlist_node.h" />
     <ClInclude Include="src\htl\hvector.h" />
     <ClInclude Include="src\Table.h" />
     <ClInclude Include="src\TableGroup.h" />
