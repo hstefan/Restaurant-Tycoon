@@ -59,7 +59,7 @@ namespace htl
 			template <class I>
 			friend class const_list_iterator;
 
-		//private: leve gambiarra...
+		private:
 			hlist_node<T>* ptr;
 		};
 
