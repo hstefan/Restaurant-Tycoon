@@ -24,9 +24,9 @@
 #ifndef HUGO_H_LIST__
 #define HUGO_H_LIST__
 
-#include "src/htl/hallocator.h"
-#include "src/htl/hlist_node.h"
-#include "src/htl/hiterator.h"
+#include "hallocator.h"
+#include "hlist_node.h"
+#include "hiterator.h"
 
 namespace htl 
 {
@@ -53,13 +53,13 @@ namespace htl
 			bool operator!=(const list_iterator<T>& it);
 			reference_type operator*();
 
-		private:
 			template <class S, class U>
 			friend class list;
 
 			template <class I>
 			friend class const_list_iterator;
 
+		//private: leve gambiarra...
 			hlist_node<T>* ptr;
 		};
 
@@ -335,23 +335,9 @@ namespace htl
 	list<T,Allocator>::list(const Allocator& x)
 		: first(0),  last(0), m_size(0), alloc(x)
 	{
-		first = new htl::detail::h_list_node(T(), 0, 0);
-		last = new htl::detail::h_list_node(T(), first, 0);
+		first = new detail::hlist_node<T>(T(), 0, 0);
+		last = new detail::hlist_node<T>(T(), first, 0);
 		first->next = last;
-	}
-
-	template <class T, class Allocator>
-	void list<T,Allocator>::_init_iterators()
-	{
-		m_iterators.begin = list_iterator<T>(first);
-		m_iterators.end = list_iterator<T>(end);
-		m_iterators.const_begin = const_list_iterator<T>(first);
-		m_iterators.const_end = const_list_iterator<T>(end);
-
-		m_iterators.rbegin = reverse_iterator<list_iterator<T>>(end);
-		m_iterators.rend = reverse_iterator<list_iterator<T>>(begin()--);
-		m_iterators.const_rbegin = const_reverse_iterator<List_iterator<T>>(end);
-		m_iterators.const_rend = const_reverse_iterator<List_iterator<T>>(begin--);	
 	}
 
 	template <class T, class Allocator>
@@ -359,10 +345,9 @@ namespace htl
 		const Allocator& x) 
 		: first(0), last(0), m_iterators(), m_size(0), alloc(x)
 	{
-		first = new h_list_node(T(), 0, 0);
-		last = new h_list_node(T(), first, 0);
+		first = new detail::hlist_node(T(), 0, 0);
+		last = new detail::hlist_node(T(), first, 0);
 		first->prev = last;
-		_init_iterators();
 		while(n >= 0)
 		{
 			push_back(value);
@@ -376,8 +361,8 @@ namespace htl
 		const Allocator& x)
 		: first(0), last(0), m_iterators(), m_size(0), alloc(x)
 	{
-		first = new h_list_node(T(), 0, 0);
-		last = new h_list_node(T(), first, 0);
+		first = new detail::hlist_node(T(), 0, 0);
+		last = new detail::hlist_node(T(), first, 0);
 		first->prev = last;
 		_init_iterators();
 		while(first != last)
@@ -392,8 +377,8 @@ namespace htl
 	list<T, Allocator>::list(const list<T, Allocator>& x)
 		: first(0), last(0), m_iterators(), m_size(0), alloc(x.get_allocator())
 	{
-		first = new h_list_node(T(), 0, 0);
-		last = new h_list_node(T(), first, 0);
+		first = new detail::hlist_node(T(), 0, 0);
+		last = new detail::hlist_node(T(), first, 0);
 		first->prev = last;
 		_init_iterators();
 		

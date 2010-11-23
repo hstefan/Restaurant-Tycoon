@@ -32,13 +32,20 @@ namespace htl
 		struct hlist_node
 		{
 		public:
-			T value;
+			T* value;
 			hlist_node<T>* prev;
 			hlist_node<T>* next;
 
 			hlist_node(T _value = T(), hlist_node<T>* _prev = 0, hlist_node<T>* _next = 0)
+				: value(new T(_value)), prev(_prev), next(_next)
+			{}
+
+			hlist_node(T* _value, hlist_node<T>* _prev = 0, hlist_node<T>* _next = 0)
 				: value(_value), prev(_prev), next(_next)
 			{}
+
+			template <class T, class Allocator>
+			friend class list;
 		};
 	}
 }
