@@ -27,7 +27,10 @@
 namespace rty
 {
 	class Order
-	{};
+	{
+	public:
+		double preparingTime();
+	};
 }
 
 #endif
