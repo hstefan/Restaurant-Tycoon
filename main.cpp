@@ -1,19 +1,15 @@
-#include "src/htl/hlist.h"
+#include "src/htl/hqueue.h"
 #include <iostream>
 
 int main()
 {
-	htl::list<int> a;
-	a.push_back(1);
-	a.push_back(2);
-	a.push_back(3);
-	a.pop_back();
-
-	for(htl::list<int>::const_iterator it = a.begin(); it != a.end(); it++)
+	htl::queue<int> i;
+	i.push(1), i.push(2), i.push(3);
+	while(!i.empty())
 	{
-		std::cout << *it << std::endl;
+		std::cout << i.front() << std::endl;
+		i.pop();
 	}
-	
 	getchar();
 	getchar();
 }
