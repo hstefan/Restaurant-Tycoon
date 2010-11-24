@@ -27,6 +27,7 @@
 
 #include "htl/hvector.h"
 #include "Table.h"
+#include "BillManager.h"
 
 namespace rty
 {
@@ -35,8 +36,10 @@ namespace rty
 	public:
 		void addTable(Table* table);
 		void removeTable(htl::vector<Table*>::iterator it);
+		void receiveBill(detail::Bill& bill) const;
 	private:
 		htl::vector<Table*> tables;
+		int id;
 	};
 }
 
