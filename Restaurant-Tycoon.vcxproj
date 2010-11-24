@@ -90,6 +90,7 @@
     <ClInclude Include="src\htl\hlist_node.h" />
     <ClInclude Include="src\htl\hqueue.h" />
     <ClInclude Include="src\htl\hvector.h" />
+    <ClInclude Include="src\MenuItem.h" />
     <ClInclude Include="src\Order.h" />
     <ClInclude Include="src\Table.h" />
     <ClInclude Include="src\TableGroup.h" />
@@ -97,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\Waiter.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

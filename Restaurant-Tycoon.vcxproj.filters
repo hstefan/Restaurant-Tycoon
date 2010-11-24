@@ -81,9 +81,15 @@
     <ClInclude Include="src\Chronometer.h">
       <Filter>Header Files\auxiliary</Filter>
     </ClInclude>
+    <ClInclude Include="src\MenuItem.h">
+      <Filter>Header Files\auxiliary</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Waiter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
