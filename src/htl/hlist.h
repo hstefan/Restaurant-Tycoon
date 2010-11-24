@@ -504,25 +504,19 @@ namespace htl
 	template <class T, class Allocator>
 	void list<T, Allocator>::pop_back()
 	{
-		erase(end());
+		erase(--end());
 	}
 
 	template <class T, class Allocator>
 	typename list<T, Allocator>::iterator list<T, Allocator>::erase(iterator position)
 	{
-		if(position.ptr == first || position.ptr == last )
-			//TODO handle this exception : can't erase the 'base' nodes 
-			return iterator(position.ptr->next);
-		else
-		{
-			if(position.ptr->prev != 0)
-				position.ptr->prev->next = position.ptr->next;
-			if(position.ptr->next != 0)
-				position.ptr->next->prev = position.ptr->prev;
-			iterator it(position.ptr->next);
-			delete position.ptr;
-			return it;
-		}
+		iterator it(position.ptr->next);
+		
+		position.ptr->next->prev = position.ptr->prev;
+		position.ptr->prev->next = position.ptr->next;
+
+		delete position.ptr;
+		return it;
 	}
 
 	template <class T, class Allocator>
