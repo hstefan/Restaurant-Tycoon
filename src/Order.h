@@ -24,12 +24,15 @@
 #ifndef RTY_ORDER_H
 #define RTY_ORDER_H
 
+#include "TableGroup.h"
+
 namespace rty
 {
 	class Order
 	{
 	public:
 		double preparingTime();
+		TableGroup* table;
 	};
 }
 
