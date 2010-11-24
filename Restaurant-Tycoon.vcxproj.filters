@@ -78,6 +78,9 @@
     <ClInclude Include="src\htl\hqueue.h">
       <Filter>Header Files\htlib</Filter>
     </ClInclude>
+    <ClInclude Include="Chronometer.h">
+      <Filter>Header Files\auxiliary</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">

@@ -76,6 +76,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Chronometer.h" />
     <ClInclude Include="src\Admin.h" />
     <ClInclude Include="src\Balcony.h" />
     <ClInclude Include="src\Car.h" />
