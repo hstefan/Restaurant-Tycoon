@@ -70,25 +70,25 @@ namespace htl
 	}
 
 	template <class T, class Container>
-	typename queue<T, Container>::value_type queue<T, Container>::front()
+	typename queue<T, Container>::value_type& queue<T, Container>::front()
 	{
 		return ctnr.front();
 	}
 
 	template <class T, class Container>
-	typename const queue<T, Container>::value_type queue<T, Container>::front() const
+	typename const queue<T, Container>::value_type& queue<T, Container>::front() const
 	{
 		return ctnr.front();
 	}
 
 	template <class T, class Container>
-	typename queue<T, Container>::value_type queue<T, Container>::back()
+	typename queue<T, Container>::value_type& queue<T, Container>::back()
 	{
 		return ctnr.back();
 	}
 
 	template <class T, class Container>
-	typename const queue<T, Container>::value_type queue<T, Container>::back() const
+	typename const queue<T, Container>::value_type& queue<T, Container>::back() const
 	{
 		return ctnr.back();
 	}
