@@ -78,6 +78,7 @@
   <ItemGroup>
     <ClInclude Include="src\Admin.h" />
     <ClInclude Include="src\Balcony.h" />
+    <ClInclude Include="src\BillManager.h" />
     <ClInclude Include="src\Car.h" />
     <ClInclude Include="src\Chair.h" />
     <ClInclude Include="src\Chef.h" />
