@@ -373,16 +373,16 @@ namespace htl
 
 	template <class T, class Allocator>
 	list<T, Allocator>::list(const list<T, Allocator>& x)
-		: first(0), last(0), m_iterators(), m_size(0), alloc(x.get_allocator())
+		: first(0), last(0), m_size(0), alloc(x.get_allocator())
 	{
-		first = new detail::hlist_node(T(), 0, 0);
-		last = new detail::hlist_node(T(), first, 0);
-		first->prev = last;
+		first = new detail::hlist_node<T>(T(), 0, 0);
+		last = new detail::hlist_node<T>(T(), first, 0);
+		first->next = last;
 		
-		iterator it = x.begin();
-		while(it != x.last())
+		const_iterator it = x.begin();
+		while(it != x.end())
 		{
-			push_back(it);
+			push_back(*it);
 			it++;
 		}
 	}
@@ -390,7 +390,7 @@ namespace htl
 	template <class T, class Allocator>
 	list<T, Allocator>::~list()
 	{
-		erase(begin(), end());
+		clear();
 	}
 
 	template <class T, class Allocator>
@@ -523,7 +523,7 @@ namespace htl
 	typename list<T, Allocator>::iterator list<T, Allocator>::erase(iterator position, iterator last)
 	{
 		iterator it;
-		while(position != last)
+		while(position != last && position.ptr != 0)
 			it = erase(position++);
 		return it;
 	}
@@ -576,7 +576,7 @@ namespace htl
 
 	template <class T, class Allocator>
 	void list<T, Allocator>::clear()
-	{ erase(begin(), last()); }
+	{ erase(begin(), end()); }
 
 	template <class T, class Allocator>
 	void list<T, Allocator>::splice(iterator position, list<T, Allocator>& x)
