@@ -76,12 +76,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Chronometer.h" />
     <ClInclude Include="src\Admin.h" />
     <ClInclude Include="src\Balcony.h" />
     <ClInclude Include="src\Car.h" />
     <ClInclude Include="src\Chair.h" />
     <ClInclude Include="src\Chef.h" />
+    <ClInclude Include="src\Chronometer.h" />
     <ClInclude Include="src\Client.h" />
     <ClInclude Include="src\htl\hallocator.h" />
     <ClInclude Include="src\htl\hiterator.h" />
