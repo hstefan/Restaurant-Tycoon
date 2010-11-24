@@ -40,7 +40,6 @@ namespace rty
 		inline bool depositReadyOrder();
 		inline bool busy();
 		inline bool orderReady();
-
 	private:
 		Balcony* in_balc;
 		Balcony* out_balc;
@@ -80,10 +79,19 @@ namespace rty
 	{
 		return orderReady() || in_balc == 0;
 	}
-
+	
 	bool Chef::orderReady()
 	{
 		return cntr.getCurrent() - order_arrival > cur_ord.preparingTime();
+	}
+
+	void Chef::routine()
+	{
+		if(!busy())
+		{
+			depositReadyOrder();
+			prepareNext();
+		}
 	}
 }
 
