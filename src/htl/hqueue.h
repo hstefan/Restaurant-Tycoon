@@ -96,13 +96,13 @@ namespace htl
 	template <class T, class Container>
 	void queue<T, Container>::push(const T& x)
 	{
-		cntr.push_back(x);
+		ctnr.push_back(x);
 	}
 
 	template <class T, class Container>
 	void queue<T, Container>::pop()
 	{
-		cntr.pop_front(x);
+		ctnr.pop_front();
 	}
 }
 
