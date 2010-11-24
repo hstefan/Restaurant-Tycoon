@@ -21,32 +21,16 @@
  * THE SOFTWARE.
 */
 
-
-#ifndef RTY_WAITER_H
-#define RTY_WAITER_H
-
-#include "Client.h"
-#include "TableGroup.h"
-#include "htl/hqueue.h"
-#include "Order.h"
-#include "Balcony.h"
+#include "Waiter.h"
 
 namespace rty
 {
-	class Waiter
+	void Waiter::askForPreparaton()
 	{
-	public:
-		void allocateTableGroup(const Client&);
-		void askForPreparaton();
-		void deliverBill(const TableGroup&);
-		void deliverRequest(const TableGroup&);
-		void getRequest(const TableGroup&);
-
-	private:
-		htl::queue<Order> orders;
-		Balcony* out_balc;
-		Balcony* in_balc;
-	};
+		while(!orders.empty())
+		{
+			out_balc->leaveOrder(orders.front());
+			orders.pop();
+		}
+	}
 }
-
-#endif
