@@ -22,6 +22,9 @@
     <Filter Include="Header Files\htlib">
       <UniqueIdentifier>{9e3c9228-68a5-4a1e-b883-b84cd712d202}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\auxiliary">
+      <UniqueIdentifier>{300c5dee-05cf-4439-a004-190f45190891}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Car.h">
@@ -64,6 +67,15 @@
       <Filter>Header Files\htlib</Filter>
     </ClInclude>
     <ClInclude Include="src\htl\hlist.h">
+      <Filter>Header Files\htlib</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Order.h">
+      <Filter>Header Files\auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Balcony.h">
+      <Filter>Header Files\objects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\htl\hqueue.h">
       <Filter>Header Files\htlib</Filter>
     </ClInclude>
   </ItemGroup>
