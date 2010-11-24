@@ -83,7 +83,7 @@ namespace rty
 
 	bool Chef::orderReady()
 	{
-		return cntr.getCurrent() - order_arrival;
+		return cntr.getCurrent() - order_arrival > cur_ord.preparingTime();
 	}
 }
 
