@@ -469,11 +469,11 @@ namespace htl
 
 	template <class T, class Allocator>
 	typename list<T, Allocator>::reference list<T, Allocator>::front()
-	{ return first->next->value; }
+	{ return *first->next->value; }
 
 	template <class T, class Allocator>
 	typename list<T, Allocator>::const_reference list<T, Allocator>::front() const
-	{ return first->next->value; }
+	{ return *first->next->value; }
 
 	template <class T, class Allocator>
 	typename list<T, Allocator>::reference list<T, Allocator>::back()
@@ -516,6 +516,7 @@ namespace htl
 		position.ptr->prev->next = position.ptr->next;
 
 		delete position.ptr;
+		m_size--;
 		return it;
 	}
 
@@ -534,6 +535,7 @@ namespace htl
 		detail::hlist_node<T>* node = new detail::hlist_node<T>(x, position.ptr->prev, position.ptr);
 		position.ptr->prev->next = node;
 		position.ptr->prev = node;
+		m_size++;
 		return iterator(node);
 	}
 
