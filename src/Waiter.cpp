@@ -22,6 +22,8 @@
 */
 
 #include "Waiter.h"
+#include "BillManager.h"
+#include <iostream>
 
 namespace rty
 {
@@ -31,6 +33,27 @@ namespace rty
 		{
 			out_balc->leaveOrder(orders.front());
 			orders.pop();
+		}
+	}
+
+	void Waiter::deliverBill(const TableGroup& table)
+	{
+		detail::Bill* b = BillManager::getInstance().getBill(table);
+		if(b != 0)
+			table.receiveBill(*b);
+		BillManager::getInstance().notifyLeft(table);
+	}
+
+	void Waiter::getRequest(const TableGroup& table)
+	{
+		std::cout << "Digite os codigos dos itens desejados. Para encerrar os pedidos, digite -1" << std::endl;
+		int code = 0;
+		while(code != -1)
+		{
+			std::cout << "> ";
+			std::cin >> code;
+			//busca item
+			//insere na ordem
 		}
 	}
 }
