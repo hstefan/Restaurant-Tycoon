@@ -30,6 +30,10 @@
 
 namespace htl 
 {
+
+	template <class T, class Allocator>
+	class list;
+	
 	namespace detail 
 	{
 		template <class T>
@@ -54,7 +58,7 @@ namespace htl
 			reference_type operator*();
 
 			template <class S, class U>
-			friend class list;
+			friend class htl::list;
 
 			template <class I>
 			friend class const_list_iterator;
