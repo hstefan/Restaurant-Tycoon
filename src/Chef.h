@@ -25,13 +25,66 @@
 #ifndef RTY_CHEF_H
 #define RTY_CHEF_H
 
+#include "Balcony.h"
+#include "Chronometer.h"
+
 namespace rty
 {
 	class Chef
 	{
 	public:
-		void prepare();
+		inline void routine();
+
+		inline Chef(Balcony& in_balc, Balcony& out_balc);
+		inline void prepareNext();
+		inline bool depositReadyOrder();
+		inline bool busy();
+		inline bool orderReady();
+
+	private:
+		Balcony* in_balc;
+		Balcony* out_balc;
+		Chronometer& cntr;
+		time_t order_arrival;
+		Order cur_ord;
 	};
+
+	Chef::Chef(Balcony& in_balc, Balcony& out_balc)
+		: in_balc(&in_balc), out_balc(&out_balc), cntr(Chronometer::getInstance()), order_arrival(), cur_ord()
+	{}
+
+	void Chef::prepareNext()
+	{
+		if(in_balc != 0)
+		{
+			if(!busy() && in_balc->hasNext())
+			{
+				cur_ord = in_balc->nextOrder();
+				order_arrival = cntr.getCurrent();
+			}
+		}
+	}
+
+	bool Chef::depositReadyOrder()
+	{
+		if(orderReady())
+		{
+			out_balc->leaveOrder(cur_ord);
+			return true;
+		}
+
+		return false;
+	}
+
+	bool Chef::busy()
+	{
+		return orderReady() || in_balc == 0;
+	}
+
+	bool Chef::orderReady()
+	{
+		return cntr.getCurrent() - order_arrival;
+	}
 }
 
 #endif
