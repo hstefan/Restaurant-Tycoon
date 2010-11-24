@@ -174,7 +174,7 @@ namespace htl
 		template <class T>
 		const_list_iterator<T> const_list_iterator<T>::operator++(int)
 		{
-			list_iterator i = *this;
+			const_list_iterator i(*this);
 			ptr = ptr->next;
 			return i;
 		}
@@ -204,7 +204,7 @@ namespace htl
 		
 		template <class T>
 		typename const_list_iterator<T>::const_reference const_list_iterator<T>::operator*()
-		{ return ptr->value; }
+		{ return *ptr->value; }
 		
 		template <class T>
 		const_list_iterator<T>::const_list_iterator(hlist_node<T>* i)
@@ -322,7 +322,6 @@ namespace htl
 		void reverse();
 	
 	protected:
-		void _init_iterators();
 	private:
 
 		detail::hlist_node<T>* first;
@@ -352,11 +351,8 @@ namespace htl
 		first = new detail::hlist_node(T(), 0, 0);
 		last = new detail::hlist_node(T(), first, 0);
 		first->prev = last;
-		while(n >= 0)
-		{
+		while(n-- >= 0)
 			push_back(value);
-			n--;
-		}
 	}
 
 	template <class T, class Allocator>
@@ -368,13 +364,11 @@ namespace htl
 		first = new detail::hlist_node(T(), 0, 0);
 		last = new detail::hlist_node(T(), first, 0);
 		first->prev = last;
-		_init_iterators();
 		while(first != last)
 		{
 			push_back(*first);
 			first++;
 		}
-		push_back(*last);
 	}
 
 	template <class T, class Allocator>
@@ -384,7 +378,6 @@ namespace htl
 		first = new detail::hlist_node(T(), 0, 0);
 		last = new detail::hlist_node(T(), first, 0);
 		first->prev = last;
-		_init_iterators();
 		
 		iterator it = x.begin();
 		while(it != x.last())
@@ -392,7 +385,6 @@ namespace htl
 			push_back(it);
 			it++;
 		}
-		push_back(*it);
 	}
 
 	template <class T, class Allocator>
@@ -477,19 +469,19 @@ namespace htl
 
 	template <class T, class Allocator>
 	typename list<T, Allocator>::reference list<T, Allocator>::front()
-	{ return first->value; }
+	{ return first->next->value; }
 
 	template <class T, class Allocator>
 	typename list<T, Allocator>::const_reference list<T, Allocator>::front() const
-	{ return first->value; }
+	{ return first->next->value; }
 
 	template <class T, class Allocator>
 	typename list<T, Allocator>::reference list<T, Allocator>::back()
-	{ return last->value; }
+	{ return last->prev->value; }
 
 	template <class T, class Allocator>
 	typename list<T, Allocator>::const_reference list<T, Allocator>::back() const
-	{ return last->value; }
+	{ return last->prev->value; }
 
 	template <class T, class Allocator>
 	void list<T, Allocator>::push_front(const T& x) 
@@ -546,8 +538,8 @@ namespace htl
 	typename list<T,Allocator>::iterator list<T, Allocator>::insert(iterator position, const T& x)
 	{
 		detail::hlist_node<T>* node = new detail::hlist_node<T>(x, position.ptr->prev, position.ptr);
-		position.ptr->prev->next = node; //considering that the user will not pass an null iterator
-		m_size++;
+		position.ptr->prev->next = node;
+		position.ptr->prev = node;
 		return iterator(node);
 	}
 
