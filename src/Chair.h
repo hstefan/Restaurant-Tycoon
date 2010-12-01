@@ -33,11 +33,11 @@ namespace rty
 	{
 	public:
 		Chair();
-		void setOccupant(Client* occupant);
+		//void setOccupant(Client* occupant);
 		void occupantLeft();
 		bool isBusy();
 	private:
-		Client* occupant;
+		//Client* occupant;
 	};
 }
 

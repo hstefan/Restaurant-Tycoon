@@ -38,10 +38,10 @@ namespace rty
 
 	void Waiter::deliverBill(const TableGroup& table)
 	{
-		detail::Bill* b = BillManager::getInstance().getBill(table);
+		/*detail::Bill* b = BillManager::getInstance().getBill();
 		if(b != 0)
 			table.receiveBill(*b);
-		BillManager::getInstance().notifyLeft(table);
+		BillManager::getInstance().notifyLeft(table);*/
 	}
 
 	void Waiter::getRequest(const TableGroup& table)

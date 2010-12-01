@@ -32,10 +32,10 @@ namespace rty
 	class Table
 	{
 	public:
-		static const unsigned int N_CHAIRS 2;
+		//static const int N_CHAIRS 2;
 	private:
 		friend class TableGroup;
-		Chair[N_CHAIRS] chairs;
+		Chair* chairs;
 	};
 }
 

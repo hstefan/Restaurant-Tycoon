@@ -57,7 +57,7 @@ namespace rty
 		{
 			return _instance;
 		}
-		Bill* getBill(const TableGroup& table);
+		detail::Bill* getBill(const TableGroup& table);
 		bool notifyLeft(const TableGroup& table);
 	};
 }

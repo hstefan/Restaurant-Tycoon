@@ -23,7 +23,7 @@
 
 
 #ifndef RTY_CLIENT_H
-#define RTY_CLEINT_H
+#define RTY_CLIENT_H
 
 #include "TableGroup.h"
 
@@ -40,7 +40,7 @@ namespace rty
 		void orderItems();
 		void payBill();
 	protected:
-		TableGroup* table;
+		//TableGroup* table;
 	};
 }
 
