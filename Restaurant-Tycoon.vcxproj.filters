@@ -19,11 +19,14 @@
     <Filter Include="Header Files\objects">
       <UniqueIdentifier>{5018c60b-bc89-4e78-991b-a62bcbe9b4f0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\htlib">
-      <UniqueIdentifier>{9e3c9228-68a5-4a1e-b883-b84cd712d202}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\auxiliary">
       <UniqueIdentifier>{300c5dee-05cf-4439-a004-190f45190891}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\structures">
+      <UniqueIdentifier>{17fea752-5506-4819-9423-c863ddaca6f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\structures\htlib">
+      <UniqueIdentifier>{9e3c9228-68a5-4a1e-b883-b84cd712d202}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -52,22 +55,22 @@
       <Filter>Header Files\objects</Filter>
     </ClInclude>
     <ClInclude Include="src\htl\hvector.h">
-      <Filter>Header Files\htlib</Filter>
+      <Filter>Header Files\structures\htlib</Filter>
     </ClInclude>
     <ClInclude Include="src\htl\hallocator.h">
-      <Filter>Header Files\htlib</Filter>
+      <Filter>Header Files\structures\htlib</Filter>
     </ClInclude>
     <ClInclude Include="src\htl\hiterators.h">
-      <Filter>Header Files\htlib</Filter>
+      <Filter>Header Files\structures\htlib</Filter>
     </ClInclude>
     <ClInclude Include="src\htl\hlist_node.h">
-      <Filter>Header Files\htlib</Filter>
+      <Filter>Header Files\structures\htlib</Filter>
     </ClInclude>
     <ClInclude Include="src\htl\hiterator.h">
-      <Filter>Header Files\htlib</Filter>
+      <Filter>Header Files\structures\htlib</Filter>
     </ClInclude>
     <ClInclude Include="src\htl\hlist.h">
-      <Filter>Header Files\htlib</Filter>
+      <Filter>Header Files\structures\htlib</Filter>
     </ClInclude>
     <ClInclude Include="src\Order.h">
       <Filter>Header Files\auxiliary</Filter>
@@ -76,7 +79,7 @@
       <Filter>Header Files\objects</Filter>
     </ClInclude>
     <ClInclude Include="src\htl\hqueue.h">
-      <Filter>Header Files\htlib</Filter>
+      <Filter>Header Files\structures\htlib</Filter>
     </ClInclude>
     <ClInclude Include="src\Chronometer.h">
       <Filter>Header Files\auxiliary</Filter>
@@ -86,6 +89,9 @@
     </ClInclude>
     <ClInclude Include="src\BillManager.h">
       <Filter>Header Files\auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SortedList.h">
+      <Filter>Header Files\structures</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

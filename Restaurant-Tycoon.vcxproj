@@ -93,6 +93,7 @@
     <ClInclude Include="src\htl\hvector.h" />
     <ClInclude Include="src\MenuItem.h" />
     <ClInclude Include="src\Order.h" />
+    <ClInclude Include="src\SortedList.h" />
     <ClInclude Include="src\Table.h" />
     <ClInclude Include="src\TableGroup.h" />
     <ClInclude Include="src\Waiter.h" />
