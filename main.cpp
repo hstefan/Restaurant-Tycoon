@@ -1,15 +1,21 @@
-#include "src/htl/hqueue.h"
+#include "src/SortedList.h"
 #include <iostream>
 
 int main()
 {
-	htl::queue<int> i;
-	i.push(1), i.push(2), i.push(3);
-	while(!i.empty())
+	rty::SortedList<int> a;
+	a.insert(5);
+	a.insert(3);
+	a.insert(4);
+	a.insert(7);
+	a.insert(1);
+	a.insert(9);
+
+	for(rty::SortedList<int>::iterator it = a.begin(); it != a.end(); it++)
 	{
-		std::cout << i.front() << std::endl;
-		i.pop();
+		std::cout << *it << std::endl;
 	}
+
 	getchar();
 	getchar();
 }
