@@ -114,7 +114,7 @@ namespace htl
 		
 		template <class T>
 		typename list_iterator<T>::reference_type list_iterator<T>::operator*()
-		{ return ptr->value;}
+		{ return *ptr->value;}
 		
 		template <class T>
 		list_iterator<T>::list_iterator(hlist_node<T>* i)
