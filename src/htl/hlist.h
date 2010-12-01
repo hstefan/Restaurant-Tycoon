@@ -412,6 +412,7 @@ namespace htl
 			first++;
 		}
 	}
+
 	template <class T, class Allocator>
 	void list<T, Allocator>::assign(size_type n, const T& t)
 	{
