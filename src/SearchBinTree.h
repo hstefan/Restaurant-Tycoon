@@ -47,10 +47,8 @@ namespace rty
 		{
 		public:
 			typedef std::pair<Key, Ty> ValueType;
-		private:
 			TreeNode<ValueType>* node;
-
-		public:
+			
 			SearchBinTreeIter()
 				: node(0)
 			{}
@@ -58,6 +56,16 @@ namespace rty
 			SearchBinTreeIter(TreeNode<ValueType>* v)
 				: node(v)
 			{}
+
+			SearchBinTreeIter left() const
+			{
+				return SearchBinTreeIter<Key, Ty>(node->tleft);
+			}
+
+			SearchBinTreeIter right() const
+			{
+				return SearchBinTreeIter<Key, Ty>(node->tright);
+			}
 
 			SearchBinTreeIter toRoot() {
 				return SearchBinTreeIter<Key, Ty>(*this);
