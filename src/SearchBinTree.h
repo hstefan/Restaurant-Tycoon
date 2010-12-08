@@ -49,6 +49,15 @@ namespace rty
 			TreeNode<ValueType>* node;
 
 		public:
+
+			SearchBinTreeIter()
+				: node(0)
+			{}
+
+			SearchBinTreeIter(TreeNode<ValueType>* v)
+				: node(v)
+			{}
+
 			BinTreeIterator toRoot();
 
 			BinTreeIterator toLeft()
