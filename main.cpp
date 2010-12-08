@@ -1,10 +1,11 @@
 #include "src/SortedList.h"
 #include "src/SearchBinTree.h"
 #include <iostream>
+#include "src/UserInterface.h"
 
 int main()
 {
-	rty::SortedList<int> a;
+	/*rty::SortedList<int> a;
 	a.insert(5);
 	a.insert(3);
 	a.insert(4);
@@ -23,7 +24,11 @@ int main()
 	i.search(1);
 	i.remove(1);
 	i.remove(2);
-	i.remove(3);
+	i.remove(3);*/
+
+	rty::UserInterface ui;
+	ui.start();
+
 	getchar();
 	getchar();
 }
