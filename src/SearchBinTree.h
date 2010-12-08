@@ -37,7 +37,7 @@ namespace rty
 			T* val;
 			TreeNode* tright;
 
-			TreeNode(const T& val = T(), TreeNode* l = 0; TreeNode* r)
+			TreeNode(const T& val, TreeNode* l = 0; TreeNode* r)
 				: tleft(l), val(new T(val)), tright(r)
 			{}
 		};
@@ -45,17 +45,51 @@ namespace rty
 		template <class Key, class Ty>
 		class SearchBinTreeIter : public BinTreeIterator<Key, Ty>
 		{
+		private:
+			TreeNode<ValueType>* node;
+
 		public:
 			BinTreeIterator toRoot();
-			BinTreeIterator toLeft();
-			BinTreeIterator toRight();
 
-			const Key& operator*() const;
-			Key& operator*();
-			BinTreeIterator& operator=(const BinTreeIterator&);
+			BinTreeIterator toLeft()
+			{
+				node = node->tleft;
+				return *this;
+			}
 
-			bool hasLeft();
-			bool hasRight();
+			BinTreeIterator toRight()
+			{
+				node = node->tright;
+				return *this;
+			}
+
+			const ValueType& operator*() const
+			{
+				return node->val;
+			}
+
+			ValueType& operator*()
+			{
+				return node->val;
+			}
+
+			BinTreeIterator<Key,Ty>& operator=(const BinTreeIterator& t)
+			{
+				TreeNode<ValueType>* n = new BinTreeIterator<Key, Ty>();
+				n->tleft = &t.tleft;
+				n->tleft = &t.tright;
+				return *this;
+			}
+
+			bool hasLeft()
+			{
+				return node->tleft == 0;
+			}
+
+			bool hasRight()
+			{
+				return node->tright == 0;
+			}
 		};
 	}
 
