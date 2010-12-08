@@ -33,15 +33,9 @@ namespace rty
 		T v1;
 		V v2;
 
-		pair(T a, V b)
+		pair(const T& a, const V& b)
 			: v1(a), v2(b)
 		{}
-
-		void operator pair(T a, V b)
-		{
-			v1 = a;
-			v2 = b;
-		}
 	};
 
 	template <class Key, class Ty>
@@ -50,14 +44,13 @@ namespace rty
 	public:
 		typedef pair<Key, Ty>		ValueType;
 
-		virtual BinTreeIterator toRoot()
-		{ return BinTereIterator(); }
-		virtual BinTreeIterator toLeft() = 0;
-		virtual BinTreeIterator toRight() = 0;
+		virtual BinTreeIterator& toRoot() = 0;
+		virtual BinTreeIterator& toLeft() = 0;
+		virtual BinTreeIterator& toRight() = 0;
 		virtual bool hasLeft() = 0;
 		virtual bool hasRight() = 0;
 
-		virtual const ValueType& operator*() const = 0;
+		virtual const ValueTeuype& operator*() const = 0;
 		virtual ValueType& operator*() = 0;
 		virtual BinTreeIterator& operator=(const BinTreeIterator&);
 	};
@@ -66,8 +59,8 @@ namespace rty
 	class BinTree
 	{
 	public:
-		typedef typename KeyType				Key;
-		typedef typename Type					Value;
+		typedef typename Key					KeyType;
+		typedef typename Ty						Value;
 		typedef BinTreeIterator<Key, Ty>		iterator;
 		typedef BinTreeIterator<Key, Ty>		const_iterator;
 		
