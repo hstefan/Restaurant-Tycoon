@@ -93,6 +93,9 @@
     <ClInclude Include="src\SortedList.h">
       <Filter>Header Files\structures</Filter>
     </ClInclude>
+    <ClInclude Include="src\SearchBinTree.h">
+      <Filter>Header Files\structures</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
