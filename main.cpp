@@ -1,4 +1,5 @@
 #include "src/SortedList.h"
+#include "src/SearchBinTree.h"
 #include <iostream>
 
 int main()
@@ -16,6 +17,13 @@ int main()
 		std::cout << *it << std::endl;
 	}
 
+	rty::SearchBinTree<int, double> i;
+	i.insert(1, 2.3);
+	i.insert(2, 4.3);
+	i.search(1);
+	i.remove(1);
+	i.remove(2);
+	i.remove(3);
 	getchar();
 	getchar();
 }
