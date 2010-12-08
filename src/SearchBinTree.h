@@ -57,29 +57,29 @@ namespace rty
 			bool hasLeft();
 			bool hasRight();
 		};
-
-		template <class Key, class Ty>
-		class SearchBinTree : public BinTree<Key, Ty>
-		{
-		public:
-			bool insert(const ValueType&) = 0;
-			bool insert(const KeyType&, const Value&) = 0;
-
-			bool remove(const Key&) = 0;
-			bool remove(const ValueType&) = 0;
-		
-			iterator search(Key&) = 0;
-			iterator search(ValueType&) = 0;
-			const_iterator search(Key&) const = 0;
-			const_iterator search(ValueType&) const = 0;
-			iterator operator[](const Key&) = 0;
-			const_iterator operator[](const Key&) const = 0;
-
-			bool empty() const = 0;
-			iterator root() = 0;
-			const_iterator root() const = 0;
-		};
 	}
+
+	template <class Key, class Ty>
+	class SearchBinTree : public BinTree<Key, Ty>
+	{
+	public:
+		bool insert(const ValueType&) = 0;
+		bool insert(const KeyType&, const Value&) = 0;
+
+		bool remove(const Key&) = 0;
+		bool remove(const ValueType&) = 0;
+		
+		iterator search(Key&) = 0;
+		iterator search(ValueType&) = 0;
+		const_iterator search(Key&) const = 0;
+		const_iterator search(ValueType&) const = 0;
+		iterator operator[](const Key&) = 0;
+		const_iterator operator[](const Key&) const = 0;
+
+		bool empty() const = 0;
+		iterator root() = 0;
+		const_iterator root() const = 0;
+	};
 
 
 } // namespace rty
