@@ -31,11 +31,9 @@ namespace rty
 {
 	class Table
 	{
-	public:
-		//static const int N_CHAIRS 2;
 	private:
-		friend class TableGroup;
-		Chair* chairs;
+		int free;
+		int num;
 	};
 }
 
