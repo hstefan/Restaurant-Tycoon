@@ -28,6 +28,9 @@
     <Filter Include="Header Files\structures\htlib">
       <UniqueIdentifier>{9e3c9228-68a5-4a1e-b883-b84cd712d202}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\essential">
+      <UniqueIdentifier>{d03c1c4a-d0a7-448f-8c88-eaaa0c804bc8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Car.h">
@@ -96,12 +99,30 @@
     <ClInclude Include="src\SearchBinTree.h">
       <Filter>Header Files\structures</Filter>
     </ClInclude>
+    <ClInclude Include="src\UserInterface.h">
+      <Filter>Header Files\essential</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TableMatrix.h">
+      <Filter>Header Files\essential</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ItemFactory.h">
+      <Filter>Header Files\auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Item.h">
+      <Filter>Header Files\objects</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Waiter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\UserInterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TableMatrix.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

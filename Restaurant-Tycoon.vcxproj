@@ -91,16 +91,22 @@
     <ClInclude Include="src\htl\hlist_node.h" />
     <ClInclude Include="src\htl\hqueue.h" />
     <ClInclude Include="src\htl\hvector.h" />
+    <ClInclude Include="src\Item.h" />
+    <ClInclude Include="src\ItemFactory.h" />
     <ClInclude Include="src\MenuItem.h" />
     <ClInclude Include="src\Order.h" />
     <ClInclude Include="src\SearchBinTree.h" />
     <ClInclude Include="src\SortedList.h" />
     <ClInclude Include="src\Table.h" />
     <ClInclude Include="src\TableGroup.h" />
+    <ClInclude Include="src\TableMatrix.h" />
+    <ClInclude Include="src\UserInterface.h" />
     <ClInclude Include="src\Waiter.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\TableMatrix.cpp" />
+    <ClCompile Include="src\UserInterface.cpp" />
     <ClCompile Include="src\Waiter.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
