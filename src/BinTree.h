@@ -48,6 +48,8 @@ namespace rty
 	class BinTreeIterator
 	{
 	public:
+		typedef pair<Key, Ty>		ValueType;
+
 		virtual BinTreeIterator toRoot()
 		{ return BinTereIterator(); }
 		virtual BinTreeIterator toLeft() = 0;
@@ -55,8 +57,8 @@ namespace rty
 		virtual bool hasLeft() = 0;
 		virtual bool hasRight() = 0;
 
-		virtual const Key& operator*() const = 0;
-		virtual Key& operator*() = 0;
+		virtual const ValueType& operator*() const = 0;
+		virtual ValueType& operator*() = 0;
 		virtual BinTreeIterator& operator=(const BinTreeIterator&);
 	};
 
