@@ -74,16 +74,18 @@ namespace rty
 			}
 		}
 
-		static std::ostream& printSortedByCod(std::ostream& stream, SearchBinTree<int&, Item>::iterator& it)
+		static std::ostream& printSortedByCod(std::ostream& stream)
 		{
-			if(it.node == 0)
-				return stream;
-			printSortedByCod(stream, it.left());
-			stream << (*it).second << std::endl;
-			printSortedByCod(stream, it.right());
+			SortedList<Item&>::iterator it = item_l.begin();
+			while(it != item_l.end())
+			{
+				stream << *it << std::endl;
+				it++;
+			}
+			return stream;
 		}
 
-		static std::ostream& printSortedByDescricao(std::ostream& stream, SearchBinTree<std::string&, Item>::iterator& it)
+		static std::ostream& printSortedByDescricao(std::ostream& stream, SearchBinTree<std::string&, Item&>::iterator& it = item_desc.begin())
 		{
 			if(it.node == 0)
 				return stream;
@@ -92,7 +94,7 @@ namespace rty
 			printSortedByDescricao(stream, it.right());
 		}
 
-		static std::ostream& printSortedByPrice(std::ostream& stream, SearchBinTree<double&, Item>::iterator& it)
+		static std::ostream& printSortedByPrice(std::ostream& stream, SearchBinTree<double&, Item&>::iterator& it = item_preco.begin())
 		{
 			if(it.node == 0)
 				return stream;
@@ -104,6 +106,23 @@ namespace rty
 		static SearchBinTree<int&, Item>::iterator searchByCode(int code)
 		{
 			return item_cod.search(code);
+		}
+
+		static bool removeItem(int code)
+		{
+			SearchBinTree<int&, Item>::iterator it = item_cod.search(code);
+			if(it.node == 0)
+				return false;
+			item_desc.remove((*it).second.descricao);
+			item_preco.remove((*it).second.preco);
+			for(SortedList<Item&>::iterator itl = item_l.begin(); itl != item_l.end(); itl++)
+			{
+				if((*itl).codigo == code)
+				{
+					item_l.remove(itl);
+					break;
+				}
+			}
 		}
 	};
 }
