@@ -24,7 +24,7 @@
 #ifndef RTY_SEARCH_BINTREE
 #define RTY_SEARCH_BINTREE
 
-#include "BinTree.h"
+#include <utility>
 
 namespace rty
 {
@@ -37,19 +37,20 @@ namespace rty
 			T* val;
 			TreeNode* tright;
 
-			TreeNode(const T& val, TreeNode* l = 0; TreeNode* r)
+			TreeNode(const T& val, TreeNode* l = 0, TreeNode* r = 0)
 				: tleft(l), val(new T(val)), tright(r)
 			{}
 		};
 
 		template <class Key, class Ty>
-		class SearchBinTreeIter : public BinTreeIterator<Key, Ty>
+		class SearchBinTreeIter
 		{
+		public:
+			typedef std::pair<Key, Ty> ValueType;
 		private:
 			TreeNode<ValueType>* node;
 
 		public:
-
 			SearchBinTreeIter()
 				: node(0)
 			{}
@@ -58,18 +59,20 @@ namespace rty
 				: node(v)
 			{}
 
-			BinTreeIterator toRoot();
-
-			BinTreeIterator toLeft()
-			{
-				node = node->tleft;
-				return *this;
+			SearchBinTreeIter toRoot() {
+				return SearchBinTreeIter<Key, Ty>(*this);
 			}
 
-			BinTreeIterator toRight()
+			SearchBinTreeIter toLeft()
+			{
+				node = node->tleft;
+				return SearchBinTreeIter<Key, Ty>(*this);
+			}
+
+			SearchBinTreeIter toRight()
 			{
 				node = node->tright;
-				return *this;
+				return SearchBinTreeIter<Key, Ty>(*this);
 			}
 
 			const ValueType& operator*() const
@@ -82,11 +85,10 @@ namespace rty
 				return node->val;
 			}
 
-			BinTreeIterator<Key,Ty>& operator=(const BinTreeIterator& t)
+			SearchBinTreeIter operator=(const SearchBinTreeIter& t)
 			{
-				TreeNode<ValueType>* n = new BinTreeIterator<Key, Ty>();
-				n->tleft = &t.tleft;
-				n->tleft = &t.tright;
+				TreeNode<ValueType>* n = new TreeNode<ValueType>(t.val, &t.tleft, &&t.tright);
+				node = n;
 				return *this;
 			}
 
@@ -103,25 +105,171 @@ namespace rty
 	}
 
 	template <class Key, class Ty>
-	class SearchBinTree : public BinTree<Key, Ty>
+	class SearchBinTree
 	{
 	public:
-		bool insert(const ValueType&) = 0;
-		bool insert(const KeyType&, const Value&) = 0;
+		typedef std::pair<Key, Ty>						ValueType;
+		typedef typename Key							KeyType;
+		typedef typename Ty								Value;
+		typedef detail::SearchBinTreeIter<Key, Ty>		iterator;
+		typedef detail::SearchBinTreeIter<Key, Ty>		const_iterator;
+		typedef detail::TreeNode<ValueType>				node;
 
-		bool remove(const Key&) = 0;
-		bool remove(const ValueType&) = 0;
+		SearchBinTree()
+			: root(0), sz(0)
+		{}
+
+		bool insert(const ValueType& x) 
+		{
+			return _insert(root, x).second;
+		}
+
+		bool insert(const KeyType& k, const Value& v)
+		{
+			return insert(ValueType(k, v));
+		}
+
+		bool remove(const KeyType& k)
+		{
+			return _remove(root, k).second;
+		}
+
+		bool remove(const ValueType& v) 
+		{
+			return _remove(root, v.second).second;
+		}
 		
-		iterator search(Key&) = 0;
-		iterator search(ValueType&) = 0;
-		const_iterator search(Key&) const = 0;
-		const_iterator search(ValueType&) const = 0;
-		iterator operator[](const Key&) = 0;
-		const_iterator operator[](const Key&) const = 0;
+		iterator search(const Key& k)
+		{
+			return iterator(_search(root,k).first);
+		}
 
-		bool empty() const = 0;
-		iterator root() = 0;
-		const_iterator root() const = 0;
+		iterator search(const ValueType& v)
+		{
+			return search(v.first);
+		}
+
+		const_iterator search(Key&) const 
+		{
+			return const_iterator(_search(root,k).first);
+		}
+
+		const_iterator search(ValueType&) const
+		{
+			return search(v.first);
+		}
+
+		iterator operator[](const Key& k)
+		{
+			return iterator(_search(root,k).first);
+		}
+
+		const_iterator operator[](const Key& k) const
+		{
+			return const_iterator(_search(root,k).first);
+		}
+
+		bool empty() const
+		{
+			return root == 0;
+		}
+
+		iterator begin() 
+		{
+			return iterator(root);
+		}
+
+		const_iterator begin() const
+		{
+			return const_iterator(root);
+		}
+	
+	protected:
+		std::pair<node*,bool> _insert(node* t, ValueType v)
+		{
+			if(t == 0)
+			{
+				t = new node(v);
+				if(root == 0)
+					root = t;
+				sz++;
+				return std::pair<node*,bool>(t, true);
+			}
+			if(v.first == t->val->first)
+				return std::pair<node*,bool>(t, false);
+			else if (v.first > t->val->first)
+				t->tright = _insert(t->tright, v).first;
+			else
+				t->tleft = _insert(t->tleft, v).first;
+			return std::pair<node*,bool>(t, false);
+		}
+
+		std::pair<node*,bool> _remove(node* t, const KeyType v)
+		{
+			if(t == 0)
+				return std::pair<node*,bool>(t, false); 
+			else if (v > t->val->first)
+				t->tright = _remove(t->tright, v).first;
+			else if (v < t->val->first)
+				t->tleft = _remove(t->tleft, v).first;
+			else 
+			{
+				if(t->tleft == 0 && t->tright == 0)
+				{
+					delete t;
+					t = 0;
+				}
+				else if(t->tleft == 0)
+				{
+					node* n = t;
+					if(n == root)
+						root = t->tright;
+					t = t->tright;
+					delete n;
+				}
+				else if(t->tright == 0)
+				{
+					node* n = t;
+					if(n == root)
+						root = t->tleft;
+					t = t->tleft;
+					delete n;
+				}
+				else
+				{
+					node* f = t->tleft;
+					while(f->tleft != 0)
+						f = f->tleft;
+
+					if(t == root)
+						root = f;
+					
+					std::swap(t->val, f->val);
+					t->tleft = _remove(t->tleft, v).first;
+				}
+				sz--;
+				if(sz == 0)
+					root = 0;
+			}
+			return std::pair<node*,bool>(t, true);
+		}
+
+		std::pair<node*,bool> _search(node* t, const KeyType k)
+		{
+			if(t == 0)
+				return std::pair<node*,bool>(t, false);
+			else if (t->val->first == k)
+				return std::pair<node*,bool>(t, true);
+			else if (k > t->val->first)
+				return _search(t->tright, k);
+			else 
+				return _search(t->tleft, k);
+
+		}
+
+	private:
+		detail::TreeNode<ValueType>* root;
+		int sz;
 	};
 
 
