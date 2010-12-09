@@ -21,6 +21,9 @@
  * THE SOFTWARE.
 */
 
+#ifndef RTY_ITEM_H
+#define RTY_ITEM_H
+
 #include <string>
 #include <iostream>
 
@@ -64,3 +67,5 @@ namespace rty
 {
 		
 }*/
+
+#endif
