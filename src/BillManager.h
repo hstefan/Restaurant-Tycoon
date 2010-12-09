@@ -34,12 +34,12 @@ namespace rty
 	{
 		struct Bill
 		{
-			TableGroup* table;
+			//TableGroup* table;
 			htl::list<Order> orders;
 			bool left;
 
 			Bill()
-				: table(0), orders(), left(false)
+				: /*table(0)*/ orders(), left(false)
 			{}
 		};
 	}
@@ -57,8 +57,8 @@ namespace rty
 		{
 			return _instance;
 		}
-		detail::Bill* getBill(const TableGroup& table);
-		bool notifyLeft(const TableGroup& table);
+		//detail::Bill* getBill(const TableGroup& table);
+		//bool notifyLeft(const TableGroup& table);
 	};
 }
 

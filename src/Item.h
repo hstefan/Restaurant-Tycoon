@@ -57,5 +57,6 @@ namespace rty
 		out << "Descricao: " << it.descricao << std::endl;
 		out << "Preco: " << it.preco << std::endl;
 		out << "Tempo de preparo: " << it.tempo_p << "s" << std::endl;
+		return out;
 	}
 }

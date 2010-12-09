@@ -85,12 +85,12 @@ namespace rty
 
 			const ValueType& operator*() const
 			{
-				return node->val;
+				return *node->val;
 			}
 
 			ValueType& operator*()
 			{
-				return node->val;
+				return *node->val;
 			}
 
 			SearchBinTreeIter operator=(const SearchBinTreeIter& t)
@@ -144,7 +144,7 @@ namespace rty
 
 		bool remove(const ValueType& v) 
 		{
-			return _remove(root, v.second).second;
+			return _remove(root, v.first).second;
 		}
 		
 		iterator search(const Key& k)
@@ -157,25 +157,25 @@ namespace rty
 			return search(v.first);
 		}
 
-		const_iterator search(Key&) const 
+		/*const_iterator search(const Key&) const 
 		{
 			return const_iterator(_search(root,k).first);
 		}
 
-		const_iterator search(ValueType&) const
+		const_iterator search(const ValueType&) const
 		{
 			return search(v.first);
-		}
+		}*/
 
 		iterator operator[](const Key& k)
 		{
 			return iterator(_search(root,k).first);
 		}
 
-		const_iterator operator[](const Key& k) const
+		/*const_iterator operator[](const Key& k) const
 		{
 			return const_iterator(_search(root,k).first);
-		}
+		}*/
 
 		bool empty() const
 		{

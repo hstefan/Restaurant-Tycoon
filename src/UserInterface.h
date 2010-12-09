@@ -34,7 +34,10 @@ namespace rty
 	public:
 		void start();
 	private:
-		void groupArrival();
+		void menuItems();
+		void insertItem();
+		void removeItem();
+		void listaItem();
 
 		TableMatrix tm;
 	};

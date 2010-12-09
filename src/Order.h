@@ -32,7 +32,6 @@ namespace rty
 	{
 	public:
 		double preparingTime();
-		TableGroup* table;
 	};
 }
 

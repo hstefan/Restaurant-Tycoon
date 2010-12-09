@@ -22,6 +22,8 @@
 */
 
 #include "UserInterface.h"
+#include <string>
+#include "ItemFactory.h"
 
 namespace rty
 {
@@ -39,7 +41,7 @@ namespace rty
 		while (!quit)
 		{
 			std::cout << "0 - Sair" << std::endl;
-			std::cout << "1 - Adcionar grupo" << std::endl;
+			std::cout << "1 - Gerenciar items de menu" << std::endl;
 			std::cin >> op;
 			switch(op)
 			{
@@ -47,18 +49,97 @@ namespace rty
 				quit = true;
 				break;
 			case 1:
-				groupArrival();
+				menuItems();
 				break;
 			}
 		}
 	}
 
-	void UserInterface::groupArrival()
+	void UserInterface::menuItems()
 	{
-		std::cout << "Numero de pessoas do grupo: ";
-		int p;
-		std::cin >> p;
+		bool quit = false;
+		char op;
+		while (!quit)
+		{
+			std::cout << "0 - Voltar" << std::endl;
+			std::cout << "1 - Inserir" << std::endl;
+			std::cout << "2 - Remover" << std::endl;
+			std::cout << "3 - Listar" << std::endl;
+			std::cin >> op;
+			switch(op)
+			{
+			case 0:
+				quit = true;
+				break;
+			case 1:
+				insertItem();
+				break;
+			case 2:
+				removeItem();
+				break;
+			case 3:
+				listaItem();
+				break;
+			default:
+				break;
+			}
+		}
+		start();
+	}
 
+	void UserInterface::insertItem()
+	{
+		int cod;
+		std::string desc;
+		double preco;
+		int tp;
+
+		std::cout << "Codigo: ";
+		std::cin >> cod;
+		std::cout << "Descricao: ";
+		std::cin.sync();
+		std::getline(std::cin, desc);
+		std::cin.sync();
+		std::cout << "Preco: ";
+		std::cin >> preco;
+		std::cout << "Tempo de preparacao (m): ";
+		std::cin >> tp;
+
+		ItemFactory::createItem(cod, desc, preco, tp);
+		menuItems();
+	}
+
+	void UserInterface::removeItem()
+	{
+		int cod;
+		std::cout << "Codigo do item a ser removido: ";
+		std::cin >> cod;
+		ItemFactory::removeItem(cod);
+		menuItems();
+	}
+
+	void UserInterface::listaItem()
+	{
+		int op;
+		std::cout << "0 - Por codigo" << std::endl;
+		std::cout << "1 - Por descricao" << std::endl;
+		std::cout << "2 - Por preco" << std::endl;
+		lab:
+		std::cin >> op;
+		switch(op)
+		{
+		case 0:
+			ItemFactory::printSortedByCod(std::cout);
+			break;
+		case 1:
+			ItemFactory::printSortedByDescricao(std::cout);
+			break;
+		case 2:
+			ItemFactory::printSortedByPrice(std::cout);
+			break;
+		default:
+			goto lab;
+		}
 	}
  
 }
