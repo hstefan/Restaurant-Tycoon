@@ -22,8 +22,8 @@
  *  THE SOFTWARE.
 */
 
-#ifndef HUGO_H_ITERATOR_H__
-#define HUGO_H_ITERATOR_H__
+#ifndef HUGO_H_ITERATORS_H__
+#define HUGO_H_ITERATORS_H__
 
 namespace htl
 {

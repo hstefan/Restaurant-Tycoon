@@ -22,8 +22,8 @@
  *  THE SOFTWARE.
 */
 
-#ifndef HUGO_vector_H__
-#define HUGO_vector_H__
+#ifndef HUGO_VECTOR_H__
+#define HUGO_VECTOR_H__
 
 #include "hallocator.h"
 #include "hiterators.h"
