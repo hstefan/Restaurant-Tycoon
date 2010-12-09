@@ -53,6 +53,11 @@ namespace rty
 		void callNextOnQueue();
 
 		void leaveRestaurant();
+		void makeOrder();
+
+		struct group_data;
+
+		group_data* getTableGroup(int no);
 		
 		TableMatrix* tm;
 

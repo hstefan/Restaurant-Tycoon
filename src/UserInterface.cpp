@@ -52,6 +52,7 @@ namespace rty
 			std::cout << "3 - Ver fila" << std::endl;
 			std::cout << "4 - Sair da fila" << std::endl;
 			std::cout << "5 - Ir embora" << std::endl;
+			std::cout << "6 - Fazer pedido" << std::endl;
 			std::cin >> op;
 			switch(op)
 			{
@@ -72,6 +73,9 @@ namespace rty
 				break;
 			case 5:
 				leaveRestaurant();
+				break;
+			case 6:
+				makeOrder();
 				break;
 			}
 		}
@@ -277,5 +281,51 @@ namespace rty
 					break;
 			}
 		}
+	}
+
+	void UserInterface::makeOrder()
+	{
+		int no = 0;
+		std::cout << "Digite o numero de uma do grupo" << std::endl;
+		std::cin >> no;
+
+		group_data* g  = getTableGroup(no);
+		
+		if(g == 0)
+		{
+			std::cout << "Nao ha nenhum grupo com pessoas nessa mesa." << std::endl;
+			return;
+		}
+
+		std::cout << "Digite os codigos dos items que deseja armazenar, para parar, digite -1" << std::endl;
+		int code = 0;
+		while(1)
+		{
+			std::cin >> code;
+			if(code == -1)
+				break;
+			else
+			{
+				SearchBinTree<int, Item>::iterator it = ItemFactory::searchByCode(code);
+				if(it.node == 0)
+					std::cout << "Item nao encontrado." << std::endl;
+				else
+					g->orders.push_back((*it).second);
+			}
+		}
+	}
+
+	UserInterface::group_data* UserInterface::getTableGroup(int no)
+	{
+		/*htl::list<group_data> groups*/
+		for(htl::list<group_data>::iterator it = groups.begin(); it != groups.end(); it++)
+		{
+			for(htl::vector<Table*>::iterator iw = (*it).tables.begin(); iw != (*it).tables.end(); iw++)
+			{
+				if((*iw)->num == no)
+					return &(*it);
+			}
+		}
+		return 0;
 	}
 }
