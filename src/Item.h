@@ -32,6 +32,7 @@ namespace rty
 		std::string descricao;
 		double preco;
 		int tempo_p;
+		double custo;
 
 		bool operator<(const Item& it)
 		{
