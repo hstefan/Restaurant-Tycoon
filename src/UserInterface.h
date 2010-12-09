@@ -49,6 +49,10 @@ namespace rty
 		void toQueue(int n);
 		void showQueue();
 		void leaveQueue();
+
+		void callNextOnQueue();
+
+		void leaveRestaurant();
 		
 		TableMatrix* tm;
 
@@ -58,7 +62,7 @@ namespace rty
 			int sz;
 			time_t arrival;
 			time_t gottable;
-			htl::list<Order> orders;
+			htl::list<Item> orders;
 
 			group_data(int s, time_t arr, time_t gtb, htl::vector<Table*>* tab = 0)
 				: tables(tab), sz(s), arrival(arr), gottable(gtb), orders()

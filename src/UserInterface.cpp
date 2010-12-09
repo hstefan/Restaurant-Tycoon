@@ -51,6 +51,7 @@ namespace rty
 			std::cout << "2 - Adcionar clientes" << std::endl;
 			std::cout << "3 - Ver fila" << std::endl;
 			std::cout << "4 - Sair da fila" << std::endl;
+			std::cout << "5 - Ir embora" << std::endl;
 			std::cin >> op;
 			switch(op)
 			{
@@ -68,6 +69,9 @@ namespace rty
 				break;
 			case 4:
 				leaveQueue();
+				break;
+			case 5:
+				leaveRestaurant();
 				break;
 			}
 		}
@@ -218,5 +222,42 @@ namespace rty
 			}
 		}
 		std::cout << "Volte sempre!" << std::endl;
+	}
+
+	void UserInterface::leaveRestaurant()
+	{
+		int no;
+		std::cout << "Digite o numero de uma das mesas pertencentes ao grupo que esta indo embora: ";
+		std::cin >> no;
+		bool done = false;
+		for(htl::list<group_data>::iterator it = groups.begin(); it != groups.end(); it++)
+		{
+			for(htl::vector<Table*>::iterator iv = (*it).tables->begin(); iv != (*it).tables->begin(); iv++)
+			{
+				if((*iv)->num == no)
+				{
+					for(htl::vector<Table*>::iterator iw = (*it).tables->begin(); iv != (*it).tables->begin(); iw++)
+						(*iw)->free = (*iw)->MAX_OCCUPANTS;
+
+					double total = 0;
+
+					for(htl::list<Item>::iterator ik = (*it).orders.begin(); ik != (*it).orders.begin(); ik++)
+						total += (*ik).preco;
+
+					groups.erase(it);
+					std::cout << "*Foi paga uma conta de " << total << " dinheiros*" << std::endl; 
+					done = true;
+					callNextOnQueue();
+					break;
+				}
+			}
+			if(done)
+				break;
+		}
+	}
+
+	void UserInterface::callNextOnQueue()
+	{
+		
 	}
 }
