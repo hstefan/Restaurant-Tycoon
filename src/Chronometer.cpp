@@ -20,66 +20,9 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
 */
-
-#ifndef RTY_CHRONOMETER_H
-#define RTY_CHRONOMETER_H
-
-#include <ctime>
+#include "Chronometer.h"  
 
 namespace rty
 {
-	namespace detail
-	{
-		class MyTime
-		{
-		public:
-			time_t m_time;
-
-			inline MyTime(time_t& i)
-				: m_time(i)
-			{}
-
-			inline operator time_t()
-			{
-				return m_time;
-			}
-		};
-	}
-
-	/*double operator-(detail::MyTime& i, detail::MyTime& j)
-	{
-		return difftime(i.m_time, j.m_time);	
-	}*/
-
-	class Chronometer
-	{
-	public:
-		inline static Chronometer& getInstance();
-
-		inline time_t getCurrent();
-	private:
-		Chronometer()
-		{}
-
-		static Chronometer instance;
-	};
-
-	Chronometer& Chronometer::getInstance()
-	{
-		return instance;
-	}
-	
-	time_t Chronometer::getCurrent()
-	{
-		time_t t;
-		time(&t);
-		return t;
-	}
+	Chronometer Chronometer::instance;
 }
-
-/*double operator-(rty::detail::MyTime& i, rty::detail::MyTime& j)
-{
-	return difftime(i.m_time, j.m_time);	
-}*/
-
-#endif
