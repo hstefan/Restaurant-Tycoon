@@ -92,15 +92,14 @@ namespace rty
 	htl::vector<Table*>	TableMatrix::findAround(int row, int column, int n)
 	{
 		htl::vector<Table*> tab;
+		
 		for (int i = 0; i + row < rows; ++i)
 		{
 			if(mat[i + row][column].free == Table::MAX_OCCUPANTS)
 			{
 				tab.push_back(&mat[i + row][column]);
 				if(int(tab.size()) >= n/Table::MAX_OCCUPANTS)
-				{
 					return tab;
-				}
 			}
 		}
 
@@ -116,11 +115,11 @@ namespace rty
 				break;
 		}
 
-		for (int i = 0; i + column < cols; ++i)
+		for (int i = 1; i + column < cols; ++i)
 		{
 			if(mat[row][column + i].free == Table::MAX_OCCUPANTS)
 			{
-				tab.push_back(&mat[i + row][column]);
+				tab.push_back(&mat[row][column + i]);
 				if(int(tab.size()) >= n/Table::MAX_OCCUPANTS)
 					return tab;
 				
@@ -133,7 +132,7 @@ namespace rty
 		{
 			if(mat[row][column + i].free == Table::MAX_OCCUPANTS)
 			{
-				tab.push_back(&mat[i + row][column]);
+				tab.push_back(&mat[row][column + i]);
 				if(int(tab.size()) >= n/Table::MAX_OCCUPANTS)
 					return tab;
 			}
