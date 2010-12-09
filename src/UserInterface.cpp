@@ -166,6 +166,13 @@ namespace rty
 		std::cout << "Digite o numero de pessoas: ";
 		std::cin >> ng;
 		htl::vector<Table*> mesas = tm->getTableGroup(ng);
+
+		if(!client_queue.empty())
+		{
+			std::cout << "Infelizmente, ja existe uma fila de espera, portanto acompanhe-me ate a fila." << std::endl;
+			toQueue(ng);
+			return;
+		}
 		if(mesas.empty())
 		{
 			std::cout << "Desculpe, nao ha mesas disponiveis. Acompanhe-me ate a fila." << std::endl;
@@ -177,27 +184,23 @@ namespace rty
 			for(htl::vector<Table*>::iterator it = mesas.begin(); it != mesas.end(); it++)
 				std::cout << (*it)->num << " ";
 			std::cout << "foram especialmente escolhidas para voce!" << std::endl;
-			std::cout << "Aproveite a estadia!" << std::endl;
+			std::cout << "Aproveite a estadia!" << std::endl << std::endl;
+			groups.push_back(group_data(ng, Chronometer::getInstance().getCurrent(), Chronometer::getInstance().getCurrent()) );
 		}
 	}
 
 	void UserInterface::toQueue(int n)
 	{
-		std::cout << "Recepcionista: Quem ficara responsavel pela espera de mesa? " << std::endl;
-		std::cout << "Voce: ";
-		std::string nome;
-		std::cin.sync();
-		std::getline(std::cin, nome);
-		client_queue.push_back(std::pair<std::string,int>(nome,n));
-		std::cout << "Recepcionista: Ok! Pronto! Voce esta na " << client_queue.size() << "a posicao na fila" << std::endl;
+		client_queue.push_back(group_data(n, Chronometer::getInstance().getCurrent(), Chronometer::getInstance().getCurrent()) );
+		std::cout << "Voce foi encaminhado para a " << client_queue.size() << "a posicao" << std::endl << std::endl; 
 	}	
  
 	void UserInterface::showQueue()
 	{
-		for(htl::list<std::pair<std::string,int>>::iterator it = client_queue.begin(); it != client_queue.end(); it++)
+		int i = 1;
+		for(htl::list<group_data>::iterator it = client_queue.begin(); it != client_queue.end(); it++)
 		{
-			std::cout << "Responsavel: " << (*it).first << std::endl;
-			std::cout << "Tamanho do grupo: " << (*it).second << std::endl;
+			std::cout << i << " - " << (*it).sz << " pessoas"  << " esperando ha: " << (Chronometer::getInstance().getCurrent() - (*it).arrival)/60 << " minutos"  << std::endl;
 		}
 	}
 
@@ -206,7 +209,7 @@ namespace rty
 		std::cout << "Qual a posicao do elemento que deseja sair?" << std::endl;
 		int a;
 		std::cin >> a;
-		for(htl::list<std::pair<std::string,int>>::iterator it = client_queue.begin(); it != client_queue.end(); it++)
+		for(htl::list<group_data>::iterator it = client_queue.begin(); it != client_queue.end(); it++)
 		{
 			if(--a == 0)
 			{

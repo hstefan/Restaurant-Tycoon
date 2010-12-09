@@ -27,6 +27,7 @@
 #include <iostream>
 #include "TableMatrix.h"
 #include "htl/hqueue.h"
+#include "Chronometer.h" 
 
 namespace rty
 {
@@ -48,9 +49,27 @@ namespace rty
 		void toQueue(int n);
 		void showQueue();
 		void leaveQueue();
+		
 		TableMatrix* tm;
 
-		htl::list<std::pair<std::string, int>> client_queue;
+		struct group_data
+		{
+			htl::vector<Table*>* tables;
+			int sz;
+			time_t arrival;
+			time_t gottable;
+			htl::list<Order> orders;
+
+			group_data(int s, time_t arr, time_t gtb, htl::vector<Table*>* tab = 0)
+				: tables(tab), sz(s), arrival(arr), gottable(gtb), orders()
+			{}
+
+			group_data()
+			{}
+		};
+
+		htl::list<group_data> client_queue;
+		htl::list<group_data> groups;
 	};
 }
 
