@@ -48,15 +48,18 @@ namespace rty
 			return codigo >= it.codigo;
 		}
 
-		friend std::ostream& operator<< (std::ostream &out, Item& it);
+		friend std::ostream& operator<< (std::ostream &out, Item& it)
+		{
+			out << "Codigo: " << it.codigo << std::endl;
+			out << "Descricao: " << it.descricao << std::endl;
+			out << "Preco: " << it.preco << std::endl;
+			out << "Tempo de preparo: " << it.tempo_p << "s" << std::endl;
+			return out;
+		}
 	};
-
-	std::ostream& operator<< (std::ostream &out, Item& it)
-	{
-		out << "Codigo: " << it.codigo << std::endl;
-		out << "Descricao: " << it.descricao << std::endl;
-		out << "Preco: " << it.preco << std::endl;
-		out << "Tempo de preparo: " << it.tempo_p << "s" << std::endl;
-		return out;
-	}
 }
+
+/*std::ostream& rty::Item::operator<< (std::ostream &out, rty::Item& it)
+{
+		
+}*/
