@@ -47,7 +47,7 @@ namespace rty
 		void addClients();
 		void toQueue(int n);
 		void showQueue();
-
+		void leaveQueue();
 		TableMatrix* tm;
 
 		htl::list<std::pair<std::string, int>> client_queue;

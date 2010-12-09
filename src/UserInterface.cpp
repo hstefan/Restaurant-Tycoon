@@ -66,6 +66,9 @@ namespace rty
 			case 3:
 				showQueue();
 				break;
+			case 4:
+				leaveQueue();
+				break;
 			}
 		}
 	}
@@ -106,7 +109,7 @@ namespace rty
 	{
 		int cod;
 		std::string desc;
-		double preco;
+		double preco, custo;
 		int tp;
 
 		std::cout << "Codigo: ";
@@ -119,8 +122,10 @@ namespace rty
 		std::cin >> preco;
 		std::cout << "Tempo de preparacao (m): ";
 		std::cin >> tp;
+		std::cout << "Custo: ";
+		std::cin >> custo;
 
-		ItemFactory::createItem(cod, desc, preco, tp);
+		ItemFactory::createItem(cod, desc, preco, tp, custo);
 	}
 
 	void UserInterface::removeItem()
@@ -194,5 +199,21 @@ namespace rty
 			std::cout << "Responsavel: " << (*it).first << std::endl;
 			std::cout << "Tamanho do grupo: " << (*it).second << std::endl;
 		}
+	}
+
+	void UserInterface::leaveQueue()
+	{
+		std::cout << "Qual a posicao do elemento que deseja sair?" << std::endl;
+		int a;
+		std::cin >> a;
+		for(htl::list<std::pair<std::string,int>>::iterator it = client_queue.begin(); it != client_queue.end(); it++)
+		{
+			if(--a == 0)
+			{
+				client_queue.erase(it);
+				break;
+			}
+		}
+		std::cout << "Volte sempre!" << std::endl;
 	}
 }
