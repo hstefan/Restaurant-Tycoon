@@ -25,6 +25,8 @@
 #define RTY_ORDER_H
 
 #include "TableGroup.h"
+#include "Item.h" 
+#include "htl/hlist.h"
 
 namespace rty
 {
@@ -32,6 +34,7 @@ namespace rty
 	{
 	public:
 		double preparingTime();
+		htl::list<Item> items;
 	};
 }
 
