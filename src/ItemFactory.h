@@ -38,9 +38,9 @@ namespace rty
 		static SearchBinTree<double, Item> item_preco;
 		static SortedList<Item> item_l;
 
-		static Item createItem(int cod, const std::string desc, double preco, int t_prep)
+		static Item createItem(int cod, const std::string desc, double preco, int t_prep, double custo)
 		{
-			Item it = { cod, desc, preco, t_prep };
+			Item it = { cod, desc, preco, t_prep, custo };
 
 			if(!item_cod.insert(it.codigo, it))
 			{
