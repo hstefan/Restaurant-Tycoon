@@ -394,10 +394,10 @@ namespace htl
 	}
 
 	template <class T, class Allocator>
-	list<T,Allocator>& list<T, Allocator>::operator=(const list<T,Allocator>& x)
+	list<T, Allocator>& list<T, Allocator>::operator=(const list<T,Allocator>& x)
 	{
 		clear();
-		for(iterator it = x.begin(); it != x.last(); it++)
+		for(const_iterator it = x.begin(); it != x.end(); it++)
 			push_back(*it);
 	}
 
