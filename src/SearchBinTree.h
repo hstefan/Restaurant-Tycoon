@@ -123,8 +123,8 @@ namespace rty
 		typedef detail::SearchBinTreeIter<Key, Ty>		const_iterator;
 		typedef detail::TreeNode<ValueType>				node;
 
-		SearchBinTree()
-			: root(0), sz(0)
+		SearchBinTree(bool unique_key = true)
+			: root(0), sz(0), uni_k(unique_key)
 		{}
 
 		bool insert(const ValueType& x) 
@@ -203,13 +203,15 @@ namespace rty
 				sz++;
 				return std::pair<node*,bool>(t, true);
 			}
-			if(v.first == t->val->first)
+			if(v.first == t->val->first && uni_k)
 				return std::pair<node*,bool>(t, false);
+			else if(v.first == t->val->first && !uni_k)
+				t->tright = _insert(t->tright, v).first;
 			else if (v.first > t->val->first)
 				t->tright = _insert(t->tright, v).first;
 			else
 				t->tleft = _insert(t->tleft, v).first;
-			return std::pair<node*,bool>(t, false);
+			return std::pair<node*,bool>(t, true);
 		}
 
 		std::pair<node*,bool> _remove(node* t, const KeyType v)
@@ -278,6 +280,7 @@ namespace rty
 	private:
 		detail::TreeNode<ValueType>* root;
 		int sz;
+		bool uni_k;
 	};
 
 
