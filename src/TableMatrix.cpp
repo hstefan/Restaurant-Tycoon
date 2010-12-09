@@ -116,7 +116,7 @@ namespace rty
 				break;
 		}
 
-		for (int i = 0; i + column < column; ++i)
+		for (int i = 0; i + column < cols; ++i)
 		{
 			if(mat[row][column + i].free == Table::MAX_OCCUPANTS)
 			{
