@@ -105,6 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\Chronometer.cpp" />
     <ClCompile Include="src\ItemFactory.cpp" />
     <ClCompile Include="src\TableMatrix.cpp" />
     <ClCompile Include="src\UserInterface.cpp" />
