@@ -38,7 +38,7 @@ namespace rty
 		void receiveBill(detail::Bill& bill) const;
 	private:
 		htl::vector<Table*> tables;
-		int id;
+		htl::list<Order> orders;
 	};
 }
 

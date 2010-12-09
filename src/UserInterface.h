@@ -26,20 +26,31 @@
 
 #include <iostream>
 #include "TableMatrix.h"
+#include "htl/hqueue.h"
 
 namespace rty
 {
 	class UserInterface
 	{
 	public:
+		UserInterface()
+		{}
 		void start();
 	private:
+		void mainMenu();
+
 		void menuItems();
 		void insertItem();
 		void removeItem();
 		void listaItem();
 
-		TableMatrix tm;
+		void addClients();
+		void toQueue(int n);
+		void showQueue();
+
+		TableMatrix* tm;
+
+		htl::list<std::pair<std::string, int>> client_queue;
 	};
 }
 

@@ -25,6 +25,8 @@
 #define RTY_TABLE_MATRIX
 
 #include "TableGroup.h"
+#include "htl/hvector.h"
+
 namespace rty
 {
 	class TableMatrix
@@ -37,9 +39,12 @@ namespace rty
 			return mat[l];
 		}
 
+		htl::vector<Table*> getTableGroup(unsigned int s);
 
+		htl::vector<Table*> findAround(int r, int c, int n);
 	private:
 		Table** mat;
+		int rows, cols;
 		int ngrupos;
 	};
 }

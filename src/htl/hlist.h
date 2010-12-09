@@ -462,7 +462,7 @@ namespace htl
 
 	template <class T, class Allocator>
 	typename list<T, Allocator>::size_type list<T, Allocator>::size() const
-	{ return size; }
+	{ return m_size; }
 
 	template <class T, class Allocator>
 	typename list<T, Allocator>::size_type list<T, Allocator>::max_size() const

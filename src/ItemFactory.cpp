@@ -26,8 +26,8 @@
 namespace rty
 {
 	SearchBinTree<int, Item> ItemFactory::item_cod;
-	SearchBinTree<std::string, Item> ItemFactory::item_desc;
-	SearchBinTree<double, Item> ItemFactory::item_preco;
+	SearchBinTree<std::string, Item> ItemFactory::item_desc(false);
+	SearchBinTree<double, Item> ItemFactory::item_preco(false);
 	SortedList<Item> ItemFactory::item_l;
 
 }

@@ -24,16 +24,22 @@
 #ifndef RTY_TABLE_H
 #define RTY_TABLE_H
 
-#include "Chair.h"
-#include "Client.h"
+#include "Order.h"
+#include "htl/hlist.h"
 
 namespace rty
 {
 	class Table
 	{
-	private:
+	public:
+		static const int MAX_OCCUPANTS = 2;
+
 		int free;
 		int num;
+
+		Table()
+			: free(MAX_OCCUPANTS), num(-1)
+		{}
 	};
 }
 

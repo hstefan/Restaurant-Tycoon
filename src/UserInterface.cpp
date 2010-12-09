@@ -36,12 +36,21 @@ namespace rty
 		std::cout << "Numero de linhas: ";
 		std::cin >> l;
 
+		tm = new TableMatrix(l,c);
+		mainMenu();
+	}
+
+	void UserInterface::mainMenu()
+	{
 		bool quit = false;
-		char op;
+		int op;
 		while (!quit)
 		{
 			std::cout << "0 - Sair" << std::endl;
 			std::cout << "1 - Gerenciar items de menu" << std::endl;
+			std::cout << "2 - Adcionar clientes" << std::endl;
+			std::cout << "3 - Ver fila" << std::endl;
+			std::cout << "4 - Sair da fila" << std::endl;
 			std::cin >> op;
 			switch(op)
 			{
@@ -51,6 +60,12 @@ namespace rty
 			case 1:
 				menuItems();
 				break;
+			case 2:
+				addClients();
+				break;
+			case 3:
+				showQueue();
+				break;
 			}
 		}
 	}
@@ -58,7 +73,7 @@ namespace rty
 	void UserInterface::menuItems()
 	{
 		bool quit = false;
-		char op;
+		int op;
 		while (!quit)
 		{
 			std::cout << "0 - Voltar" << std::endl;
@@ -84,7 +99,7 @@ namespace rty
 				break;
 			}
 		}
-		start();
+		mainMenu();
 	}
 
 	void UserInterface::insertItem()
@@ -106,7 +121,6 @@ namespace rty
 		std::cin >> tp;
 
 		ItemFactory::createItem(cod, desc, preco, tp);
-		menuItems();
 	}
 
 	void UserInterface::removeItem()
@@ -115,7 +129,6 @@ namespace rty
 		std::cout << "Codigo do item a ser removido: ";
 		std::cin >> cod;
 		ItemFactory::removeItem(cod);
-		menuItems();
 	}
 
 	void UserInterface::listaItem()
@@ -141,5 +154,45 @@ namespace rty
 			goto lab;
 		}
 	}
+
+	void UserInterface::addClients()
+	{
+		unsigned int ng;
+		std::cout << "Digite o numero de pessoas: ";
+		std::cin >> ng;
+		htl::vector<Table*> mesas = tm->getTableGroup(ng);
+		if(mesas.empty())
+		{
+			std::cout << "Desculpe, nao ha mesas disponiveis. Acompanhe-me ate a fila." << std::endl;
+			toQueue(ng);
+		}
+		else
+		{
+			std::cout << "A(s) mesa(s) ";
+			for(htl::vector<Table*>::iterator it = mesas.begin(); it != mesas.end(); it++)
+				std::cout << (*it)->num << " ";
+			std::cout << "foram especialmente escolhidas para voce!" << std::endl;
+			std::cout << "Aproveite a estadia!" << std::endl;
+		}
+	}
+
+	void UserInterface::toQueue(int n)
+	{
+		std::cout << "Recepcionista: Quem ficara responsavel pela espera de mesa? " << std::endl;
+		std::cout << "Voce: ";
+		std::string nome;
+		std::cin.sync();
+		std::getline(std::cin, nome);
+		client_queue.push_back(std::pair<std::string,int>(nome,n));
+		std::cout << "Recepcionista: Ok! Pronto! Voce esta na " << client_queue.size() << "a posicao na fila" << std::endl;
+	}	
  
+	void UserInterface::showQueue()
+	{
+		for(htl::list<std::pair<std::string,int>>::iterator it = client_queue.begin(); it != client_queue.end(); it++)
+		{
+			std::cout << "Responsavel: " << (*it).first << std::endl;
+			std::cout << "Tamanho do grupo: " << (*it).second << std::endl;
+		}
+	}
 }
