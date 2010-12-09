@@ -189,7 +189,7 @@ namespace rty
 				std::cout << (*it)->num << " ";
 			std::cout << "foram especialmente escolhidas para voce!" << std::endl;
 			std::cout << "Aproveite a estadia!" << std::endl << std::endl;
-			groups.push_back(group_data(ng, Chronometer::getInstance().getCurrent(), Chronometer::getInstance().getCurrent()) );
+			groups.push_back(group_data(ng, Chronometer::getInstance().getCurrent(), Chronometer::getInstance().getCurrent(), mesas));
 		}
 	}
 
@@ -232,16 +232,16 @@ namespace rty
 		bool done = false;
 		for(htl::list<group_data>::iterator it = groups.begin(); it != groups.end(); it++)
 		{
-			for(htl::vector<Table*>::iterator iv = (*it).tables->begin(); iv != (*it).tables->begin(); iv++)
+			for(htl::vector<Table*>::iterator iv = (*it).tables.begin(); iv != (*it).tables.end(); iv++)
 			{
 				if((*iv)->num == no)
 				{
-					for(htl::vector<Table*>::iterator iw = (*it).tables->begin(); iv != (*it).tables->begin(); iw++)
+					for(htl::vector<Table*>::iterator iw = (*it).tables.begin(); iw != (*it).tables.end(); iw++)
 						(*iw)->free = (*iw)->MAX_OCCUPANTS;
 
 					double total = 0;
 
-					for(htl::list<Item>::iterator ik = (*it).orders.begin(); ik != (*it).orders.begin(); ik++)
+					for(htl::list<Item>::iterator ik = (*it).orders.begin(); ik != (*it).orders.end(); ik++)
 						total += (*ik).preco;
 
 					groups.erase(it);
@@ -258,6 +258,24 @@ namespace rty
 
 	void UserInterface::callNextOnQueue()
 	{
-		
+		if(!client_queue.empty())
+		{
+			htl::vector<Table*> tab;
+			group_data* f;
+			while(true)
+			{
+				tab = tm->getTableGroup(client_queue.front().sz);
+				if(!tab.empty())
+				{
+					std::cout << "O proximo da fila pode passar, foram liberadas mesas que suprem sua necessidade!" << std::endl;
+					f = &client_queue.front();
+					group_data g(f->sz, f->arrival, Chronometer::getInstance().getCurrent(), tab);
+					groups.push_back(g);
+					client_queue.pop_front();
+				}
+				else
+					break;
+			}
+		}
 	}
 }

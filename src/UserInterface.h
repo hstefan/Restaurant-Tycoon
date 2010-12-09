@@ -58,15 +58,25 @@ namespace rty
 
 		struct group_data
 		{
-			htl::vector<Table*>* tables;
+			htl::vector<Table*> tables;
 			int sz;
 			time_t arrival;
 			time_t gottable;
 			htl::list<Item> orders;
 
-			group_data(int s, time_t arr, time_t gtb, htl::vector<Table*>* tab = 0)
+			group_data(int s, time_t arr, time_t gtb, htl::vector<Table*> tab = htl::vector<Table*>())
 				: tables(tab), sz(s), arrival(arr), gottable(gtb), orders()
 			{}
+
+			group_data& operator=(const group_data& g)
+			{
+				tables = g.tables;
+				sz = g.sz;
+				arrival = g.arrival;
+				gottable = g.gottable;
+				orders = g.orders;
+				return *this;
+			}
 
 			group_data()
 			{}
