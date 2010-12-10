@@ -37,6 +37,7 @@ namespace rty
 	{
 	public:
 		Balcony();
+
 		void leaveOrder(const Item& Item, Table* table);
 		void leaveOrder(const htl::list<Item>& ords, Table* table);
 		std::pair<Item, Table*> nextOrder();
