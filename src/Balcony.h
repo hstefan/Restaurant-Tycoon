@@ -27,6 +27,8 @@
 #include "Item.h"
 #include "htl/hqueue.h"
 #include "htl/hlist.h"
+#include "Table.h"
+#include <utility>
 
 namespace rty
 {
@@ -34,32 +36,32 @@ namespace rty
 	{
 	public:
 		inline Balcony();
-		inline void leaveItem(const Item& Item);
-		inline void leaveItem(const htl::list<Item>& ords);
-		inline Item nextItem();
+		inline void leaveItem(const Item& Item, Table* table);
+		inline void leaveItem(const htl::list<Item>& ords, Table* table);
+		inline std::pair<Item, Table*> nextItem();
 		inline bool hasNext() const;
 	private:
-		htl::queue<Item> orders;
+		htl::queue<std::pair<Item, Table*>> orders;
 	};
 
 	Balcony::Balcony()
 		: orders()
 	{}
 
-	void Balcony::leaveItem(const Item& order)
+	void Balcony::leaveItem(const Item& order, Table* table)
 	{
-		orders.push(order);
+		orders.push(std::pair<Item, Table*>(order,table));
 	}
 
-	void Balcony::leaveItem(const htl::list<Item>& ords)
+	void Balcony::leaveItem(const htl::list<Item>& ords, Table* table)
 	{
 		for(htl::list<Item>::const_iterator it = ords.begin(); it != ords.end(); it++)
-			orders.push(*it);
+			orders.push(std::pair<Item, Table*>(*it, table));
 	}
 
-	Item Balcony::nextItem()
+	std::pair<Item, Table*> Balcony::nextItem()
 	{
-		Item ord = orders.front();
+		std::pair<Item, Table*> ord = orders.front();
 		orders.pop();
 		return ord;
 	}
