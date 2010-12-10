@@ -33,12 +33,57 @@ namespace rty
 	{
 	public:
 		typedef UserInterface::group_data group_data;
-		
-		void registryGroup(const group_data& gp);
-		void notifyGroupLeft(const group_data& gp);
-		void registryOrder(const group_data& gp, const htl::list<Item>& order);
-	private:
 
+		struct gp_time
+		{
+			group_data gd;
+			time_t left_at;
+		};
+
+		struct ord_group
+		{
+			group_data gp;
+			htl::list<Item> ord;
+		};
+		
+		void registryGroup(const group_data& gp)
+		{
+			group_active.push_back(gp);
+		}
+
+		void notifyGroupLeft(const group_data& gp)
+		{
+			int no_table = gp.tables.front()->num;
+			for(htl::list<group_data>::iterator it = group_active.begin(); it != group_active.end(); it++)
+			{
+				for(htl::vector<Table*>::iterator iv = (*it).tables.begin(); iv != (*it).tables.end(); it++)
+				{
+					if((*iv)->num == no_table)
+					{
+						group_active.erase(it);
+						gp_time g = {(*it), Chronometer::getInstance().getCurrent()};
+						groups_left.push_back(g);
+						no_table = -1;
+						break;
+					}
+				}
+				if(no_table == -1)
+					break;
+			}
+		}
+		
+		void registryOrder(const group_data& gp, const htl::list<Item>& order)
+		{
+			ord_group o = { gp , order };
+			orders.push_back(o);
+		}
+
+		
+
+	private:
+		htl::list<gp_time> groups_left;
+		htl::list<group_data> group_active;
+		htl::list<ord_group> orders; 
 	};
 }
 
