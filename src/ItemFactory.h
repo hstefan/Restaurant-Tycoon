@@ -21,6 +21,9 @@
  * THE SOFTWARE.
 */
 
+#ifndef HUGO_ITEM_FACTORY_H
+#define HUGO_ITEM_FACTORY_H
+
 #include "Item.h"
 #include "SearchBinTree.h"
 #include "SortedList.h"
@@ -131,3 +134,5 @@ namespace rty
 		}
 	};
 }
+
+#endif
