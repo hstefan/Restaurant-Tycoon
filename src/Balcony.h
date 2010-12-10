@@ -36,9 +36,9 @@ namespace rty
 	{
 	public:
 		inline Balcony();
-		inline void leaveItem(const Item& Item, Table* table);
-		inline void leaveItem(const htl::list<Item>& ords, Table* table);
-		inline std::pair<Item, Table*> nextItem();
+		inline void leaveOrder(const Item& Item, Table* table);
+		inline void leaveOrder(const htl::list<Item>& ords, Table* table);
+		inline std::pair<Item, Table*> nextOrder();
 		inline bool hasNext() const;
 	private:
 		htl::queue<std::pair<Item, Table*>> orders;
@@ -48,18 +48,18 @@ namespace rty
 		: orders()
 	{}
 
-	void Balcony::leaveItem(const Item& order, Table* table)
+	void Balcony::leaveOrder(const Item& order, Table* table)
 	{
 		orders.push(std::pair<Item, Table*>(order,table));
 	}
 
-	void Balcony::leaveItem(const htl::list<Item>& ords, Table* table)
+	void Balcony::leaveOrder(const htl::list<Item>& ords, Table* table)
 	{
 		for(htl::list<Item>::const_iterator it = ords.begin(); it != ords.end(); it++)
 			orders.push(std::pair<Item, Table*>(*it, table));
 	}
 
-	std::pair<Item, Table*> Balcony::nextItem()
+	std::pair<Item, Table*> Balcony::nextOrder()
 	{
 		std::pair<Item, Table*> ord = orders.front();
 		orders.pop();
