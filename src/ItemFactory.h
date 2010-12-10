@@ -28,6 +28,7 @@
 #include "SearchBinTree.h"
 #include "SortedList.h"
 #include <iostream>
+
 namespace rty
 {
 	//esta classe funciona um pouco diferente das factory padrao, apenas estou usando-a como um

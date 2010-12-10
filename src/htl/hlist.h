@@ -21,8 +21,8 @@
  * THE SOFTWARE.
 */
 
-#ifndef HUGO_H_LIST__
-#define HUGO_H_LIST__
+#ifndef HUGO_H_LIST_
+#define HUGO_H_LIST_
 
 #include "hallocator.h"
 #include "hlist_node.h"

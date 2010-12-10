@@ -24,6 +24,7 @@
 #include "UserInterface.h"
 #include <string>
 #include "ItemFactory.h"
+#include "TableMatrix.h"
 
 namespace rty
 {
@@ -199,7 +200,7 @@ namespace rty
 			std::cout << "Aproveite a estadia!" << std::endl << std::endl;
 			group_data g(group_data(ng, Chronometer::getInstance().getCurrent(), Chronometer::getInstance().getCurrent(), mesas));
 			groups.push_back(g);
-			reg.registryGroup(g);
+			//reg.registryGroup(g);
 		}
 	}
 
@@ -254,7 +255,7 @@ namespace rty
 					for(htl::list<Item>::iterator ik = (*it).orders.begin(); ik != (*it).orders.end(); ik++)
 						total += (*ik).preco;
 
-					reg.notifyGroupLeft(*it);
+					//reg.notifyGroupLeft(*it);
 					groups.erase(it);
 					std::cout << "*Foi paga uma conta de " << total << " dinheiros*" << std::endl; 
 					done = true;
@@ -324,7 +325,7 @@ namespace rty
 			}
 		}
 
-		reg.registryOrder(*g, g->orders);
+		//reg.registryOrder(*g, g->orders);
 	}
 
 	UserInterface::group_data* UserInterface::getTableGroup(int no)

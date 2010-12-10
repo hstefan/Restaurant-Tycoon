@@ -21,8 +21,8 @@
  * THE SOFTWARE.
 */
 
-#ifndef HUGO_RESTAURANT_REGISTRY_H
-#define HUGO_RESTAURANT_REGISTRY_H
+#ifndef HUGO_REGISTRY_H
+#define HUGO_REGISTRY_H
 
 #include "htl/hlist.h"
 #include "UserInterface.h"
@@ -54,7 +54,7 @@ namespace rty
 		void notifyGroupLeft(const group_data& gp)
 		{
 			int no_table = gp.tables.front()->num;
-			for(htl::list<UserInterface::group_data>::iterator it = group_active.begin(); it != group_active.end(); it++)
+			for(htl::list<group_data>::iterator it = group_active.begin(); it != group_active.end(); it++)
 			{
 				for(htl::vector<Table*>::iterator iv = (*it).tables.begin(); iv != (*it).tables.end(); it++)
 				{

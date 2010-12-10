@@ -25,15 +25,20 @@
 #define RTY_USER_INTERFACE_H
 
 #include <iostream>
-#include "TableMatrix.h"
+
+#include "htl/hvector.h"
 #include "htl/hqueue.h"
+
 #include "Chronometer.h"
 #include "Balcony.h"
 #include "Chef.h" 
+
 #include "RestaurantRegistry.h" 
 
 namespace rty
 {
+	class TableMatrix;
+
 	class UserInterface
 	{
 	public:
@@ -101,6 +106,5 @@ namespace rty
 		RestaurantRegistry reg;
 	};
 }
-
 
 #endif
