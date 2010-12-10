@@ -41,7 +41,7 @@ namespace rty
 	public:
 		void routine();
 
-		Chef(Balcony& in_balc, Balcony& out_balc);
+		Chef(Balcony* in_balc, Balcony* out_balc);
 		void prepareNext();
 		bool depositReadyOrder();
 		bool busy();

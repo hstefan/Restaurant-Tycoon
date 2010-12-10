@@ -27,8 +27,8 @@
 
 namespace rty
 {
-	Chef::Chef(Balcony& in_balc, Balcony& out_balc)
-		: in_balc(&in_balc), out_balc(&out_balc), cntr(Chronometer::getInstance()), order_arrival(), cur_ord()
+	Chef::Chef(Balcony* in_balc, Balcony* out_balc)
+		: in_balc(in_balc), out_balc(out_balc), cntr(Chronometer::getInstance()), order_arrival(), cur_ord()
 	{}
 
 	void Chef::prepareNext()
@@ -56,20 +56,22 @@ namespace rty
 
 	bool Chef::busy()
 	{
-		return orderReady() || in_balc == 0;
+		return !orderReady() || !in_balc->hasNext();
 	}
 	
 	bool Chef::orderReady()
 	{
-		return cntr.getCurrent() - order_arrival > cur_ord.first.tempo_p;
+		return in_balc->hasNext() && (cntr.getCurrent() - order_arrival) > cur_ord.first.tempo_p;
 	}
 
 	void Chef::routine()
 	{
-		if(!busy())
+		while(orderReady())
 		{
 			depositReadyOrder();
 			prepareNext();
+			if(!in_balc->hasNext())
+				break;
 		}
 	}
 }
