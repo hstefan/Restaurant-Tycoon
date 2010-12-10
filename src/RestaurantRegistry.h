@@ -84,9 +84,9 @@ namespace rty
 				{
 					if((*iv)->num == no_table)
 					{
-						group_active.erase(it);
-						gp_time g = {(*it), Chronometer::getInstance().getCurrent()};
+						gp_time g = {(*it), time(0)};
 						groups_left.push_back(g);
+						group_active.erase(it);
 						no_table = -1;
 						break;
 					}
