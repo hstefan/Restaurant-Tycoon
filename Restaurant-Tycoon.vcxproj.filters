@@ -36,23 +36,8 @@
     <ClInclude Include="src\Car.h">
       <Filter>Header Files\objects</Filter>
     </ClInclude>
-    <ClInclude Include="src\Client.h">
-      <Filter>Header Files\actors</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Waiter.h">
-      <Filter>Header Files\actors</Filter>
-    </ClInclude>
-    <ClInclude Include="src\TableGroup.h">
-      <Filter>Header Files\actors</Filter>
-    </ClInclude>
     <ClInclude Include="src\Chef.h">
       <Filter>Header Files\actors</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Admin.h">
-      <Filter>Header Files\actors</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Chair.h">
-      <Filter>Header Files\objects</Filter>
     </ClInclude>
     <ClInclude Include="src\Table.h">
       <Filter>Header Files\objects</Filter>
@@ -75,9 +60,6 @@
     <ClInclude Include="src\htl\hlist.h">
       <Filter>Header Files\structures\htlib</Filter>
     </ClInclude>
-    <ClInclude Include="src\Order.h">
-      <Filter>Header Files\auxiliary</Filter>
-    </ClInclude>
     <ClInclude Include="src\Balcony.h">
       <Filter>Header Files\objects</Filter>
     </ClInclude>
@@ -85,12 +67,6 @@
       <Filter>Header Files\structures\htlib</Filter>
     </ClInclude>
     <ClInclude Include="src\Chronometer.h">
-      <Filter>Header Files\auxiliary</Filter>
-    </ClInclude>
-    <ClInclude Include="src\MenuItem.h">
-      <Filter>Header Files\auxiliary</Filter>
-    </ClInclude>
-    <ClInclude Include="src\BillManager.h">
       <Filter>Header Files\auxiliary</Filter>
     </ClInclude>
     <ClInclude Include="src\SortedList.h">
@@ -117,9 +93,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Waiter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\UserInterface.cpp">
