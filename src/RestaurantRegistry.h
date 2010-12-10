@@ -102,7 +102,20 @@ namespace rty
 			orders.push_back(o);
 		}
 
-		
+		inline htl::list<group_data>& getGroupActive()
+		{
+			return group_active;
+		}
+
+		inline htl::list<gp_time>& getGroupLeft()
+		{
+			return groups_left;
+		}
+
+		inline htl::list<ord_group>& getOrders()
+		{
+			return orders;
+		}
 
 	private:
 		htl::list<gp_time> groups_left;
