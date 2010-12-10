@@ -375,6 +375,7 @@ namespace rty
 			std::cout << "3 - Listar pedidos feitos" << std::endl;
 			std::cout << "4 - Listar clientes (somente aqueles que ja foram embora)" << std::endl;
 			std::cout << "5 - Listar clientes ativos" << std::endl;
+			std::cout << "6 - Ver tempo de manobra com veiculos" << std::endl;
 			std::cin >> op;
 			switch(op)
 			{
@@ -395,6 +396,9 @@ namespace rty
 				break;
 			case 5:
 				listActive();
+				break;
+			case 6:
+				std::cout << "Foram gastos " << reg.getParking() << "segundos com manobras de veiculos" << std::endl;
 				break;
 			}
 		}
