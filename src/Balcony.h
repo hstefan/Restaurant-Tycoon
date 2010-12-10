@@ -24,8 +24,9 @@
 #ifndef RTY_BALCONY_H
 #define RTY_BALCONY_H
 
-#include "Order.h"
+#include "Item.h"
 #include "htl/hqueue.h"
+#include "htl/hlist.h"
 
 namespace rty
 {
@@ -33,25 +34,32 @@ namespace rty
 	{
 	public:
 		inline Balcony();
-		inline void leaveOrder(const Order& order);
-		inline Order nextOrder();
+		inline void leaveItem(const Item& Item);
+		inline void leaveItem(const htl::list<Item>& ords);
+		inline Item nextItem();
 		inline bool hasNext() const;
 	private:
-		htl::queue<Order> orders;
+		htl::queue<Item> orders;
 	};
 
 	Balcony::Balcony()
 		: orders()
 	{}
 
-	void Balcony::leaveOrder(const Order& order)
+	void Balcony::leaveItem(const Item& order)
 	{
 		orders.push(order);
 	}
 
-	Order Balcony::nextOrder()
+	void Balcony::leaveItem(const htl::list<Item>& ords)
 	{
-		Order ord = orders.front();
+		for(htl::list<Item>::const_iterator it = ords.begin(); it != ords.end(); it++)
+			orders.push(*it);
+	}
+
+	Item Balcony::nextItem()
+	{
+		Item ord = orders.front();
 		orders.pop();
 		return ord;
 	}
