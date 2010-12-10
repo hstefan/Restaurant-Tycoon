@@ -89,6 +89,7 @@
     <ClInclude Include="src\htl\hvector.h" />
     <ClInclude Include="src\Item.h" />
     <ClInclude Include="src\ItemFactory.h" />
+    <ClInclude Include="src\Parking.h" />
     <ClInclude Include="src\RestaurantRegistry.h" />
     <ClInclude Include="src\SearchBinTree.h" />
     <ClInclude Include="src\SortedList.h" />
@@ -101,6 +102,7 @@
     <ClCompile Include="src\Chef.cpp" />
     <ClCompile Include="src\Chronometer.cpp" />
     <ClCompile Include="src\ItemFactory.cpp" />
+    <ClCompile Include="src\Parking.cpp" />
     <ClCompile Include="src\TableMatrix.cpp" />
     <ClCompile Include="src\UserInterface.cpp" />
   </ItemGroup>
