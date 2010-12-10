@@ -33,13 +33,13 @@ namespace rty
 	class Chef
 	{
 	public:
-		inline void routine();
+		void routine();
 
-		inline Chef(Balcony& in_balc, Balcony& out_balc);
-		inline void prepareNext();
-		inline bool depositReadyOrder();
-		inline bool busy();
-		inline bool orderReady();
+		Chef(Balcony& in_balc, Balcony& out_balc);
+		void prepareNext();
+		bool depositReadyOrder();
+		bool busy();
+		bool orderReady();
 	private:
 		Balcony* in_balc;
 		Balcony* out_balc;
@@ -47,52 +47,6 @@ namespace rty
 		time_t order_arrival;
 		std::pair<Item, Table*> cur_ord;
 	};
-
-	Chef::Chef(Balcony& in_balc, Balcony& out_balc)
-		: in_balc(&in_balc), out_balc(&out_balc), cntr(Chronometer::getInstance()), order_arrival(), cur_ord()
-	{}
-
-	void Chef::prepareNext()
-	{
-		if(in_balc != 0)
-		{
-			if(!busy() && in_balc->hasNext())
-			{
-				cur_ord = in_balc->nextOrder();
-				order_arrival = cntr.getCurrent();
-			}
-		}
-	}
-
-	bool Chef::depositReadyOrder()
-	{
-		if(orderReady())
-		{
-			out_balc->leaveOrder(cur_ord.first, cur_ord.second);
-			return true;
-		}
-
-		return false;
-	}
-
-	bool Chef::busy()
-	{
-		return orderReady() || in_balc == 0;
-	}
-	
-	bool Chef::orderReady()
-	{
-		return cntr.getCurrent() - order_arrival > cur_ord.first.tempo_p;
-	}
-
-	void Chef::routine()
-	{
-		if(!busy())
-		{
-			depositReadyOrder();
-			prepareNext();
-		}
-	}
 }
 
 #endif
