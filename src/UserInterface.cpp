@@ -53,6 +53,7 @@ namespace rty
 			std::cout << "4 - Sair da fila" << std::endl;
 			std::cout << "5 - Ir embora" << std::endl;
 			std::cout << "6 - Fazer pedido" << std::endl;
+			std::cout << "7 - Ver pedidos prontos" << std::endl;
 			std::cin >> op;
 			switch(op)
 			{
@@ -76,6 +77,9 @@ namespace rty
 				break;
 			case 6:
 				makeOrder();
+				break;
+			case 7:
+				checkReadyOrders();
 				break;
 			}
 		}
@@ -193,7 +197,9 @@ namespace rty
 				std::cout << (*it)->num << " ";
 			std::cout << "foram especialmente escolhidas para voce!" << std::endl;
 			std::cout << "Aproveite a estadia!" << std::endl << std::endl;
-			groups.push_back(group_data(ng, Chronometer::getInstance().getCurrent(), Chronometer::getInstance().getCurrent(), mesas));
+			group_data g(group_data(ng, Chronometer::getInstance().getCurrent(), Chronometer::getInstance().getCurrent(), mesas));
+			groups.push_back(g);
+			reg.registryGroup(g);
 		}
 	}
 
@@ -248,6 +254,7 @@ namespace rty
 					for(htl::list<Item>::iterator ik = (*it).orders.begin(); ik != (*it).orders.end(); ik++)
 						total += (*ik).preco;
 
+					reg.notifyGroupLeft(*it);
 					groups.erase(it);
 					std::cout << "*Foi paga uma conta de " << total << " dinheiros*" << std::endl; 
 					done = true;
@@ -310,14 +317,18 @@ namespace rty
 				if(it.node == 0)
 					std::cout << "Item nao encontrado." << std::endl;
 				else
+				{
 					g->orders.push_back((*it).second);
+					balc.leaveOrder((*it).second, g->tables.front());
+				}
 			}
 		}
+
+		reg.registryOrder(*g, g->orders);
 	}
 
 	UserInterface::group_data* UserInterface::getTableGroup(int no)
 	{
-		/*htl::list<group_data> groups*/
 		for(htl::list<group_data>::iterator it = groups.begin(); it != groups.end(); it++)
 		{
 			for(htl::vector<Table*>::iterator iw = (*it).tables.begin(); iw != (*it).tables.end(); iw++)
@@ -327,5 +338,16 @@ namespace rty
 			}
 		}
 		return 0;
+	}
+
+	void UserInterface::checkReadyOrders()
+	{
+		chef.routine();
+		std::pair<Item, Table*> o;
+		while(out_balc.hasNext())
+		{
+			o = out_balc.nextOrder();
+			std::cout << "O item de codigo " << o.first.codigo << "da mesa " << o.second->num << "esta pronto!" << std::endl; 
+		}
 	}
 }

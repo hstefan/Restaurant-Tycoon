@@ -24,9 +24,6 @@
 #ifndef RTY_TABLE_H
 #define RTY_TABLE_H
 
-#include "Order.h"
-#include "htl/hlist.h"
-
 namespace rty
 {
 	class Table

@@ -24,8 +24,8 @@
 #ifndef RTY_TABLE_MATRIX
 #define RTY_TABLE_MATRIX
 
-#include "TableGroup.h"
 #include "htl/hvector.h"
+#include "Table.h"
 
 namespace rty
 {

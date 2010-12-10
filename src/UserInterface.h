@@ -27,7 +27,10 @@
 #include <iostream>
 #include "TableMatrix.h"
 #include "htl/hqueue.h"
-#include "Chronometer.h" 
+#include "Chronometer.h"
+#include "Balcony.h"
+#include "Chef.h" 
+#include "RestaurantRegistry.h" 
 
 namespace rty
 {
@@ -35,31 +38,10 @@ namespace rty
 	{
 	public:
 		UserInterface()
+			: chef(balc, out_balc)
 		{}
+
 		void start();
-	private:
-		void mainMenu();
-
-		void menuItems();
-		void insertItem();
-		void removeItem();
-		void listaItem();
-
-		void addClients();
-		void toQueue(int n);
-		void showQueue();
-		void leaveQueue();
-
-		void callNextOnQueue();
-
-		void leaveRestaurant();
-		void makeOrder();
-
-		struct group_data;
-
-		group_data* getTableGroup(int no);
-		
-		TableMatrix* tm;
 
 		struct group_data
 		{
@@ -87,8 +69,36 @@ namespace rty
 			{}
 		};
 
+	private:
+		void mainMenu();
+
+		void menuItems();
+		void insertItem();
+		void removeItem();
+		void listaItem();
+
+		void addClients();
+		void toQueue(int n);
+		void showQueue();
+		void leaveQueue();
+
+		void callNextOnQueue();
+
+		void leaveRestaurant();
+		void makeOrder();
+		void checkReadyOrders();
+
+		group_data* getTableGroup(int no);
+		
+		TableMatrix* tm;
+
 		htl::list<group_data> client_queue;
 		htl::list<group_data> groups;
+		Balcony balc;
+		Balcony out_balc;
+		Chef chef;
+
+		RestaurantRegistry reg;
 	};
 }
 

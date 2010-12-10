@@ -54,7 +54,7 @@ namespace rty
 		void notifyGroupLeft(const group_data& gp)
 		{
 			int no_table = gp.tables.front()->num;
-			for(htl::list<group_data>::iterator it = group_active.begin(); it != group_active.end(); it++)
+			for(htl::list<UserInterface::group_data>::iterator it = group_active.begin(); it != group_active.end(); it++)
 			{
 				for(htl::vector<Table*>::iterator iv = (*it).tables.begin(); iv != (*it).tables.end(); it++)
 				{
