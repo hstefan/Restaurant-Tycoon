@@ -45,7 +45,7 @@ namespace rty
 		Balcony* out_balc;
 		Chronometer& cntr;
 		time_t order_arrival;
-		Order cur_ord;
+		std::pair<Item, Table*> cur_ord;
 	};
 
 	Chef::Chef(Balcony& in_balc, Balcony& out_balc)
@@ -68,7 +68,7 @@ namespace rty
 	{
 		if(orderReady())
 		{
-			out_balc->leaveOrder(cur_ord);
+			out_balc->leaveOrder(cur_ord.first, cur_ord.second);
 			return true;
 		}
 
@@ -82,7 +82,7 @@ namespace rty
 	
 	bool Chef::orderReady()
 	{
-		return cntr.getCurrent() - order_arrival > cur_ord.preparingTime();
+		return cntr.getCurrent() - order_arrival > cur_ord.first.tempo_p;
 	}
 
 	void Chef::routine()
