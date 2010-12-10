@@ -95,6 +95,7 @@
     <ClInclude Include="src\ItemFactory.h" />
     <ClInclude Include="src\MenuItem.h" />
     <ClInclude Include="src\Order.h" />
+    <ClInclude Include="src\RestaurantRegistry.h" />
     <ClInclude Include="src\SearchBinTree.h" />
     <ClInclude Include="src\SortedList.h" />
     <ClInclude Include="src\Table.h" />
