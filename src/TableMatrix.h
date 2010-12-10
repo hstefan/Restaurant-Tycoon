@@ -25,10 +25,12 @@
 #define RTY_TABLE_MATRIX
 
 #include "htl/hvector.h"
-#include "Table.h"
+
 
 namespace rty
 {
+	class Table;
+
 	class TableMatrix
 	{
 	public:

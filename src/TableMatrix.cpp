@@ -22,6 +22,7 @@
 */
 
 #include "TableMatrix.h"
+#include "Table.h"
 
 namespace rty
 {

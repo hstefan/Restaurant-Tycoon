@@ -328,7 +328,7 @@ namespace rty
 		//reg.registryOrder(*g, g->orders);
 	}
 
-	UserInterface::group_data* UserInterface::getTableGroup(int no)
+	group_data* UserInterface::getTableGroup(int no)
 	{
 		for(htl::list<group_data>::iterator it = groups.begin(); it != groups.end(); it++)
 		{

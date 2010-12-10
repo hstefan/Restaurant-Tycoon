@@ -25,14 +25,38 @@
 #define HUGO_REGISTRY_H
 
 #include "htl/hlist.h"
-#include "UserInterface.h"
+#include "Table.h"
 
 namespace rty
 {
+	struct group_data
+	{
+		htl::vector<Table*> tables;
+		int sz;
+		time_t arrival;
+		time_t gottable;
+		htl::list<Item> orders;
+
+		group_data(int s, time_t arr, time_t gtb, htl::vector<Table*> tab = htl::vector<Table*>())
+			: tables(tab), sz(s), arrival(arr), gottable(gtb), orders()
+		{}
+
+		group_data& operator=(const group_data& g)
+		{
+			tables = g.tables;
+			sz = g.sz;
+			arrival = g.arrival;
+			gottable = g.gottable;
+			orders = g.orders;
+			return *this;
+		}
+
+		group_data()
+		{}
+	};
 	class RestaurantRegistry
 	{
 	public:
-		typedef UserInterface::group_data group_data;
 
 		struct gp_time
 		{
