@@ -55,6 +55,7 @@ namespace rty
 			std::cout << "5 - Ir embora" << std::endl;
 			std::cout << "6 - Fazer pedido" << std::endl;
 			std::cout << "7 - Ver pedidos prontos" << std::endl;
+			std::cout << "8 - Ver relatorio" << std::endl;
 			std::cin >> op;
 			switch(op)
 			{
@@ -82,6 +83,8 @@ namespace rty
 			case 7:
 				checkReadyOrders();
 				break;
+			case 8:
+				menuRelatory();
 			}
 		}
 	}
@@ -200,7 +203,7 @@ namespace rty
 			std::cout << "Aproveite a estadia!" << std::endl << std::endl;
 			group_data g(group_data(ng, Chronometer::getInstance().getCurrent(), Chronometer::getInstance().getCurrent(), mesas));
 			groups.push_back(g);
-			//reg.registryGroup(g);
+			reg.registryGroup(g);
 		}
 	}
 
@@ -255,7 +258,7 @@ namespace rty
 					for(htl::list<Item>::iterator ik = (*it).orders.begin(); ik != (*it).orders.end(); ik++)
 						total += (*ik).preco;
 
-					//reg.notifyGroupLeft(*it);
+					reg.notifyGroupLeft(*it);
 					groups.erase(it);
 					std::cout << "*Foi paga uma conta de " << total << " dinheiros*" << std::endl; 
 					done = true;
@@ -325,7 +328,7 @@ namespace rty
 			}
 		}
 
-		//reg.registryOrder(*g, g->orders);
+		reg.registryOrder(*g, g->orders);
 	}
 
 	group_data* UserInterface::getTableGroup(int no)
@@ -350,5 +353,111 @@ namespace rty
 			o = out_balc.nextOrder();
 			std::cout << "O item de codigo " << o.first.codigo << "da mesa " << o.second->num << "esta pronto!" << std::endl; 
 		}
+	}
+
+	void UserInterface::menuRelatory()
+	{
+		bool quit = false;
+		int op;
+		while(!quit)
+		{
+			std::cout << "0 - Voltar" << std::endl;
+			std::cout << "1 - Ver custo total" << std::endl;
+			std::cout << "2 - Ver lucro total" << std::endl;
+			std::cout << "3 - Listar pedidos feitos" << std::endl;
+			std::cout << "4 - Listar clientes (somente aqueles que ja foram embora)" << std::endl;
+			std::cout << "5 - Listar clientes ativos" << std::endl;
+			std::cin >> op;
+			switch(op)
+			{
+			case 0:
+				quit = true;
+				break;
+			case 1:
+				printCost();
+				break;
+			case 2:
+				printGain();
+				break;
+			case 3:
+				listOrders();
+				break;
+			case 4:
+				listClients();
+				break;
+			case 5:
+				listActive();
+				break;
+			}
+		}
+	}
+
+	void UserInterface::printCost()
+	{
+		htl::list<RestaurantRegistry::ord_group>& o = reg.getOrders();
+		double total = 0;
+		for(htl::list<RestaurantRegistry::ord_group>::iterator it = o.begin(); it != o.end(); it++)
+		{
+			for(htl::list<Item>::iterator iw = (*it).ord.begin(); iw != (*it).ord.end(); iw++)
+				total += (*iw).custo;
+		}
+		std::cout << std::endl << "O custo total foi de " << total << " dinheiros" << std::endl;
+	}
+
+	void UserInterface::printGain()
+	{
+		std::cout << std::endl;
+		htl::list<RestaurantRegistry::ord_group>& o = reg.getOrders();
+		double custo = 0;
+		double total = 0;
+		for(htl::list<RestaurantRegistry::ord_group>::iterator it = o.begin(); it != o.end(); it++)
+		{
+			for(htl::list<Item>::iterator iw = (*it).ord.begin(); iw != (*it).ord.end(); iw++)
+			{
+				custo += (*iw).custo;
+				total += (*iw).preco;
+			}
+		}
+
+		std::cout << "O lucro foi de " << total - custo << std::endl;
+		std::cout << std::endl;
+	}
+
+	void UserInterface::listOrders()
+	{
+		std::cout << std::endl;
+		htl::list<RestaurantRegistry::ord_group>& o = reg.getOrders();
+		for(htl::list<RestaurantRegistry::ord_group>::iterator it = o.begin(); it != o.end(); it++)
+		{
+			for(htl::list<Item>::iterator iw = (*it).ord.begin(); iw != (*it).ord.end(); iw++)
+			{
+				std::cout << (*iw).codigo << "\t" << (*iw).descricao << std::endl;		
+			}
+		}	
+		std::cout << std::endl;
+	}
+
+	void UserInterface::listClients()
+	{
+		std::cout << std::endl;
+		htl::list<RestaurantRegistry::gp_time>& g = reg.getGroupLeft();
+		std::cout << "Numero de pessoas, hora de chegada, hora que conseguiu mesa, hora que foi embora" << std::endl;
+		
+		struct tm* arr, *gta, *lef;
+		for(htl::list<RestaurantRegistry::gp_time>::iterator it = g.begin(); it != g.end(); it++)
+		{
+			arr = localtime(&(*it).gd.arrival);
+			gta = localtime(&(*it).gd.gottable);
+			lef = localtime(&(*it).left_at);
+
+			std::cout << (*it).gd.sz << "\t" << asctime(arr) << "\t" << asctime(gta) << "\t" << asctime(lef) << std::endl;
+		}
+		std::cout << std::endl;
+	}
+
+	void UserInterface::listActive()
+	{
+		std::cout << std::endl;
+
 	}
 }

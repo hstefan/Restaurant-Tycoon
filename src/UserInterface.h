@@ -43,7 +43,7 @@ namespace rty
 	{
 	public:
 		UserInterface()
-			: chef(balc, out_balc)
+			: client_queue(), groups(), balc(), out_balc(), chef(&balc, &out_balc), reg()
 		{}
 
 		void start();
@@ -55,6 +55,7 @@ namespace rty
 		void insertItem();
 		void removeItem();
 		void listaItem();
+		void menuRelatory();
 
 		void addClients();
 		void toQueue(int n);
@@ -66,6 +67,12 @@ namespace rty
 		void leaveRestaurant();
 		void makeOrder();
 		void checkReadyOrders();
+
+		void printCost();
+		void printGain();
+		void listOrders();
+		void listClients();
+		void listActive();
 
 		group_data* getTableGroup(int no);
 		
