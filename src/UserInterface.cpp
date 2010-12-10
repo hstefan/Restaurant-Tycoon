@@ -536,6 +536,7 @@ namespace rty
 		{
 			std::cout << "Manobrista: eu demorei " << p.first*20 << " segundos pra estacionar ali na fileira " <<
 				p.second.first << " no slot " << p.second.second << std::endl;
+			reg.registryParkingTime(p.first);
 		}
 	}
 
@@ -553,6 +554,9 @@ namespace rty
 			std::cout << "Manobrista: Ta me tirando? Nao tem carro ali manolo" << std::endl;
 		}
 		else
+		{
 			std::cout << "Manobrista: Demorei " << temp *20 << " segundos mas ta aqui teu carro, flw" << std::endl;
+			reg.registryParkingTime(temp);
+		}
 	}
 }
