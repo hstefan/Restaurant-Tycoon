@@ -45,14 +45,14 @@ namespace rty
 		return park_emp[row][slot];
 	}
 
-	int Parking::parkCar()
+	std::pair<int, std::pair<int,int> > Parking::parkCar()
 	{
 		for(int i = 0; i < NUM_ROW; i++) //tenta achar vagas no ultimo slot de cada linha (assim o tempo de remocao fica menor)
 		{
 			if(isBusy(i, NUM_SLOT - 1))
 			{
 				park_emp[i][NUM_SLOT - 1] = true;
-				return i + 1; //numero de linhas percorridas + 1 da entrada no slot
+				return std::pair<int, std::pair<int, int>>(i + 1, std::pair<int,int>(i, NUM_SLOT - 1)); //numero de linhas percorridas + 1 da entrada no slot
 			}
 		}
 
@@ -62,11 +62,11 @@ namespace rty
 			{
 				int t_push = pushCars(i);
 				park_emp[i][NUM_SLOT - 1] = true;
-				return t_push + i + 1; //tempo de deslocamento dos carros + tempo de chegar ate um slot com vaga
+				return std::pair<int, std::pair<int, int>>(t_push + i + 1, std::pair<int,int>(i, NUM_SLOT - 1));
 			}
 		}
 
-		return 0;
+		return std::pair<int, std::pair<int, int>>(0, std::pair<int,int>(0, 0));
 	}
 
 	bool Parking::theresAnEmptySlot(int row)

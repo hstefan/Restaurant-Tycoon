@@ -24,6 +24,8 @@
 #ifndef RTY_PARKING_H
 #define RTY_PARKING_H
 
+#include <utility>
+
 namespace rty
 {
 	/*O tempo necessario para retirar um carro e dado em funcao do numero de 'casas' que o carro precisa percorrer para sair*/
@@ -35,7 +37,7 @@ namespace rty
 		
 		Parking();
 
-		int parkCar();
+		std::pair<int, std::pair<int,int> > parkCar();
 		int removeCar(int row, int slot);
 	
 	protected:
