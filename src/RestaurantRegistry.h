@@ -58,6 +58,10 @@ namespace rty
 	{
 	public:
 
+		RestaurantRegistry()
+			: groups_left(), group_active(), orders(), total_park(0)
+		{}
+
 		struct gp_time
 		{
 			group_data gd;
@@ -117,10 +121,21 @@ namespace rty
 			return orders;
 		}
 
+		inline void registryParkingTime(int t)
+		{
+			total_park += t;
+		}
+		
+		inline int getParking()
+		{
+			return total_park;
+		}
+
 	private:
 		htl::list<gp_time> groups_left;
 		htl::list<group_data> group_active;
 		htl::list<ord_group> orders; 
+		int total_park;
 	};
 }
 
