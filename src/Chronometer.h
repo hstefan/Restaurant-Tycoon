@@ -71,9 +71,7 @@ namespace rty
 	
 	time_t Chronometer::getCurrent()
 	{
-		time_t t;
-		time(&t);
-		return t;
+		return time(0);
 	}
 }
 
