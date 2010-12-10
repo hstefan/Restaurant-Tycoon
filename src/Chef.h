@@ -25,11 +25,17 @@
 #ifndef RTY_CHEF_H
 #define RTY_CHEF_H
 
-#include "Balcony.h"
-#include "Chronometer.h"
+#include <ctime>
+#include <utility>
+
+#include "Item.h"
 
 namespace rty
 {
+	class Balcony;
+	class Table;
+	class Chronometer;
+
 	class Chef
 	{
 	public:
