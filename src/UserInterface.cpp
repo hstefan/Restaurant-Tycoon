@@ -305,7 +305,7 @@ namespace rty
 	void UserInterface::makeOrder()
 	{
 		int no = 0;
-		std::cout << "Digite o numero de uma do grupo" << std::endl;
+		std::cout << "Digite o numero de uma mesa do grupo" << std::endl;
 		std::cin >> no;
 
 		group_data* g  = getTableGroup(no);
@@ -398,7 +398,7 @@ namespace rty
 				listActive();
 				break;
 			case 6:
-				std::cout << "Foram gastos " << reg.getParking() << "segundos com manobras de veiculos" << std::endl;
+				std::cout << "Foram gastos " << reg.getParking()*20 << " segundos com manobras de veiculos" << std::endl;
 				break;
 			}
 		}
