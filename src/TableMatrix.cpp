@@ -99,7 +99,7 @@ namespace rty
 			if(mat[i + row][column].free == Table::MAX_OCCUPANTS)
 			{
 				tab.push_back(&mat[i + row][column]);
-				if(int(tab.size()) >= n/Table::MAX_OCCUPANTS)
+				if(int(tab.size()) >= (n + n%Table::MAX_OCCUPANTS)/Table::MAX_OCCUPANTS)
 					return tab;
 			}
 		}
@@ -109,7 +109,7 @@ namespace rty
 			if(mat[i + row][column].free == Table::MAX_OCCUPANTS)
 			{
 				tab.push_back(&mat[i + row][column]);
-				if(int(tab.size()) >= n/Table::MAX_OCCUPANTS)
+				if(int(tab.size()) >= (n + n%Table::MAX_OCCUPANTS)/Table::MAX_OCCUPANTS)
 					return tab;
 			}
 			else 
@@ -121,7 +121,7 @@ namespace rty
 			if(mat[row][column + i].free == Table::MAX_OCCUPANTS)
 			{
 				tab.push_back(&mat[row][column + i]);
-				if(int(tab.size()) >= n/Table::MAX_OCCUPANTS)
+				if(int(tab.size()) >= (n + n%Table::MAX_OCCUPANTS)/Table::MAX_OCCUPANTS)
 					return tab;
 				
 			}
@@ -134,7 +134,7 @@ namespace rty
 			if(mat[row][column + i].free == Table::MAX_OCCUPANTS)
 			{
 				tab.push_back(&mat[row][column + i]);
-				if(int(tab.size()) >= n/Table::MAX_OCCUPANTS)
+				if(int(tab.size()) >= (n + n%Table::MAX_OCCUPANTS)/Table::MAX_OCCUPANTS)
 					return tab;
 			}
 			else 
