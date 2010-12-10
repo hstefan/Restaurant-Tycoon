@@ -24,6 +24,7 @@
 #include "Parking.h"
 #include "htl/hlist.h"
 #include <utility>
+#include <iostream>
 
 namespace rty
 {
@@ -49,7 +50,7 @@ namespace rty
 	{
 		for(int i = 0; i < NUM_ROW; i++) //tenta achar vagas no ultimo slot de cada linha (assim o tempo de remocao fica menor)
 		{
-			if(isBusy(i, NUM_SLOT - 1))
+			if(!isBusy(i, NUM_SLOT - 1))
 			{
 				park_emp[i][NUM_SLOT - 1] = true;
 				return std::pair<int, std::pair<int, int>>(i + 1, std::pair<int,int>(i, NUM_SLOT - 1)); //numero de linhas percorridas + 1 da entrada no slot
@@ -100,17 +101,21 @@ namespace rty
 		}
 
 		int cars_moved = 0;
-
+		std::pair<int, std::pair<int, int>> newpos;
 		for(int i = slot - 1; i > 0; i--)
 		{
 			cars_moved++;
 			park_emp[row][i] = false;
+			newpos = parkCar();
+			std::cout << "O carro que estava na fileira " << row << " na posicao " << i << 
+				" foi movido para fileira " << newpos.second.first << " na posicao " << newpos.second.second 
+				<< std::endl;
 		}
 
 		int total = 0;
 		while(cars_moved > 0)
 		{
-			total += parkCar();
+			total += parkCar().first;
 			cars_moved--;
 		}
 
