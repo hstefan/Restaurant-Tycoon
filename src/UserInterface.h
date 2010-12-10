@@ -32,6 +32,7 @@
 #include "Chronometer.h"
 #include "Balcony.h"
 #include "Chef.h" 
+#include "Parking.h"
 
 #include "RestaurantRegistry.h" 
 
@@ -52,6 +53,7 @@ namespace rty
 		void mainMenu();
 
 		void menuItems();
+		void menuParking();
 		void insertItem();
 		void removeItem();
 		void listaItem();
@@ -74,6 +76,9 @@ namespace rty
 		void listClients();
 		void listActive();
 
+		void parkCar();
+		void removeCar();
+
 		group_data* getTableGroup(int no);
 		
 		TableMatrix* tm;
@@ -83,6 +88,7 @@ namespace rty
 		Balcony balc;
 		Balcony out_balc;
 		Chef chef;
+		Parking park;
 
 		RestaurantRegistry reg;
 	};

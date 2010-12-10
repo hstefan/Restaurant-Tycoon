@@ -27,6 +27,7 @@
 #include "TableMatrix.h"
 
 #include <cassert>
+#include <utility>
 
 namespace rty
 {
@@ -58,6 +59,7 @@ namespace rty
 			std::cout << "6 - Fazer pedido" << std::endl;
 			std::cout << "7 - Ver pedidos prontos" << std::endl;
 			std::cout << "8 - Ver relatorio" << std::endl;
+			std::cout << "9 - Gerenciar estacionamento" << std::endl;
 			std::cin >> op;
 			switch(op)
 			{
@@ -87,6 +89,10 @@ namespace rty
 				break;
 			case 8:
 				menuRelatory();
+				break;
+			case 9:
+				menuParking();
+				break;
 			}
 		}
 	}
@@ -491,5 +497,62 @@ namespace rty
 			std::cout << "\t" << buf << std::endl;
 		}
 		std::cout << std::endl;
+	}
+
+	void UserInterface::menuParking()
+	{
+		int op = 0;
+		while(op != -1)
+		{
+			std::cout << "0 - Voltar" << std::endl;
+			std::cout << "1 - Estacionar" << std::endl;
+			std::cout << "2 - Remover carro" << std::endl;
+			std::cin >> op;
+			switch(op)
+			{
+			case 0:
+				op = -1;
+				break;
+			case 1:
+				parkCar();
+				break;
+			case 2:
+				removeCar();
+				break;
+			}
+		}
+	}
+
+	void UserInterface::parkCar()
+	{
+		std::cout << "Manobrista: ta vo estacionah, perae" << std::endl;
+		
+		std::pair<int, std::pair<int,int>> p = park.parkCar();
+		if(p.first == 0)
+		{
+			std::cout << "Manobrista: bah, nao tem mais vaga, foi mal." << std::endl;
+		}
+		else
+		{
+			std::cout << "Manobrista: eu demorei " << p.first*20 << " segundos pra estacionar ali na fileira " <<
+				p.second.first << " no slot " << p.second.second << std::endl;
+		}
+	}
+
+	void UserInterface::removeCar()
+	{
+		int f, c;
+		std::cout << "Manobrista: Qual e a fileira? " << std::endl;
+		std::cin >> f;
+		std::cout << "Manobrista: Qual slot? " << std::endl;
+		std::cin >> c;
+
+		int temp = park.removeCar(f,c);
+		if(temp == 0)
+		{
+			std::cout << "Manobrista: Ta me tirando? Nao tem carro ali manolo" << std::endl;
+		}
+		else
+			std::cout << "Manobrista: Demorei " << temp *20 << " segundos mas ta aqui teu carro, flw" << std::endl;
 	}
 }
