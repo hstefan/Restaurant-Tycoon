@@ -26,6 +26,8 @@
 #include "ItemFactory.h"
 #include "TableMatrix.h"
 
+#include <cassert>
+
 namespace rty
 {
 	void UserInterface::start()
@@ -443,14 +445,27 @@ namespace rty
 		htl::list<RestaurantRegistry::gp_time>& g = reg.getGroupLeft();
 		std::cout << "Numero de pessoas, hora de chegada, hora que conseguiu mesa, hora que foi embora" << std::endl;
 		
-		struct tm* arr, *gta, *lef;
+		struct tm* arr;
+		char buf[40];;
+		const char* format = "%a %b %d %H:%M:%S %Y";
 		for(htl::list<RestaurantRegistry::gp_time>::iterator it = g.begin(); it != g.end(); it++)
-		{
-			arr = localtime(&(*it).gd.arrival);
-			gta = localtime(&(*it).gd.gottable);
-			lef = localtime(&(*it).left_at);
+		{	
+			/*assert((*it).gd.arrival < (*it).left_at);
+			std::cerr << (*it).left_at  - (*it).gd.arrival<< std::endl;*/
 
-			std::cout << (*it).gd.sz << "\t" << asctime(arr) << "\t" << asctime(gta) << "\t" << asctime(lef) << std::endl;
+			arr = localtime(&(*it).gd.arrival);
+			std::cout << (*it).gd.sz;
+			strftime(buf, 40, format, arr);
+			std::cout << "\t" << buf;
+
+			arr = localtime(&(*it).gd.gottable);
+			strftime(buf, 40, format, arr);
+			std::cout << "\t" << buf;
+
+			arr = localtime(&(*it).left_at);
+			strftime(buf, 40, format, arr);
+			std::cout << "\t" << buf;
+			std::cout << std::endl;
 		}
 		std::cout << std::endl;
 	}
@@ -458,6 +473,23 @@ namespace rty
 	void UserInterface::listActive()
 	{
 		std::cout << std::endl;
+		std::cout << "Numero de pessoas, hora de chegada, hora que conseguiu mesa" << std::endl;
+		struct tm* arr;
+		htl::list<group_data>& g = reg.getGroupActive();
+		char buf[40];
+		const char* format = "%a %b %d %H:%M:%S %Y";
+		for(htl::list<group_data>::iterator it = g.begin(); it != g.end(); it++)
+		{
+			std::cout << (*it).sz;
+			
+			arr = localtime(&(*it).arrival);
+			strftime(buf, 40, format, arr);
+			std::cout << "\t" << buf;
 
+			arr = localtime(&(*it).gottable);
+			strftime(buf, 40, format, arr);
+			std::cout << "\t" << buf << std::endl;
+		}
+		std::cout << std::endl;
 	}
 }
